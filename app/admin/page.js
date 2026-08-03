@@ -34,7 +34,7 @@ export default function AdminOverviewPage() {
     { title: 'Total Pengguna', value: stats?.totalUsers || 0, icon: Users, color: 'from-blue-500 to-indigo-600', badge: '+18% bulan ini' },
     { title: 'Langganan Premium Aktif', value: stats?.activePremium || 0, icon: Crown, color: 'from-amber-500 to-amber-600', badge: 'Freemium Converter' },
     { title: 'Estimasi Pendapatan', value: `Rp ${(stats?.totalRevenue || 0).toLocaleString('id-ID')}`, icon: DollarSign, color: 'from-emerald-500 to-emerald-700', badge: 'QRIS & Voucher' },
-    { title: 'Data PTN & Prodi Synced', value: `${stats?.totalPtn || 146} PTN / ${stats?.totalProdi || 5150} Prodi`, icon: Database, color: 'from-purple-500 to-purple-700', badge: 'Cloud Supabase' },
+    { title: 'Data PTN & Prodi Synced', value: `${stats?.totalPtn ?? 0} PTN / ${stats?.totalProdi ?? 0} Prodi`, icon: Database, color: 'from-purple-500 to-purple-700', badge: 'Cloud Supabase' },
   ];
 
   return (

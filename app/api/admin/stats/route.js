@@ -3,52 +3,98 @@ import { supabaseAdmin } from '@/lib/supabase';
 
 export const dynamic = 'force-dynamic';
 
+const monthFormatter = new Intl.DateTimeFormat('id-ID', { month: 'short' });
+
+function buildUserGrowthTrend(profiles = []) {
+  const grouped = new Map();
+
+  profiles.forEach((profile) => {
+    if (!profile.created_at) return;
+
+    const createdAt = new Date(profile.created_at);
+    if (Number.isNaN(createdAt.getTime())) return;
+
+    const key = `${createdAt.getFullYear()}-${String(createdAt.getMonth() + 1).padStart(2, '0')}`;
+    const existing = grouped.get(key) || {
+      date: new Date(createdAt.getFullYear(), createdAt.getMonth(), 1),
+      month: monthFormatter.format(createdAt),
+      siswa: 0,
+      guru_bk: 0,
+      admin: 0,
+    };
+
+    if (profile.role === 'guru_bk') {
+      existing.guru_bk += 1;
+    } else if (profile.role === 'admin') {
+      existing.admin += 1;
+    } else {
+      existing.siswa += 1;
+    }
+
+    grouped.set(key, existing);
+  });
+
+  return Array.from(grouped.values())
+    .sort((a, b) => a.date - b.date)
+    .map(({ date, ...item }) => item);
+}
+
 export async function GET() {
   try {
-    // Total users count
-    const { count: totalUsers } = await supabaseAdmin.from('profiles').select('*', { count: 'exact', head: true });
-    
-    // Total premium users
-    const { count: activePremium } = await supabaseAdmin
+    const { count: totalUsers, error: totalUsersError } = await supabaseAdmin
+      .from('profiles')
+      .select('*', { count: 'exact', head: true });
+    if (totalUsersError) throw totalUsersError;
+
+    const { count: activePremium, error: activePremiumError } = await supabaseAdmin
       .from('profiles')
       .select('*', { count: 'exact', head: true })
       .eq('is_premium', true);
+    if (activePremiumError) throw activePremiumError;
 
-    // Total PTNs & Prodis
-    const { count: totalPtn } = await supabaseAdmin.from('ptn').select('*', { count: 'exact', head: true });
-    const { count: totalProdi } = await supabaseAdmin.from('prodi').select('*', { count: 'exact', head: true });
-    const { count: totalHistoris } = await supabaseAdmin.from('historis_seleksi').select('*', { count: 'exact', head: true });
+    const { count: totalPtn, error: totalPtnError } = await supabaseAdmin
+      .from('ptn')
+      .select('*', { count: 'exact', head: true });
+    if (totalPtnError) throw totalPtnError;
 
-    // Total Revenue from transactions
-    const { data: transactions } = await supabaseAdmin
+    const { count: totalProdi, error: totalProdiError } = await supabaseAdmin
+      .from('prodi')
+      .select('*', { count: 'exact', head: true });
+    if (totalProdiError) throw totalProdiError;
+
+    const { count: totalHistoris, error: totalHistorisError } = await supabaseAdmin
+      .from('historis_seleksi')
+      .select('*', { count: 'exact', head: true });
+    if (totalHistorisError) throw totalHistorisError;
+
+    const { data: transactions, error: transactionsError } = await supabaseAdmin
       .from('transactions')
       .select('amount')
       .eq('status', 'success');
+    if (transactionsError) throw transactionsError;
 
     const totalRevenue = (transactions || []).reduce((acc, curr) => acc + (curr.amount || 0), 0);
 
-    // Dummy user growth trend data for chart visualization
-    const userGrowthTrend = [
-      { month: 'Jan', siswa: 120, guru_bk: 15, revenue: 1500000 },
-      { month: 'Feb', siswa: 240, guru_bk: 28, revenue: 3200000 },
-      { month: 'Mar', siswa: 450, guru_bk: 45, revenue: 5800000 },
-      { month: 'Apr', siswa: 780, guru_bk: 72, revenue: 9400000 },
-      { month: 'Mei', siswa: 1250, guru_bk: 110, revenue: 14800000 },
-      { month: 'Jun', siswa: 1890, guru_bk: 165, revenue: 21500000 },
-      { month: 'Jul', siswa: Math.max(totalUsers || 2450, 2450), guru_bk: 210, revenue: Math.max(totalRevenue || 28900000, 28900000) }
-    ];
+    const { data: profiles, error: profilesError } = await supabaseAdmin
+      .from('profiles')
+      .select('created_at, role')
+      .order('created_at', { ascending: true });
+    if (profilesError) throw profilesError;
+
+    const userGrowthTrend = buildUserGrowthTrend(profiles || []);
 
     return NextResponse.json({
       success: true,
       data: {
         totalUsers: totalUsers || 0,
         activePremium: activePremium || 0,
-        totalPtn: totalPtn || 146,
-        totalProdi: totalProdi || 5150,
-        totalHistoris: totalHistoris || 43045,
-        totalRevenue: totalRevenue || 0,
-        userGrowthTrend
-      }
+        totalPtn: totalPtn || 0,
+        totalProdi: totalProdi || 0,
+        totalSynced: (totalPtn || 0) + (totalProdi || 0),
+        totalHistoris: totalHistoris || 0,
+        totalRevenue,
+        userGrowthTrend,
+      },
     });
   } catch (error) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });

@@ -35,7 +35,7 @@ export default function AdminDataSyncPage() {
     try {
       setSyncMessage({ type: 'info', text: 'Proses sinkronisasi live data SNPMB (SNBT & SNBP) sedang berjalan di Supabase Cloud...' });
       setTimeout(() => {
-        setSyncMessage({ type: 'success', text: 'Sinkronisasi data Supabase Cloud berhasil disegarkan (146 PTN, 5,150 Prodi, 43,045 Historis).' });
+        setSyncMessage({ type: 'success', text: `Sinkronisasi data Supabase Cloud berhasil disegarkan (${stats?.totalPtn ?? 0} PTN, ${(stats?.totalProdi ?? 0).toLocaleString('id-ID')} Prodi, ${(stats?.totalHistoris ?? 0).toLocaleString('id-ID')} Historis).` });
         setSyncing(false);
         fetchStats();
       }, 2500);
@@ -73,7 +73,7 @@ export default function AdminDataSyncPage() {
             <span className="text-xs font-bold">Total PTN Terdaftar</span>
             <Building className="w-4 h-4 text-purple-600" />
           </div>
-          <h3 className="text-2xl font-extrabold text-slate-900">{stats?.totalPtn || 146} PTN</h3>
+          <h3 className="text-2xl font-extrabold text-slate-900">{stats?.totalPtn ?? 0} PTN</h3>
           <span className="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full inline-block">
             Akademik, Vokasi & PTKIN
           </span>
@@ -84,7 +84,7 @@ export default function AdminDataSyncPage() {
             <span className="text-xs font-bold">Total Program Studi</span>
             <Sparkles className="w-4 h-4 text-amber-500" />
           </div>
-          <h3 className="text-2xl font-extrabold text-slate-900">{(stats?.totalProdi || 5150).toLocaleString('id-ID')} Prodi</h3>
+          <h3 className="text-2xl font-extrabold text-slate-900">{(stats?.totalProdi ?? 0).toLocaleString('id-ID')} Prodi</h3>
           <span className="text-[10px] text-blue-600 font-semibold bg-blue-50 px-2 py-0.5 rounded-full inline-block">
             S1, D4 & D3 se-Indonesia
           </span>
@@ -95,7 +95,7 @@ export default function AdminDataSyncPage() {
             <span className="text-xs font-bold">Catatan Historis Seleksi</span>
             <BarChart2 className="w-4 h-4 text-emerald-600" />
           </div>
-          <h3 className="text-2xl font-extrabold text-slate-900">{(stats?.totalHistoris || 43045).toLocaleString('id-ID')} Records</h3>
+          <h3 className="text-2xl font-extrabold text-slate-900">{(stats?.totalHistoris ?? 0).toLocaleString('id-ID')} Records</h3>
           <span className="text-[10px] text-purple-600 font-semibold bg-purple-50 px-2 py-0.5 rounded-full inline-block">
             SNBP (Rapor) & SNBT (UTBK) 5 Tahun
           </span>
