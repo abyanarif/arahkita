@@ -10,7 +10,12 @@ export async function GET() {
       .select('*')
       .order('created_at', { ascending: false });
 
-    if (error) throw error;
+    if (error) {
+      if (error.code === '42P01' || error.message?.includes('does not exist')) {
+        return NextResponse.json({ success: true, count: 0, data: [], note: 'vouchers table not yet created — run supabase_schema.sql first' });
+      }
+      throw error;
+    }
 
     return NextResponse.json({ success: true, count: vouchers ? vouchers.length : 0, data: vouchers || [] });
   } catch (error) {

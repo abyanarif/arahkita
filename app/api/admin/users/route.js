@@ -4,6 +4,7 @@ import { supabaseAdmin } from '@/lib/supabase';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request) {
+  // If profiles table not yet created, return empty gracefully
   try {
     const { searchParams } = new URL(request.url);
     const role = searchParams.get('role');
@@ -28,7 +29,13 @@ export async function GET(request) {
     }
 
     const { data: users, error } = await queryBuilder;
-    if (error) throw error;
+    if (error) {
+      // Table may not exist yet — return empty list instead of 500
+      if (error.code === '42P01' || error.message?.includes('does not exist')) {
+        return NextResponse.json({ success: true, count: 0, data: [], note: 'profiles table not yet created — run supabase_schema.sql first' });
+      }
+      throw error;
+    }
 
     return NextResponse.json({ success: true, count: users ? users.length : 0, data: users || [] });
   } catch (error) {
