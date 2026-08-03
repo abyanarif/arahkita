@@ -165,3 +165,59 @@ VALUES
   ('PREMIUM30', 100, 30, 1000, true),
   ('BKSURABAYA2026', 100, 365, 200, true)
 ON CONFLICT (code) DO NOTHING;
+
+-- ========================================================
+-- PHASE 2 MIGRATION: Assessment & Matching Engine
+-- Run AFTER the base schema above has been applied
+-- ========================================================
+
+-- Enable pgvector extension (must be done first in Supabase Dashboard
+-- under Database > Extensions > vector, OR via SQL below)
+CREATE EXTENSION IF NOT EXISTS vector;
+
+-- ── ALTER TABLE prodi: tambah kolom Assessment & Matching ──────────
+
+ALTER TABLE public.prodi
+  ADD COLUMN IF NOT EXISTS riasec_profile    JSONB    DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS major_vector      vector(26),
+  ADD COLUMN IF NOT EXISTS akademik_minimum  JSONB    DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS must_have_traits  TEXT[]   DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS gaya_kerja        JSONB    DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS keketatan_snbt    FLOAT    DEFAULT 10.0,
+  ADD COLUMN IF NOT EXISTS prospek_karir     JSONB    DEFAULT '{}';
+
+-- Keterangan kolom prodi baru:
+-- riasec_profile   : { R: 0.8, I: 0.9, A: 0.2, S: 0.4, E: 0.5, C: 0.6 }
+-- major_vector     : float[26] — representasi 26 dimensi prodi
+-- akademik_minimum : { utbk_min: 650, rapor_min: 80, mapel_kunci: ["Matematika","Fisika"] }
+-- must_have_traits : ["Tidak buta warna"] — syarat eliminasi keras
+-- gaya_kerja       : { outdoor: 0.3, teamwork: 0.7, analytical: 0.9, creative: 0.2 }
+-- keketatan_snbt   : persentase penerimaan SNBT (override dari historis)
+-- prospek_karir    : { entry: ["Junior Dev"], mid: ["Senior Dev"], ai_resistance: 0.75 }
+
+-- ── ALTER TABLE profiles: tambah kolom Student Assessment ──────────
+
+ALTER TABLE public.profiles
+  ADD COLUMN IF NOT EXISTS student_vector    vector(26),
+  ADD COLUMN IF NOT EXISTS riasec_result     JSONB    DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS academic_scores   JSONB    DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS assessment_status TEXT     DEFAULT 'not_started'
+                                             CHECK (assessment_status IN ('not_started', 'in_progress', 'completed'));
+
+-- Keterangan kolom profiles baru:
+-- student_vector    : float[26] — hasil kalkulasi dari assessment 5 modul
+-- riasec_result     : { topTraits: ["I","R","A"], scores: { R: 4, I: 5, ... } }
+-- academic_scores   : { matematika: 88, fisika: 82, biologi: 75, ... }
+-- assessment_status : 'not_started' | 'in_progress' | 'completed'
+
+-- ── Index untuk Vector Similarity Search ───────────────────────────
+
+-- Index cosine similarity untuk major_vector (IVFFlat)
+-- Catatan: Buat index setelah ada data (minimal 1 baris dengan vector tidak NULL)
+-- CREATE INDEX IF NOT EXISTS idx_prodi_major_vector
+--   ON public.prodi USING ivfflat (major_vector vector_cosine_ops) WITH (lists = 100);
+
+-- Index konvensional untuk filtering assessment
+CREATE INDEX IF NOT EXISTS idx_profiles_assessment_status ON public.profiles(assessment_status);
+CREATE INDEX IF NOT EXISTS idx_prodi_riasec_profile ON public.prodi USING GIN(riasec_profile);
+CREATE INDEX IF NOT EXISTS idx_prodi_must_have_traits ON public.prodi USING GIN(must_have_traits);
