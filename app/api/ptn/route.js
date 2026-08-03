@@ -1,33 +1,59 @@
 import { NextResponse } from 'next/server';
-import { query } from '@/lib/db';
+import { supabase } from '@/lib/supabase';
 
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
+    const id_ptn = searchParams.get('id_ptn');
     const jenis = searchParams.get('jenis');
-    const provinsi = searchParams.get('provinsi');
     const search = searchParams.get('search');
 
-    let sql = `SELECT * FROM ptn WHERE 1=1`;
-    const params = [];
+    if (id_ptn) {
+      const { data: ptnData, error: ptnError } = await supabase
+        .from('ptn')
+        .select('*')
+        .eq('id_ptn', id_ptn)
+        .single();
 
-    if (jenis && jenis !== 'Semua') {
-      sql += ` AND jenis_ptn = ?`;
-      params.push(jenis);
+      if (ptnError || !ptnData) {
+        return NextResponse.json({ success: false, message: 'PTN tidak ditemukan' }, { status: 404 });
+      }
+
+      const { data: prodiData } = await supabase
+        .from('prodi')
+        .select('*')
+        .eq('id_ptn', id_ptn);
+
+      return NextResponse.json({
+        success: true,
+        data: {
+          ...ptnData,
+          prodi_list: prodiData || []
+        }
+      });
     }
-    if (provinsi && provinsi !== 'Semua') {
-      sql += ` AND (provinsi_1 = ? OR provinsi_2 = ?)`;
-      params.push(provinsi, provinsi);
-    }
+
+    let queryBuilder = supabase.from('ptn').select('*, prodi(count)');
+
     if (search) {
-      sql += ` AND (nama_ptn LIKE ? OR kode_ptn LIKE ?)`;
-      params.push(`%${search}%`, `%${search}%`);
+      queryBuilder = queryBuilder.or(`nama_ptn.ilike.%${search}%,kode_ptn.ilike.%${search}%`);
+    }
+    if (jenis && jenis !== 'Semua') {
+      queryBuilder = queryBuilder.eq('jenis_ptn', jenis);
     }
 
-    sql += ` ORDER BY nama_ptn ASC LIMIT 100`;
+    const { data: ptnList, error } = await queryBuilder.order('nama_ptn', { ascending: true });
 
-    const ptns = await query(sql, params);
-    return NextResponse.json({ success: true, data: ptns });
+    if (error) {
+      throw error;
+    }
+
+    const formatted = (ptnList || []).map((item) => ({
+      ...item,
+      jumlah_prodi: item.prodi ? item.prodi[0]?.count || 0 : 0
+    }));
+
+    return NextResponse.json({ success: true, count: formatted.length, data: formatted });
   } catch (error) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }

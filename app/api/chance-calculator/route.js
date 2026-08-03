@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { query } from '@/lib/db';
+import { supabase } from '@/lib/supabase';
 
 function calculatePassingScoreSnbt(keketatanPersen) {
   if (keketatanPersen <= 3.0) return 725;
@@ -18,22 +18,25 @@ function calculatePassingScoreSnbp(keketatanPersen) {
 }
 
 async function evaluateChoice(studentScore, prodiKode, jalur = 'SNBT') {
-  const prodiSql = `
-    SELECT p.*, ptn.nama_ptn, ptn.jenis_ptn, ptn.provinsi_1
-    FROM prodi p
-    JOIN ptn ON p.id_ptn = ptn.id_ptn
-    WHERE p.kode_prodi = ?
-  `;
-  const prodiList = await query(prodiSql, [prodiKode]);
+  const { data: prodiData, error: prodiError } = await supabase
+    .from('prodi')
+    .select('*, ptn(*)')
+    .eq('kode_prodi', prodiKode)
+    .single();
 
-  if (!prodiList || prodiList.length === 0) return null;
+  if (prodiError || !prodiData) return null;
 
-  const prodi = prodiList[0];
-  const table = jalur === 'SNBP' ? 'historis_snbp' : 'historis_snbt';
-  const history = await query(`SELECT * FROM ${table} WHERE kode_prodi = ? ORDER BY tahun DESC LIMIT 1`, [prodiKode]);
-  const latestHistory = history.length > 0 ? history[0] : null;
+  const { data: history } = await supabase
+    .from('historis_seleksi')
+    .select('*')
+    .eq('kode_prodi', prodiKode)
+    .eq('jalur', jalur)
+    .order('tahun', { ascending: false })
+    .limit(1);
 
+  const latestHistory = history && history.length > 0 ? history[0] : null;
   const keketatan = latestHistory ? latestHistory.keketatan_persen : 10.0;
+  
   const estimatedPassingScore = jalur === 'SNBP' 
     ? calculatePassingScoreSnbp(keketatan) 
     : calculatePassingScoreSnbt(keketatan);
@@ -71,8 +74,15 @@ async function evaluateChoice(studentScore, prodiKode, jalur = 'SNBT') {
       : 'Peta persaingan prodi ini sangat ketat. Disarankan menyiapkan opsi pilihan ke-2 yang lebih aman.';
   }
 
+  const formattedProdi = {
+    ...prodiData,
+    nama_ptn: prodiData.ptn?.nama_ptn || '',
+    jenis_ptn: prodiData.ptn?.jenis_ptn || 'Akademik',
+    provinsi_1: prodiData.ptn?.provinsi_1 || 'Indonesia'
+  };
+
   return {
-    prodi,
+    prodi: formattedProdi,
     jalur,
     latestHistory,
     keketatan_persen: keketatan,

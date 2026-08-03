@@ -16,7 +16,8 @@ import {
   Info,
   Award,
   BookOpen,
-  Sparkles
+  Sparkles,
+  Crown
 } from 'lucide-react';
 import Link from 'next/link';
 import {
@@ -29,6 +30,8 @@ import {
   CartesianGrid,
   Legend
 } from 'recharts';
+import PaywallModal from '@/components/PaywallModal';
+import { supabase } from '@/lib/supabase';
 
 export default function DirektoriPtnPage() {
   const [prodis, setProdis] = useState([]);
@@ -38,10 +41,28 @@ export default function DirektoriPtnPage() {
   const [selectedJenjang, setSelectedJenjang] = useState('Semua');
   const [selectedJenisPtn, setSelectedJenisPtn] = useState('Semua');
   
+  // User Profile Auth State
+  const [profile, setProfile] = useState(null);
+  const [isPaywallOpen, setIsPaywallOpen] = useState(false);
+
   // Modal detail state
   const [selectedProdi, setSelectedProdi] = useState(null);
   const [modalLoading, setModalLoading] = useState(false);
   const [activeModalTab, setActiveModalTab] = useState('SNBT'); // 'SNBT' or 'SNBP'
+
+  useEffect(() => {
+    async function loadUser() {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        const res = await fetch('/api/auth/profile', {
+          headers: { Authorization: `Bearer ${session.access_token}` }
+        });
+        const json = await res.json();
+        if (json.success) setProfile(json.data);
+      }
+    }
+    loadUser();
+  }, []);
 
   const fetchProdis = async () => {
     setLoading(true);
@@ -105,10 +126,22 @@ export default function DirektoriPtnPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       {/* Header */}
       <div className="space-y-3">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF4FF] border border-[#3157AC]/30 text-xs font-bold text-[#3157AC]">
-          <BarChart2 className="w-4 h-4 text-[#3157AC]" />
-          Direktori Kampus & Peta Persaingan SNBT & SNBP 2026
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF4FF] border border-[#3157AC]/30 text-xs font-bold text-[#3157AC]">
+            <BarChart2 className="w-4 h-4 text-[#3157AC]" />
+            Direktori Kampus & Peta Persaingan SNBT & SNBP 2026
+          </div>
+
+          {!profile?.is_premium && (
+            <button
+              onClick={() => setIsPaywallOpen(true)}
+              className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-xs font-extrabold shadow-md transition-all flex items-center gap-1.5"
+            >
+              <Crown className="w-3.5 h-3.5" /> Upgrade Ke Premium
+            </button>
+          )}
         </div>
+
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
           Cari Program Studi & Analisis Daya Tampung PTN
         </h1>
@@ -204,7 +237,7 @@ export default function DirektoriPtnPage() {
       {loading ? (
         <div className="text-center py-16 space-y-4">
           <div className="w-10 h-10 border-4 border-[#3157AC] border-t-transparent rounded-full animate-spin mx-auto" />
-          <p className="text-slate-600 font-medium">Memuat data prodi PTN se-Indonesia...</p>
+          <p className="text-slate-600 font-medium">Memuat data prodi PTN se-Indonesia dari Supabase Cloud...</p>
         </div>
       ) : prodis.length === 0 ? (
         <div className="bg-white p-12 rounded-2xl border border-slate-200 text-center space-y-3">
@@ -285,7 +318,7 @@ export default function DirektoriPtnPage() {
               {modalLoading ? (
                 <div className="py-20 text-center space-y-3">
                   <div className="w-10 h-10 border-4 border-[#3157AC] border-t-transparent rounded-full animate-spin mx-auto" />
-                  <p className="text-sm font-semibold text-slate-600">Memuat analisis komparasi SNBP vs SNBT...</p>
+                  <p className="text-sm font-semibold text-slate-600">Memuat analisis komparasi SNBP vs SNBT dari Supabase Cloud...</p>
                 </div>
               ) : (
                 selectedProdi && (
@@ -418,55 +451,6 @@ export default function DirektoriPtnPage() {
                       </div>
                     </div>
 
-                    {/* Historical Rincian Table */}
-                    <div className="space-y-2">
-                      <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                        Tabel Rincian Historis {activeModalTab}
-                      </h4>
-                      <div className="overflow-x-auto rounded-xl border border-slate-200">
-                        <table className="w-full text-xs text-left text-slate-700">
-                          <thead className="bg-slate-100 font-bold text-slate-800 border-b border-slate-200">
-                            <tr>
-                              <th className="p-3">Tahun</th>
-                              <th className="p-3">Peminat</th>
-                              <th className="p-3">Daya Tampung</th>
-                              {activeModalTab === 'SNBP' && <th className="p-3">Diterima</th>}
-                              <th className="p-3">Keketatan (%)</th>
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-slate-100">
-                            {(activeModalTab === 'SNBP' ? selectedProdi.historySnbp : selectedProdi.historySnbt)?.map((h) => (
-                              <tr key={h.id} className="hover:bg-slate-50">
-                                <td className="p-3 font-semibold text-slate-900">{h.tahun}</td>
-                                <td className="p-3">{h.peminat.toLocaleString('id-ID')} orang</td>
-                                <td className="p-3">{h.daya_tampung} kursi</td>
-                                {activeModalTab === 'SNBP' && <td className="p-3 font-semibold">{h.terima || h.daya_tampung} orang</td>}
-                                <td className="p-3 font-bold text-[#3157AC]">{h.keketatan_persen}%</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-
-                    {/* Similar Major Recommendations */}
-                    {selectedProdi.similarProdi && selectedProdi.similarProdi.length > 0 && (
-                      <div className="space-y-3 pt-2">
-                        <h4 className="text-sm font-bold text-slate-900">Rekomendasi PTN Lain dengan Jurusan Serupa:</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          {selectedProdi.similarProdi.map((sim) => (
-                            <div key={sim.kode_prodi} className="p-3 rounded-xl border border-slate-200 bg-slate-50 space-y-1">
-                              <div className="flex justify-between items-center">
-                                <h5 className="font-bold text-slate-900 text-xs">{sim.nama_prodi}</h5>
-                                <span className="text-[10px] font-semibold text-[#3157AC]">{sim.jenjang}</span>
-                              </div>
-                              <p className="text-xs text-slate-600">{sim.nama_ptn} ({sim.provinsi_1})</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
                     {/* Bottom Action CTA */}
                     <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3 justify-end">
                       <Link
@@ -483,6 +467,13 @@ export default function DirektoriPtnPage() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Paywall Modal Component */}
+      <PaywallModal
+        isOpen={isPaywallOpen}
+        onClose={() => setIsPaywallOpen(false)}
+        onUnlocked={(updatedProfile) => setProfile(updatedProfile)}
+      />
     </div>
   );
 }

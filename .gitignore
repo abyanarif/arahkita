@@ -1,5 +1,45 @@
 # ==========================================
-# 1. Dependencies & Package Managers
+# 1. Environment Variables & Credentials (CRITICAL)
+# ==========================================
+.env
+.env*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==========================================
+# 2. Local Databases & Scraped Data
+# ==========================================
+# Database SQLite lokal & log
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+smart_choose.db*
+
+# File cadangan JSON hasil scraping (SNBP & SNBT)
+daftar_id_ptn*.json
+database_snbt_*.json
+database_snbp_*.json
+data_snbt_*.json
+data_snbp_*.json
+*.json.bak
+
+# ==========================================
+# 3. Next.js & Build Outputs
+# ==========================================
+/.next/
+/out/
+/build/
+/dist/
+.next-boost/
+
+# ==========================================
+# 4. Dependencies & Package Managers
 # ==========================================
 /node_modules
 /.pnp
@@ -10,7 +50,9 @@
 /.yarn/install-state.gz
 .yarn-integrity
 
-# Python Virtual Environments
+# ==========================================
+# 5. Python & Virtual Environments
+# ==========================================
 venv/
 .venv/
 env/
@@ -19,47 +61,23 @@ ENV/
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.pytest_cache/
+.coverage
 
 # ==========================================
-# 2. Next.js & Build Outputs
+# 6. IDEs, Editors & OS Files
 # ==========================================
-/.next/
-/out/
-/build/
-/dist/
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 *.pem
 
-# Next.js bundle analyzer
-.next-boost/
-
-# ==========================================
-# 3. Environment Variables & Credentials
-# (SANGAT PENTING: Jangan push API Key Supabase/Secret ke Git)
-# ==========================================
-.env
-.env*.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# ==========================================
-# 4. Local Databases & Scraped Data
-# ==========================================
-# Jika menggunakan Supabase/Cloud DB, file database & JSON lokal tidak perlu di-push
-*.db
-*.db-journal
-*.sqlite
-*.sqlite3
-
-# File cadangan hasil scraping lokal
-database_snbt_*.json
-daftar_id_ptn.json
-data_snbt_*.json
-
-# ==========================================
-# 5. IDE & Code Editors
-# ==========================================
+# Editor configs
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -69,9 +87,10 @@ data_snbt_*.json
 *.swp
 *.swo
 *~
+*.bak
 
 # ==========================================
-# 6. Logs & Debugging
+# 7. Logs & Debugging
 # ==========================================
 npm-debug.log*
 yarn-debug.log*
