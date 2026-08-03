@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-blue: #3157AC;
+    --primary-blue-dark: #223F82;
+    --primary-blue-light: #EFF4FF;
+    --accent-amber: #F5A623;
+    --accent-amber-dark: #D48813;
+    --accent-amber-light: #FFF8EB;
+    --bg-main: #F8FAFC;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: #1E293B;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+.bg-brand-blue {
+  background-color: #3157AC;
+}
+
+.text-brand-blue {
+  color: #3157AC;
+}
+
+.bg-brand-amber {
+  background-color: #F5A623;
+}
+
+.text-brand-amber {
+  color: #F5A623;
+}
+
+.border-brand-amber {
+  border-color: #F5A623;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(49, 87, 172, 0.06);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
