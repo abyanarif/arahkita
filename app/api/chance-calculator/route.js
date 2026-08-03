@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 function calculatePassingScoreSnbt(keketatanPersen) {
   if (keketatanPersen <= 3.0) return 725;
   if (keketatanPersen <= 5.0) return 690;
