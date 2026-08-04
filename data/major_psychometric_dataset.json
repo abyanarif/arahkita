@@ -1,3299 +1,3299 @@
 [
-    {
-        "keywords": [
-            "INFORMATIKA",
-            "KOMPUTER",
-            "REKAYASA PERANGKAT LUNAK",
-            "CYBER",
-            "TEKNOLOGI INFORMASI",
-            "SISTEM INFORMASI"
-        ],
-        "sub_rumpun": "Rekayasa Perangkat Lunak & Data",
-        "riasec_profile": {
-            "R": 0.4,
-            "I": 0.9,
-            "A": 0.3,
-            "S": 0.2,
-            "E": 0.5,
-            "C": 0.7
-        },
-        "gaya_kerja": {
-            "analytical": 0.9,
-            "creative": 0.5,
-            "practical": 0.7,
-            "social": 0.3
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "problem_solving_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                6000000,
-                12000000
-            ],
-            "ai_resistance_score": 0.65,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.95,
-            0.5,
-            0.6,
-            0.2,
-            0.1,
-            0.4,
-            0.6,
-            0.1,
-            0.9,
-            0.6,
-            0.9,
-            0.7,
-            0.8,
-            0.7,
-            0.8,
-            0.5,
-            0.4,
-            0.2,
-            0.7,
-            0.7,
-            0.6,
-            0.4,
-            0.6,
-            0.5,
-            0.2,
-            0.95
-        ]
+  {
+    "keywords": [
+      "INFORMATIKA",
+      "KOMPUTER",
+      "REKAYASA PERANGKAT LUNAK",
+      "CYBER",
+      "TEKNOLOGI INFORMASI",
+      "SISTEM INFORMASI"
+    ],
+    "sub_rumpun": "Rekayasa Perangkat Lunak & Data",
+    "riasec_profile": {
+      "R": 0.4,
+      "I": 0.9,
+      "A": 0.3,
+      "S": 0.2,
+      "E": 0.5,
+      "C": 0.7
     },
-    {
-        "keywords": [
-            "TEKNIK SIPIL",
-            "KONSTRUKSI",
-            "INFRASTRUKTUR",
-            "TRANSPORTASI"
-        ],
-        "sub_rumpun": "Teknik Sipil & Infrastruktur",
-        "riasec_profile": {
-            "R": 0.8,
-            "I": 0.6,
-            "A": 0.2,
-            "S": 0.2,
-            "E": 0.4,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.7,
-            "creative": 0.3,
-            "practical": 0.9,
-            "social": 0.3
-        },
-        "must_have_traits": [
-            "spatial_reasoning_high",
-            "logical_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5500000,
-                10000000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.8,
-            0.4,
-            0.85,
-            0.5,
-            0.1,
-            0.4,
-            0.5,
-            0.4,
-            0.75,
-            0.3,
-            0.7,
-            0.75,
-            0.85,
-            0.7,
-            0.9,
-            0.5,
-            0.5,
-            0.2,
-            0.85,
-            0.6,
-            0.4,
-            0.4,
-            0.5,
-            0.6,
-            0.6,
-            0.5
-        ]
+    "gaya_kerja": {
+      "analytical": 0.9,
+      "creative": 0.5,
+      "practical": 0.7,
+      "social": 0.3
     },
-    {
-        "keywords": [
-            "TEKNIK ELEKTRO",
-            "ELEKTRONIKA",
-            "TELEKOMUNIKASI",
-            "ROBOTIKA",
-            "INSTRUMENTASI"
-        ],
-        "sub_rumpun": "Teknik Elektro & Elektronika",
-        "riasec_profile": {
-            "R": 0.7,
-            "I": 0.8,
-            "A": 0.2,
-            "S": 0.1,
-            "E": 0.3,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.85,
-            "creative": 0.4,
-            "practical": 0.8,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "technical_aptitude_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                6000000,
-                11000000
-            ],
-            "ai_resistance_score": 0.7,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.9,
-            0.35,
-            0.7,
-            0.4,
-            0.1,
-            0.25,
-            0.5,
-            0.15,
-            0.85,
-            0.4,
-            0.8,
-            0.75,
-            0.85,
-            0.75,
-            0.9,
-            0.4,
-            0.35,
-            0.15,
-            0.85,
-            0.6,
-            0.55,
-            0.35,
-            0.4,
-            0.5,
-            0.4,
-            0.75
-        ]
+    "must_have_traits": [
+      "logical_thinking_high",
+      "problem_solving_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        6000000,
+        12000000
+      ],
+      "ai_resistance_score": 0.65,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "TEKNIK MESIN",
-            "MANUFAKTUR",
-            "OTOMOTIF",
-            "ENERGI"
-        ],
-        "sub_rumpun": "Teknik Mesin & Manufaktur",
-        "riasec_profile": {
-            "R": 0.85,
-            "I": 0.6,
-            "A": 0.2,
-            "S": 0.1,
-            "E": 0.3,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.7,
-            "creative": 0.4,
-            "practical": 0.9,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "spatial_reasoning_high",
-            "technical_aptitude_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5500000,
-                10000000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.75,
-            0.3,
-            0.8,
-            0.6,
-            0.1,
-            0.25,
-            0.5,
-            0.2,
-            0.7,
-            0.35,
-            0.65,
-            0.7,
-            0.75,
-            0.65,
-            0.9,
-            0.35,
-            0.4,
-            0.15,
-            0.85,
-            0.55,
-            0.35,
-            0.4,
-            0.45,
-            0.5,
-            0.6,
-            0.5
-        ]
+    "major_vector": [
+      0.4,
+      0.9,
+      0.3,
+      0.2,
+      0.5,
+      0.7,
+      0.95,
+      0.8,
+      0.3,
+      0.2,
+      0.85,
+      0.9,
+      0.1,
+      0.5,
+      0.9,
+      0.7,
+      0.4,
+      0.8,
+      0.8,
+      0.6,
+      0.3,
+      0.9,
+      0.6,
+      0.4,
+      0.9,
+      0.8
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK SIPIL",
+      "KONSTRUKSI",
+      "INFRASTRUKTUR",
+      "TRANSPORTASI"
+    ],
+    "sub_rumpun": "Teknik Sipil & Infrastruktur",
+    "riasec_profile": {
+      "R": 0.8,
+      "I": 0.6,
+      "A": 0.2,
+      "S": 0.2,
+      "E": 0.4,
+      "C": 0.6
     },
-    {
-        "keywords": [
-            "TEKNIK INDUSTRI",
-            "MANAJEMEN REKAYASA",
-            "SISTEM PRODUKSI",
-            "LOGISTIK"
-        ],
-        "sub_rumpun": "Teknik Industri & Sistem",
-        "riasec_profile": {
-            "R": 0.5,
-            "I": 0.6,
-            "A": 0.2,
-            "S": 0.4,
-            "E": 0.6,
-            "C": 0.7
-        },
-        "gaya_kerja": {
-            "analytical": 0.8,
-            "creative": 0.4,
-            "practical": 0.7,
-            "social": 0.5
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "leadership_potential"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5500000,
-                10500000
-            ],
-            "ai_resistance_score": 0.6,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.8,
-            0.5,
-            0.55,
-            0.3,
-            0.1,
-            0.55,
-            0.55,
-            0.15,
-            0.85,
-            0.4,
-            0.75,
-            0.65,
-            0.8,
-            0.55,
-            0.6,
-            0.6,
-            0.65,
-            0.3,
-            0.75,
-            0.65,
-            0.4,
-            0.35,
-            0.7,
-            0.5,
-            0.3,
-            0.6
-        ]
+    "gaya_kerja": {
+      "analytical": 0.7,
+      "creative": 0.3,
+      "practical": 0.9,
+      "social": 0.3
     },
-    {
-        "keywords": [
-            "TEKNIK KIMIA",
-            "PETROKIMIA",
-            "PROSES INDUSTRI",
-            "BIOPROSES"
-        ],
-        "sub_rumpun": "Teknik Kimia & Proses",
-        "riasec_profile": {
-            "R": 0.7,
-            "I": 0.85,
-            "A": 0.15,
-            "S": 0.1,
-            "E": 0.3,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.85,
-            "creative": 0.35,
-            "practical": 0.75,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "scientific_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                6000000,
-                11000000
-            ],
-            "ai_resistance_score": 0.7,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.85,
-            0.35,
-            0.55,
-            0.35,
-            0.1,
-            0.2,
-            0.5,
-            0.35,
-            0.9,
-            0.35,
-            0.8,
-            0.75,
-            0.85,
-            0.85,
-            0.75,
-            0.35,
-            0.3,
-            0.15,
-            0.9,
-            0.5,
-            0.6,
-            0.3,
-            0.4,
-            0.6,
-            0.4,
-            0.5
-        ]
+    "must_have_traits": [
+      "spatial_reasoning_high",
+      "logical_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5500000,
+        10000000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "stable"
     },
-    {
-        "keywords": [
-            "PERENCANAAN WILAYAH DAN KOTA",
-            "PWK",
-            "PLANOLOGI",
-            "TATA KOTA",
-            "URBAN PLANNING",
-            "PERENCANAAN KOTA"
-        ],
-        "sub_rumpun": "Perencanaan Wilayah dan Kota (PWK)",
-        "riasec_profile": {
-            "R": 0.45,
-            "I": 0.65,
-            "A": 0.5,
-            "S": 0.3,
-            "E": 0.4,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.7,
-            "creative": 0.55,
-            "practical": 0.6,
-            "social": 0.4
-        },
-        "must_have_traits": [
-            "spatial_reasoning_high",
-            "critical_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                8500000
-            ],
-            "ai_resistance_score": 0.65,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.7,
-            0.5,
-            0.75,
-            0.2,
-            0.15,
-            0.45,
-            0.55,
-            0.35,
-            0.75,
-            0.55,
-            0.7,
-            0.55,
-            0.55,
-            0.5,
-            0.4,
-            0.55,
-            0.45,
-            0.35,
-            0.6,
-            0.55,
-            0.55,
-            0.65,
-            0.4,
-            0.5,
-            0.2,
-            0.55
-        ]
+    "major_vector": [
+      0.8,
+      0.6,
+      0.2,
+      0.2,
+      0.4,
+      0.6,
+      0.9,
+      0.85,
+      0.4,
+      0.2,
+      0.75,
+      0.75,
+      0.6,
+      0.6,
+      0.8,
+      0.3,
+      0.5,
+      0.8,
+      0.6,
+      0.8,
+      0.3,
+      0.5,
+      0.6,
+      0.5,
+      0.8,
+      0.7
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK ELEKTRO",
+      "ELEKTRONIKA",
+      "TELEKOMUNIKASI",
+      "ROBOTIKA",
+      "INSTRUMENTASI"
+    ],
+    "sub_rumpun": "Teknik Elektro & Elektronika",
+    "riasec_profile": {
+      "R": 0.7,
+      "I": 0.8,
+      "A": 0.2,
+      "S": 0.1,
+      "E": 0.3,
+      "C": 0.6
     },
-    {
-        "keywords": [
-            "TEKNIK LINGKUNGAN",
-            "SANITASI",
-            "TEKNOLOGI LINGKUNGAN",
-            "PENGELOLAAN LIMBAH",
-            "REKAYASA LINGKUNGAN"
-        ],
-        "sub_rumpun": "Teknik Lingkungan",
-        "riasec_profile": {
-            "R": 0.55,
-            "I": 0.75,
-            "A": 0.15,
-            "S": 0.35,
-            "E": 0.3,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.75,
-            "creative": 0.3,
-            "practical": 0.7,
-            "social": 0.35
-        },
-        "must_have_traits": [
-            "scientific_reasoning_high",
-            "logical_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                8500000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.75,
-            0.4,
-            0.45,
-            0.4,
-            0.1,
-            0.35,
-            0.55,
-            0.8,
-            0.8,
-            0.3,
-            0.75,
-            0.65,
-            0.65,
-            0.8,
-            0.6,
-            0.4,
-            0.35,
-            0.35,
-            0.75,
-            0.55,
-            0.6,
-            0.25,
-            0.4,
-            0.65,
-            0.4,
-            0.5
-        ]
+    "gaya_kerja": {
+      "analytical": 0.85,
+      "creative": 0.4,
+      "practical": 0.8,
+      "social": 0.2
     },
-    {
-        "keywords": [
-            "TEKNIK GEODESI",
-            "GEOMATIKA",
-            "SURVEYING",
-            "PEMETAAN",
-            "GIS",
-            "SISTEM INFORMASI GEOGRAFIS",
-            "TEKNIK GEOMATIKA"
-        ],
-        "sub_rumpun": "Teknik Geodesi & Geomatika",
-        "riasec_profile": {
-            "R": 0.6,
-            "I": 0.7,
-            "A": 0.25,
-            "S": 0.2,
-            "E": 0.3,
-            "C": 0.55
-        },
-        "gaya_kerja": {
-            "analytical": 0.75,
-            "creative": 0.3,
-            "practical": 0.75,
-            "social": 0.25
-        },
-        "must_have_traits": [
-            "spatial_reasoning_high",
-            "technical_aptitude_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4800000,
-                9000000
-            ],
-            "ai_resistance_score": 0.65,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.75,
-            0.35,
-            0.85,
-            0.4,
-            0.1,
-            0.25,
-            0.5,
-            0.35,
-            0.8,
-            0.35,
-            0.7,
-            0.75,
-            0.7,
-            0.6,
-            0.7,
-            0.4,
-            0.3,
-            0.15,
-            0.8,
-            0.5,
-            0.45,
-            0.5,
-            0.4,
-            0.5,
-            0.4,
-            0.7
-        ]
+    "must_have_traits": [
+      "logical_thinking_high",
+      "technical_aptitude_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        6000000,
+        11000000
+      ],
+      "ai_resistance_score": 0.7,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "TEKNIK GEOLOGI",
-            "GEOLOGI TERAPAN",
-            "PERTAMBANGAN",
-            "GEOSAINS",
-            "TEKNIK PERTAMBANGAN"
-        ],
-        "sub_rumpun": "Teknik Geologi",
-        "riasec_profile": {
-            "R": 0.65,
-            "I": 0.8,
-            "A": 0.15,
-            "S": 0.15,
-            "E": 0.3,
-            "C": 0.45
-        },
-        "gaya_kerja": {
-            "analytical": 0.75,
-            "creative": 0.3,
-            "practical": 0.75,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "scientific_reasoning_high",
-            "spatial_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5500000,
-                10500000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.75,
-            0.4,
-            0.65,
-            0.5,
-            0.1,
-            0.25,
-            0.55,
-            0.7,
-            0.8,
-            0.3,
-            0.75,
-            0.65,
-            0.65,
-            0.85,
-            0.65,
-            0.35,
-            0.35,
-            0.2,
-            0.75,
-            0.55,
-            0.55,
-            0.3,
-            0.4,
-            0.55,
-            0.55,
-            0.5
-        ]
+    "major_vector": [
+      0.7,
+      0.8,
+      0.2,
+      0.1,
+      0.3,
+      0.6,
+      0.95,
+      0.9,
+      0.4,
+      0.2,
+      0.7,
+      0.8,
+      0.3,
+      0.5,
+      0.9,
+      0.4,
+      0.4,
+      0.8,
+      0.7,
+      0.7,
+      0.2,
+      0.7,
+      0.6,
+      0.4,
+      0.85,
+      0.75
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK MESIN",
+      "MANUFAKTUR",
+      "OTOMOTIF",
+      "ENERGI"
+    ],
+    "sub_rumpun": "Teknik Mesin & Manufaktur",
+    "riasec_profile": {
+      "R": 0.85,
+      "I": 0.6,
+      "A": 0.2,
+      "S": 0.1,
+      "E": 0.3,
+      "C": 0.5
     },
-    {
-        "keywords": [
-            "TEKNIK PERKAPALAN",
-            "TEKNIK KELAUTAN",
-            "SISTEM PERKAPALAN",
-            "TEKNOLOGI KELAUTAN",
-            "REKAYASA KELAUTAN"
-        ],
-        "sub_rumpun": "Teknik Perkapalan & Kelautan",
-        "riasec_profile": {
-            "R": 0.75,
-            "I": 0.65,
-            "A": 0.15,
-            "S": 0.15,
-            "E": 0.3,
-            "C": 0.45
-        },
-        "gaya_kerja": {
-            "analytical": 0.65,
-            "creative": 0.3,
-            "practical": 0.85,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "technical_aptitude_high",
-            "spatial_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5000000,
-                9500000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.75,
-            0.35,
-            0.7,
-            0.55,
-            0.1,
-            0.25,
-            0.5,
-            0.55,
-            0.75,
-            0.3,
-            0.65,
-            0.65,
-            0.7,
-            0.65,
-            0.85,
-            0.35,
-            0.35,
-            0.2,
-            0.8,
-            0.5,
-            0.4,
-            0.3,
-            0.4,
-            0.5,
-            0.6,
-            0.45
-        ]
+    "gaya_kerja": {
+      "analytical": 0.7,
+      "creative": 0.4,
+      "practical": 0.9,
+      "social": 0.2
     },
-    {
-        "keywords": [
-            "KEDOKTERAN",
-            "DOKTER UMUM",
-            "BEDAH",
-            "KLINIS"
-        ],
-        "sub_rumpun": "Kedokteran Umum & Bedah",
-        "riasec_profile": {
-            "R": 0.4,
-            "I": 0.9,
-            "A": 0.1,
-            "S": 0.7,
-            "E": 0.4,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.85,
-            "creative": 0.2,
-            "practical": 0.7,
-            "social": 0.7
-        },
-        "must_have_traits": [
-            "high_stress_tolerance",
-            "empathy_high",
-            "logical_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                8000000,
-                15000000
-            ],
-            "ai_resistance_score": 0.85,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.85,
-            0.55,
-            0.55,
-            0.5,
-            0.1,
-            0.7,
-            0.65,
-            0.15,
-            0.85,
-            0.25,
-            0.85,
-            0.85,
-            0.6,
-            0.85,
-            0.55,
-            0.65,
-            0.5,
-            0.9,
-            0.9,
-            0.6,
-            0.6,
-            0.15,
-            0.3,
-            0.9,
-            0.6,
-            0.4
-        ]
+    "must_have_traits": [
+      "spatial_reasoning_high",
+      "technical_aptitude_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5500000,
+        10000000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "stable"
     },
-    {
-        "keywords": [
-            "KEDOKTERAN GIGI",
-            "DENTAL",
-            "ORTODONTI"
-        ],
-        "sub_rumpun": "Kedokteran Gigi",
-        "riasec_profile": {
-            "R": 0.5,
-            "I": 0.75,
-            "A": 0.2,
-            "S": 0.6,
-            "E": 0.3,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.75,
-            "creative": 0.3,
-            "practical": 0.8,
-            "social": 0.6
-        },
-        "must_have_traits": [
-            "fine_motor_skill_high",
-            "empathy_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                7500000,
-                14000000
-            ],
-            "ai_resistance_score": 0.85,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.75,
-            0.5,
-            0.7,
-            0.6,
-            0.1,
-            0.6,
-            0.6,
-            0.1,
-            0.75,
-            0.3,
-            0.75,
-            0.85,
-            0.55,
-            0.75,
-            0.75,
-            0.6,
-            0.4,
-            0.85,
-            0.9,
-            0.5,
-            0.4,
-            0.2,
-            0.35,
-            0.85,
-            0.7,
-            0.4
-        ]
+    "major_vector": [
+      0.85,
+      0.6,
+      0.2,
+      0.1,
+      0.3,
+      0.5,
+      0.5,
+      0.2,
+      0.7,
+      0.35,
+      0.65,
+      0.7,
+      0.75,
+      0.65,
+      0.9,
+      0.35,
+      0.4,
+      0.15,
+      0.85,
+      0.55,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.6,
+      0.5
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK INDUSTRI",
+      "MANAJEMEN REKAYASA",
+      "SISTEM PRODUKSI",
+      "LOGISTIK"
+    ],
+    "sub_rumpun": "Teknik Industri & Sistem",
+    "riasec_profile": {
+      "R": 0.5,
+      "I": 0.6,
+      "A": 0.2,
+      "S": 0.4,
+      "E": 0.6,
+      "C": 0.7
     },
-    {
-        "keywords": [
-            "KEPERAWATAN",
-            "NERS",
-            "KESEHATAN KLINIS"
-        ],
-        "sub_rumpun": "Keperawatan",
-        "riasec_profile": {
-            "R": 0.4,
-            "I": 0.5,
-            "A": 0.1,
-            "S": 0.9,
-            "E": 0.2,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.5,
-            "creative": 0.2,
-            "practical": 0.7,
-            "social": 0.9
-        },
-        "must_have_traits": [
-            "empathy_high",
-            "stress_tolerance_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                8000000
-            ],
-            "ai_resistance_score": 0.8,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.5,
-            0.5,
-            0.35,
-            0.5,
-            0.1,
-            0.85,
-            0.7,
-            0.1,
-            0.55,
-            0.2,
-            0.6,
-            0.7,
-            0.4,
-            0.55,
-            0.55,
-            0.7,
-            0.4,
-            0.95,
-            0.75,
-            0.7,
-            0.25,
-            0.15,
-            0.2,
-            0.9,
-            0.65,
-            0.35
-        ]
+    "gaya_kerja": {
+      "analytical": 0.8,
+      "creative": 0.4,
+      "practical": 0.7,
+      "social": 0.5
     },
-    {
-        "keywords": [
-            "FARMASI",
-            "APOTEKER",
-            "KEFARMASIAN"
-        ],
-        "sub_rumpun": "Farmasi",
-        "riasec_profile": {
-            "R": 0.4,
-            "I": 0.85,
-            "A": 0.1,
-            "S": 0.4,
-            "E": 0.3,
-            "C": 0.75
-        },
-        "gaya_kerja": {
-            "analytical": 0.85,
-            "creative": 0.2,
-            "practical": 0.65,
-            "social": 0.4
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "precision_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5000000,
-                9000000
-            ],
-            "ai_resistance_score": 0.7,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.8,
-            0.5,
-            0.4,
-            0.3,
-            0.1,
-            0.4,
-            0.55,
-            0.3,
-            0.85,
-            0.2,
-            0.75,
-            0.85,
-            0.65,
-            0.85,
-            0.55,
-            0.45,
-            0.3,
-            0.6,
-            0.9,
-            0.5,
-            0.5,
-            0.2,
-            0.35,
-            0.75,
-            0.3,
-            0.45
-        ]
+    "must_have_traits": [
+      "logical_thinking_high",
+      "leadership_potential"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5500000,
+        10500000
+      ],
+      "ai_resistance_score": 0.6,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "GIZI",
-            "ILMU GIZI",
-            "NUTRISI",
-            "DIETISIEN"
-        ],
-        "sub_rumpun": "Gizi",
-        "riasec_profile": {
-            "R": 0.3,
-            "I": 0.6,
-            "A": 0.15,
-            "S": 0.7,
-            "E": 0.3,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.6,
-            "creative": 0.3,
-            "practical": 0.6,
-            "social": 0.7
-        },
-        "must_have_traits": [
-            "empathy_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                8000000
-            ],
-            "ai_resistance_score": 0.7,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.6,
-            0.55,
-            0.3,
-            0.3,
-            0.1,
-            0.7,
-            0.6,
-            0.4,
-            0.65,
-            0.3,
-            0.6,
-            0.65,
-            0.55,
-            0.6,
-            0.4,
-            0.65,
-            0.35,
-            0.75,
-            0.7,
-            0.6,
-            0.4,
-            0.2,
-            0.35,
-            0.65,
-            0.3,
-            0.4
-        ]
+    "major_vector": [
+      0.5,
+      0.6,
+      0.2,
+      0.4,
+      0.6,
+      0.7,
+      0.55,
+      0.15,
+      0.85,
+      0.4,
+      0.75,
+      0.65,
+      0.8,
+      0.55,
+      0.6,
+      0.6,
+      0.65,
+      0.3,
+      0.75,
+      0.65,
+      0.4,
+      0.35,
+      0.7,
+      0.5,
+      0.3,
+      0.6
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK KIMIA",
+      "PETROKIMIA",
+      "PROSES INDUSTRI",
+      "BIOPROSES"
+    ],
+    "sub_rumpun": "Teknik Kimia & Proses",
+    "riasec_profile": {
+      "R": 0.7,
+      "I": 0.85,
+      "A": 0.15,
+      "S": 0.1,
+      "E": 0.3,
+      "C": 0.5
     },
-    {
-        "keywords": [
-            "KESEHATAN MASYARAKAT",
-            "KESMAS",
-            "EPIDEMIOLOGI",
-            "KEBIJAKAN KESEHATAN"
-        ],
-        "sub_rumpun": "Kesehatan Masyarakat",
-        "riasec_profile": {
-            "R": 0.2,
-            "I": 0.7,
-            "A": 0.2,
-            "S": 0.7,
-            "E": 0.5,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.75,
-            "creative": 0.3,
-            "practical": 0.5,
-            "social": 0.75
-        },
-        "must_have_traits": [
-            "research_orientation_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                8500000
-            ],
-            "ai_resistance_score": 0.65,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.7,
-            0.6,
-            0.3,
-            0.2,
-            0.1,
-            0.7,
-            0.55,
-            0.35,
-            0.75,
-            0.3,
-            0.7,
-            0.6,
-            0.6,
-            0.7,
-            0.35,
-            0.7,
-            0.55,
-            0.75,
-            0.6,
-            0.6,
-            0.65,
-            0.2,
-            0.5,
-            0.7,
-            0.25,
-            0.5
-        ]
+    "gaya_kerja": {
+      "analytical": 0.85,
+      "creative": 0.35,
+      "practical": 0.75,
+      "social": 0.2
     },
-    {
-        "keywords": [
-            "MATEMATIKA",
-            "STATISTIKA",
-            "AKTUARIA"
-        ],
-        "sub_rumpun": "Matematika & Statistika",
-        "riasec_profile": {
-            "R": 0.3,
-            "I": 0.95,
-            "A": 0.2,
-            "S": 0.15,
-            "E": 0.2,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.95,
-            "creative": 0.4,
-            "practical": 0.4,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "abstract_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5500000,
-                10000000
-            ],
-            "ai_resistance_score": 0.6,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.95,
-            0.4,
-            0.5,
-            0.1,
-            0.1,
-            0.2,
-            0.6,
-            0.1,
-            0.95,
-            0.4,
-            0.9,
-            0.75,
-            0.95,
-            0.85,
-            0.4,
-            0.35,
-            0.25,
-            0.15,
-            0.85,
-            0.5,
-            0.75,
-            0.25,
-            0.35,
-            0.5,
-            0.15,
-            0.6
-        ]
+    "must_have_traits": [
+      "logical_thinking_high",
+      "scientific_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        6000000,
+        11000000
+      ],
+      "ai_resistance_score": 0.7,
+      "demand_trend": "stable"
     },
-    {
-        "keywords": [
-            "FISIKA",
-            "FISIKA TERAPAN",
-            "GEOFISIKA",
-            "ASTRONOMI"
-        ],
-        "sub_rumpun": "Fisika",
-        "riasec_profile": {
-            "R": 0.4,
-            "I": 0.95,
-            "A": 0.2,
-            "S": 0.1,
-            "E": 0.2,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.9,
-            "creative": 0.45,
-            "practical": 0.45,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "scientific_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5000000,
-                9500000
-            ],
-            "ai_resistance_score": 0.65,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.9,
-            0.4,
-            0.6,
-            0.2,
-            0.1,
-            0.2,
-            0.6,
-            0.3,
-            0.95,
-            0.4,
-            0.9,
-            0.7,
-            0.9,
-            0.95,
-            0.6,
-            0.3,
-            0.25,
-            0.15,
-            0.85,
-            0.5,
-            0.8,
-            0.25,
-            0.25,
-            0.5,
-            0.2,
-            0.55
-        ]
+    "major_vector": [
+      0.7,
+      0.85,
+      0.15,
+      0.1,
+      0.3,
+      0.5,
+      0.5,
+      0.35,
+      0.9,
+      0.35,
+      0.8,
+      0.75,
+      0.85,
+      0.85,
+      0.75,
+      0.35,
+      0.3,
+      0.15,
+      0.9,
+      0.5,
+      0.6,
+      0.3,
+      0.4,
+      0.6,
+      0.4,
+      0.5
+    ]
+  },
+  {
+    "keywords": [
+      "PERENCANAAN WILAYAH DAN KOTA",
+      "PWK",
+      "PLANOLOGI",
+      "TATA KOTA",
+      "URBAN PLANNING",
+      "PERENCANAAN KOTA"
+    ],
+    "sub_rumpun": "Perencanaan Wilayah dan Kota (PWK)",
+    "riasec_profile": {
+      "R": 0.45,
+      "I": 0.65,
+      "A": 0.5,
+      "S": 0.3,
+      "E": 0.4,
+      "C": 0.5
     },
-    {
-        "keywords": [
-            "KIMIA",
-            "KIMIA ANALITIK",
-            "KIMIA MURNI"
-        ],
-        "sub_rumpun": "Kimia",
-        "riasec_profile": {
-            "R": 0.45,
-            "I": 0.9,
-            "A": 0.15,
-            "S": 0.15,
-            "E": 0.2,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.85,
-            "creative": 0.35,
-            "practical": 0.55,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "precision_high",
-            "scientific_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4800000,
-                9000000
-            ],
-            "ai_resistance_score": 0.7,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.8,
-            0.4,
-            0.5,
-            0.3,
-            0.1,
-            0.2,
-            0.55,
-            0.4,
-            0.9,
-            0.35,
-            0.85,
-            0.85,
-            0.75,
-            0.9,
-            0.6,
-            0.3,
-            0.25,
-            0.2,
-            0.9,
-            0.5,
-            0.75,
-            0.2,
-            0.25,
-            0.55,
-            0.35,
-            0.5
-        ]
+    "gaya_kerja": {
+      "analytical": 0.7,
+      "creative": 0.55,
+      "practical": 0.6,
+      "social": 0.4
     },
-    {
-        "keywords": [
-            "BIOLOGI",
-            "BIOTEKNOLOGI",
-            "MIKROBIOLOGI",
-            "GENETIKA"
-        ],
-        "sub_rumpun": "Biologi",
-        "riasec_profile": {
-            "R": 0.4,
-            "I": 0.85,
-            "A": 0.15,
-            "S": 0.25,
-            "E": 0.2,
-            "C": 0.55
-        },
-        "gaya_kerja": {
-            "analytical": 0.8,
-            "creative": 0.35,
-            "practical": 0.5,
-            "social": 0.25
-        },
-        "must_have_traits": [
-            "scientific_reasoning_high",
-            "research_orientation_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                8500000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.75,
-            0.45,
-            0.45,
-            0.3,
-            0.1,
-            0.3,
-            0.55,
-            0.85,
-            0.85,
-            0.35,
-            0.8,
-            0.75,
-            0.6,
-            0.9,
-            0.5,
-            0.35,
-            0.25,
-            0.3,
-            0.85,
-            0.5,
-            0.8,
-            0.2,
-            0.25,
-            0.55,
-            0.4,
-            0.4
-        ]
+    "must_have_traits": [
+      "spatial_reasoning_high",
+      "critical_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        8500000
+      ],
+      "ai_resistance_score": 0.65,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "SAINS DATA",
-            "DATA SCIENCE",
-            "ANALITIK DATA",
-            "BIG DATA"
-        ],
-        "sub_rumpun": "Sains Data",
-        "riasec_profile": {
-            "R": 0.3,
-            "I": 0.9,
-            "A": 0.3,
-            "S": 0.2,
-            "E": 0.4,
-            "C": 0.7
-        },
-        "gaya_kerja": {
-            "analytical": 0.9,
-            "creative": 0.45,
-            "practical": 0.6,
-            "social": 0.3
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "pattern_recognition_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                7000000,
-                13000000
-            ],
-            "ai_resistance_score": 0.55,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.9,
-            0.5,
-            0.5,
-            0.1,
-            0.1,
-            0.35,
-            0.6,
-            0.1,
-            0.95,
-            0.55,
-            0.85,
-            0.7,
-            0.9,
-            0.7,
-            0.6,
-            0.5,
-            0.4,
-            0.2,
-            0.7,
-            0.65,
-            0.65,
-            0.3,
-            0.55,
-            0.5,
-            0.15,
-            0.9
-        ]
+    "major_vector": [
+      0.45,
+      0.65,
+      0.5,
+      0.3,
+      0.4,
+      0.5,
+      0.55,
+      0.35,
+      0.75,
+      0.55,
+      0.7,
+      0.55,
+      0.55,
+      0.5,
+      0.4,
+      0.55,
+      0.45,
+      0.35,
+      0.6,
+      0.55,
+      0.55,
+      0.65,
+      0.4,
+      0.5,
+      0.2,
+      0.55
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK LINGKUNGAN",
+      "SANITASI",
+      "TEKNOLOGI LINGKUNGAN",
+      "PENGELOLAAN LIMBAH",
+      "REKAYASA LINGKUNGAN"
+    ],
+    "sub_rumpun": "Teknik Lingkungan",
+    "riasec_profile": {
+      "R": 0.55,
+      "I": 0.75,
+      "A": 0.15,
+      "S": 0.35,
+      "E": 0.3,
+      "C": 0.5
     },
-    {
-        "keywords": [
-            "MANAJEMEN",
-            "MANAJEMEN BISNIS",
-            "MANAJEMEN SDM",
-            "MANAJEMEN PEMASARAN"
-        ],
-        "sub_rumpun": "Manajemen",
-        "riasec_profile": {
-            "R": 0.2,
-            "I": 0.5,
-            "A": 0.3,
-            "S": 0.6,
-            "E": 0.8,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.6,
-            "creative": 0.5,
-            "practical": 0.6,
-            "social": 0.7
-        },
-        "must_have_traits": [
-            "leadership_potential",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                9000000
-            ],
-            "ai_resistance_score": 0.5,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.55,
-            0.6,
-            0.35,
-            0.2,
-            0.15,
-            0.75,
-            0.6,
-            0.1,
-            0.6,
-            0.55,
-            0.65,
-            0.5,
-            0.55,
-            0.3,
-            0.35,
-            0.75,
-            0.8,
-            0.4,
-            0.5,
-            0.7,
-            0.35,
-            0.3,
-            0.85,
-            0.5,
-            0.2,
-            0.55
-        ]
+    "gaya_kerja": {
+      "analytical": 0.75,
+      "creative": 0.3,
+      "practical": 0.7,
+      "social": 0.35
     },
-    {
-        "keywords": [
-            "AKUNTANSI",
-            "AUDIT",
-            "PERPAJAKAN",
-            "KEUANGAN"
-        ],
-        "sub_rumpun": "Akuntansi",
-        "riasec_profile": {
-            "R": 0.2,
-            "I": 0.6,
-            "A": 0.15,
-            "S": 0.3,
-            "E": 0.5,
-            "C": 0.85
-        },
-        "gaya_kerja": {
-            "analytical": 0.8,
-            "creative": 0.2,
-            "practical": 0.7,
-            "social": 0.35
-        },
-        "must_have_traits": [
-            "detail_oriented_high",
-            "logical_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                8500000
-            ],
-            "ai_resistance_score": 0.45,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.8,
-            0.5,
-            0.3,
-            0.15,
-            0.1,
-            0.35,
-            0.55,
-            0.1,
-            0.85,
-            0.2,
-            0.7,
-            0.9,
-            0.85,
-            0.4,
-            0.3,
-            0.4,
-            0.35,
-            0.2,
-            0.9,
-            0.4,
-            0.3,
-            0.15,
-            0.6,
-            0.7,
-            0.15,
-            0.55
-        ]
+    "must_have_traits": [
+      "scientific_reasoning_high",
+      "logical_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        8500000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "EKONOMI PEMBANGUNAN",
-            "ILMU EKONOMI",
-            "EKONOMI MAKRO"
-        ],
-        "sub_rumpun": "Ekonomi Pembangunan",
-        "riasec_profile": {
-            "R": 0.15,
-            "I": 0.75,
-            "A": 0.2,
-            "S": 0.4,
-            "E": 0.5,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.85,
-            "creative": 0.3,
-            "practical": 0.5,
-            "social": 0.4
-        },
-        "must_have_traits": [
-            "research_orientation_high",
-            "logical_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4800000,
-                9000000
-            ],
-            "ai_resistance_score": 0.55,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.85,
-            0.6,
-            0.3,
-            0.1,
-            0.1,
-            0.4,
-            0.55,
-            0.15,
-            0.9,
-            0.3,
-            0.85,
-            0.65,
-            0.85,
-            0.65,
-            0.3,
-            0.5,
-            0.45,
-            0.35,
-            0.7,
-            0.5,
-            0.65,
-            0.2,
-            0.65,
-            0.55,
-            0.15,
-            0.5
-        ]
+    "major_vector": [
+      0.55,
+      0.75,
+      0.15,
+      0.35,
+      0.3,
+      0.5,
+      0.55,
+      0.8,
+      0.8,
+      0.3,
+      0.75,
+      0.65,
+      0.65,
+      0.8,
+      0.6,
+      0.4,
+      0.35,
+      0.35,
+      0.75,
+      0.55,
+      0.6,
+      0.25,
+      0.4,
+      0.65,
+      0.4,
+      0.5
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK GEODESI",
+      "GEOMATIKA",
+      "SURVEYING",
+      "PEMETAAN",
+      "GIS",
+      "SISTEM INFORMASI GEOGRAFIS",
+      "TEKNIK GEOMATIKA"
+    ],
+    "sub_rumpun": "Teknik Geodesi & Geomatika",
+    "riasec_profile": {
+      "R": 0.6,
+      "I": 0.7,
+      "A": 0.25,
+      "S": 0.2,
+      "E": 0.3,
+      "C": 0.55
     },
-    {
-        "keywords": [
-            "BISNIS DIGITAL",
-            "KEWIRAUSAHAAN",
-            "STARTUP",
-            "E-COMMERCE"
-        ],
-        "sub_rumpun": "Bisnis Digital & Kewirausahaan",
-        "riasec_profile": {
-            "R": 0.2,
-            "I": 0.55,
-            "A": 0.5,
-            "S": 0.5,
-            "E": 0.9,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.6,
-            "creative": 0.7,
-            "practical": 0.7,
-            "social": 0.6
-        },
-        "must_have_traits": [
-            "leadership_potential",
-            "risk_tolerance_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                10000000
-            ],
-            "ai_resistance_score": 0.5,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.55,
-            0.55,
-            0.5,
-            0.2,
-            0.15,
-            0.6,
-            0.7,
-            0.1,
-            0.6,
-            0.7,
-            0.65,
-            0.35,
-            0.5,
-            0.25,
-            0.4,
-            0.7,
-            0.85,
-            0.35,
-            0.4,
-            0.8,
-            0.35,
-            0.4,
-            0.95,
-            0.45,
-            0.2,
-            0.7
-        ]
+    "gaya_kerja": {
+      "analytical": 0.75,
+      "creative": 0.3,
+      "practical": 0.75,
+      "social": 0.25
     },
-    {
-        "keywords": [
-            "PSIKOLOGI",
-            "PSIKOLOGI KLINIS",
-            "PSIKOLOGI INDUSTRI"
-        ],
-        "sub_rumpun": "Psikologi",
-        "riasec_profile": {
-            "R": 0.15,
-            "I": 0.7,
-            "A": 0.3,
-            "S": 0.85,
-            "E": 0.3,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.7,
-            "creative": 0.35,
-            "practical": 0.4,
-            "social": 0.85
-        },
-        "must_have_traits": [
-            "empathy_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4200000,
-                8000000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.6,
-            0.65,
-            0.3,
-            0.1,
-            0.1,
-            0.85,
-            0.75,
-            0.1,
-            0.75,
-            0.4,
-            0.75,
-            0.6,
-            0.4,
-            0.6,
-            0.25,
-            0.75,
-            0.45,
-            0.9,
-            0.65,
-            0.65,
-            0.55,
-            0.2,
-            0.35,
-            0.75,
-            0.2,
-            0.4
-        ]
+    "must_have_traits": [
+      "spatial_reasoning_high",
+      "technical_aptitude_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4800000,
+        9000000
+      ],
+      "ai_resistance_score": 0.65,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "HUKUM",
-            "ILMU HUKUM",
-            "HUKUM PIDANA",
-            "HUKUM BISNIS"
-        ],
-        "sub_rumpun": "Hukum",
-        "riasec_profile": {
-            "R": 0.15,
-            "I": 0.65,
-            "A": 0.2,
-            "S": 0.5,
-            "E": 0.6,
-            "C": 0.7
-        },
-        "gaya_kerja": {
-            "analytical": 0.75,
-            "creative": 0.25,
-            "practical": 0.5,
-            "social": 0.55
-        },
-        "must_have_traits": [
-            "critical_thinking_high",
-            "verbal_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4500000,
-                9000000
-            ],
-            "ai_resistance_score": 0.6,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.65,
-            0.85,
-            0.25,
-            0.1,
-            0.1,
-            0.6,
-            0.6,
-            0.1,
-            0.8,
-            0.25,
-            0.9,
-            0.75,
-            0.4,
-            0.4,
-            0.2,
-            0.75,
-            0.6,
-            0.4,
-            0.75,
-            0.5,
-            0.4,
-            0.15,
-            0.5,
-            0.85,
-            0.15,
-            0.4
-        ]
+    "major_vector": [
+      0.6,
+      0.7,
+      0.25,
+      0.2,
+      0.3,
+      0.55,
+      0.5,
+      0.35,
+      0.8,
+      0.35,
+      0.7,
+      0.75,
+      0.7,
+      0.6,
+      0.7,
+      0.4,
+      0.3,
+      0.15,
+      0.8,
+      0.5,
+      0.45,
+      0.5,
+      0.4,
+      0.5,
+      0.4,
+      0.7
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK GEOLOGI",
+      "GEOLOGI TERAPAN",
+      "PERTAMBANGAN",
+      "GEOSAINS",
+      "TEKNIK PERTAMBANGAN"
+    ],
+    "sub_rumpun": "Teknik Geologi",
+    "riasec_profile": {
+      "R": 0.65,
+      "I": 0.8,
+      "A": 0.15,
+      "S": 0.15,
+      "E": 0.3,
+      "C": 0.45
     },
-    {
-        "keywords": [
-            "ILMU KOMUNIKASI",
-            "JURNALISTIK",
-            "PUBLIC RELATIONS",
-            "PENYIARAN"
-        ],
-        "sub_rumpun": "Ilmu Komunikasi",
-        "riasec_profile": {
-            "R": 0.1,
-            "I": 0.4,
-            "A": 0.55,
-            "S": 0.7,
-            "E": 0.6,
-            "C": 0.4
-        },
-        "gaya_kerja": {
-            "analytical": 0.4,
-            "creative": 0.7,
-            "practical": 0.6,
-            "social": 0.75
-        },
-        "must_have_traits": [
-            "communication_high",
-            "creative_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4000000,
-                8000000
-            ],
-            "ai_resistance_score": 0.55,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.4,
-            0.85,
-            0.4,
-            0.15,
-            0.2,
-            0.75,
-            0.65,
-            0.1,
-            0.5,
-            0.7,
-            0.6,
-            0.35,
-            0.3,
-            0.2,
-            0.25,
-            0.9,
-            0.6,
-            0.5,
-            0.4,
-            0.75,
-            0.35,
-            0.55,
-            0.6,
-            0.4,
-            0.2,
-            0.55
-        ]
+    "gaya_kerja": {
+      "analytical": 0.75,
+      "creative": 0.3,
+      "practical": 0.75,
+      "social": 0.2
     },
-    {
-        "keywords": [
-            "PERIKLANAN",
-            "ADVERTISING",
-            "PENYIARAN",
-            "BROADCASTING",
-            "HUMAS",
-            "PUBLIC RELATIONS DIGITAL",
-            "MEDIA DIGITAL",
-            "HUBUNGAN MASYARAKAT"
-        ],
-        "sub_rumpun": "Periklanan, Penyiaran & PR Digital",
-        "riasec_profile": {
-            "R": 0.1,
-            "I": 0.35,
-            "A": 0.65,
-            "S": 0.6,
-            "E": 0.7,
-            "C": 0.35
-        },
-        "gaya_kerja": {
-            "analytical": 0.4,
-            "creative": 0.8,
-            "practical": 0.6,
-            "social": 0.7
-        },
-        "must_have_traits": [
-            "creative_thinking_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4000000,
-                8500000
-            ],
-            "ai_resistance_score": 0.5,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.4,
-            0.75,
-            0.45,
-            0.15,
-            0.3,
-            0.7,
-            0.65,
-            0.1,
-            0.5,
-            0.8,
-            0.55,
-            0.35,
-            0.25,
-            0.15,
-            0.3,
-            0.85,
-            0.6,
-            0.4,
-            0.4,
-            0.75,
-            0.3,
-            0.6,
-            0.75,
-            0.4,
-            0.2,
-            0.65
-        ]
+    "must_have_traits": [
+      "scientific_reasoning_high",
+      "spatial_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5500000,
+        10500000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "stable"
     },
-    {
-        "keywords": [
-            "HUBUNGAN INTERNASIONAL",
-            "DIPLOMASI",
-            "STUDI GLOBAL"
-        ],
-        "sub_rumpun": "Hubungan Internasional",
-        "riasec_profile": {
-            "R": 0.1,
-            "I": 0.65,
-            "A": 0.3,
-            "S": 0.6,
-            "E": 0.55,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.7,
-            "creative": 0.35,
-            "practical": 0.4,
-            "social": 0.65
-        },
-        "must_have_traits": [
-            "critical_thinking_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4200000,
-                8500000
-            ],
-            "ai_resistance_score": 0.6,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.65,
-            0.8,
-            0.3,
-            0.1,
-            0.1,
-            0.65,
-            0.6,
-            0.15,
-            0.75,
-            0.35,
-            0.8,
-            0.55,
-            0.35,
-            0.5,
-            0.2,
-            0.8,
-            0.6,
-            0.45,
-            0.55,
-            0.65,
-            0.55,
-            0.2,
-            0.5,
-            0.6,
-            0.15,
-            0.45
-        ]
+    "major_vector": [
+      0.65,
+      0.8,
+      0.15,
+      0.15,
+      0.3,
+      0.45,
+      0.55,
+      0.7,
+      0.8,
+      0.3,
+      0.75,
+      0.65,
+      0.65,
+      0.85,
+      0.65,
+      0.35,
+      0.35,
+      0.2,
+      0.75,
+      0.55,
+      0.55,
+      0.3,
+      0.4,
+      0.55,
+      0.55,
+      0.5
+    ]
+  },
+  {
+    "keywords": [
+      "TEKNIK PERKAPALAN",
+      "TEKNIK KELAUTAN",
+      "SISTEM PERKAPALAN",
+      "TEKNOLOGI KELAUTAN",
+      "REKAYASA KELAUTAN"
+    ],
+    "sub_rumpun": "Teknik Perkapalan & Kelautan",
+    "riasec_profile": {
+      "R": 0.75,
+      "I": 0.65,
+      "A": 0.15,
+      "S": 0.15,
+      "E": 0.3,
+      "C": 0.45
     },
-    {
-        "keywords": [
-            "SOSIOLOGI",
-            "ANTROPOLOGI",
-            "ILMU SOSIAL"
-        ],
-        "sub_rumpun": "Sosiologi & Antropologi",
-        "riasec_profile": {
-            "R": 0.1,
-            "I": 0.7,
-            "A": 0.35,
-            "S": 0.75,
-            "E": 0.25,
-            "C": 0.4
-        },
-        "gaya_kerja": {
-            "analytical": 0.7,
-            "creative": 0.4,
-            "practical": 0.35,
-            "social": 0.75
-        },
-        "must_have_traits": [
-            "research_orientation_high",
-            "empathy_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3800000,
-                7000000
-            ],
-            "ai_resistance_score": 0.7,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.65,
-            0.7,
-            0.3,
-            0.1,
-            0.15,
-            0.75,
-            0.65,
-            0.2,
-            0.75,
-            0.4,
-            0.75,
-            0.5,
-            0.3,
-            0.55,
-            0.2,
-            0.7,
-            0.4,
-            0.7,
-            0.5,
-            0.6,
-            0.7,
-            0.25,
-            0.25,
-            0.6,
-            0.2,
-            0.35
-        ]
+    "gaya_kerja": {
+      "analytical": 0.65,
+      "creative": 0.3,
+      "practical": 0.85,
+      "social": 0.2
     },
-    {
-        "keywords": [
-            "SASTRA INGGRIS",
-            "SASTRA JEPANG",
-            "SASTRA ARAB",
-            "SASTRA INDONESIA",
-            "SASTRA MANDARIN",
-            "LINGUISTIK",
-            "BAHASA DAN SASTRA",
-            "SASTRA KOREA"
-        ],
-        "sub_rumpun": "Sastra & Linguistik",
-        "riasec_profile": {
-            "R": 0.1,
-            "I": 0.5,
-            "A": 0.6,
-            "S": 0.6,
-            "E": 0.25,
-            "C": 0.4
-        },
-        "gaya_kerja": {
-            "analytical": 0.5,
-            "creative": 0.55,
-            "practical": 0.4,
-            "social": 0.6
-        },
-        "must_have_traits": [
-            "verbal_reasoning_high",
-            "creative_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3500000,
-                7000000
-            ],
-            "ai_resistance_score": 0.65,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.45,
-            0.9,
-            0.35,
-            0.1,
-            0.25,
-            0.6,
-            0.65,
-            0.1,
-            0.55,
-            0.6,
-            0.6,
-            0.4,
-            0.2,
-            0.2,
-            0.15,
-            0.75,
-            0.35,
-            0.5,
-            0.5,
-            0.55,
-            0.5,
-            0.4,
-            0.3,
-            0.5,
-            0.15,
-            0.4
-        ]
+    "must_have_traits": [
+      "technical_aptitude_high",
+      "spatial_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5000000,
+        9500000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "stable"
     },
-    {
-        "keywords": [
-            "DKV",
-            "DESAIN KOMUNIKASI VISUAL",
-            "DESAIN GRAFIS",
-            "ILUSTRASI"
-        ],
-        "sub_rumpun": "Desain Komunikasi Visual",
-        "riasec_profile": {
-            "R": 0.3,
-            "I": 0.35,
-            "A": 0.9,
-            "S": 0.3,
-            "E": 0.4,
-            "C": 0.3
-        },
-        "gaya_kerja": {
-            "analytical": 0.3,
-            "creative": 0.9,
-            "practical": 0.6,
-            "social": 0.35
-        },
-        "must_have_traits": [
-            "creative_thinking_high",
-            "visual_spatial_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4000000,
-                8000000
-            ],
-            "ai_resistance_score": 0.4,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.3,
-            0.4,
-            0.9,
-            0.2,
-            0.3,
-            0.4,
-            0.6,
-            0.1,
-            0.4,
-            0.95,
-            0.5,
-            0.5,
-            0.2,
-            0.15,
-            0.4,
-            0.5,
-            0.35,
-            0.25,
-            0.6,
-            0.6,
-            0.25,
-            0.95,
-            0.5,
-            0.3,
-            0.25,
-            0.65
-        ]
+    "major_vector": [
+      0.75,
+      0.65,
+      0.15,
+      0.15,
+      0.3,
+      0.45,
+      0.5,
+      0.55,
+      0.75,
+      0.3,
+      0.65,
+      0.65,
+      0.7,
+      0.65,
+      0.85,
+      0.35,
+      0.35,
+      0.2,
+      0.8,
+      0.5,
+      0.4,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.45
+    ]
+  },
+  {
+    "keywords": [
+      "KEDOKTERAN",
+      "DOKTER UMUM",
+      "BEDAH",
+      "KLINIS"
+    ],
+    "sub_rumpun": "Kedokteran Umum & Bedah",
+    "riasec_profile": {
+      "R": 0.4,
+      "I": 0.9,
+      "A": 0.1,
+      "S": 0.7,
+      "E": 0.4,
+      "C": 0.6
     },
-    {
-        "keywords": [
-            "ARSITEKTUR",
-            "PERANCANGAN KOTA",
-            "URBAN DESIGN"
-        ],
-        "sub_rumpun": "Arsitektur",
-        "riasec_profile": {
-            "R": 0.5,
-            "I": 0.6,
-            "A": 0.8,
-            "S": 0.2,
-            "E": 0.35,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.65,
-            "creative": 0.8,
-            "practical": 0.75,
-            "social": 0.3
-        },
-        "must_have_traits": [
-            "visual_spatial_high",
-            "creative_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                5000000,
-                9500000
-            ],
-            "ai_resistance_score": 0.55,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.65,
-            0.4,
-            0.9,
-            0.35,
-            0.15,
-            0.35,
-            0.6,
-            0.25,
-            0.7,
-            0.85,
-            0.6,
-            0.6,
-            0.6,
-            0.5,
-            0.6,
-            0.5,
-            0.4,
-            0.2,
-            0.7,
-            0.55,
-            0.4,
-            0.9,
-            0.45,
-            0.4,
-            0.4,
-            0.6
-        ]
+    "gaya_kerja": {
+      "analytical": 0.85,
+      "creative": 0.2,
+      "practical": 0.7,
+      "social": 0.7
     },
-    {
-        "keywords": [
-            "FILM",
-            "TELEVISI",
-            "SINEMATOGRAFI",
-            "PRODUKSI MEDIA"
-        ],
-        "sub_rumpun": "Film & Televisi",
-        "riasec_profile": {
-            "R": 0.2,
-            "I": 0.3,
-            "A": 0.9,
-            "S": 0.35,
-            "E": 0.5,
-            "C": 0.3
-        },
-        "gaya_kerja": {
-            "analytical": 0.3,
-            "creative": 0.9,
-            "practical": 0.6,
-            "social": 0.5
-        },
-        "must_have_traits": [
-            "creative_thinking_high",
-            "storytelling_ability"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3800000,
-                8000000
-            ],
-            "ai_resistance_score": 0.45,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.25,
-            0.6,
-            0.65,
-            0.3,
-            0.5,
-            0.55,
-            0.65,
-            0.1,
-            0.35,
-            0.95,
-            0.5,
-            0.4,
-            0.15,
-            0.15,
-            0.35,
-            0.65,
-            0.45,
-            0.3,
-            0.5,
-            0.65,
-            0.3,
-            0.8,
-            0.5,
-            0.3,
-            0.35,
-            0.55
-        ]
+    "must_have_traits": [
+      "high_stress_tolerance",
+      "empathy_high",
+      "logical_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        8000000,
+        15000000
+      ],
+      "ai_resistance_score": 0.85,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "SENI RUPA",
-            "SENI LUKIS",
-            "SENI PATUNG",
-            "SENI MURNI"
-        ],
-        "sub_rumpun": "Seni Rupa Murni",
-        "riasec_profile": {
-            "R": 0.35,
-            "I": 0.2,
-            "A": 0.95,
-            "S": 0.2,
-            "E": 0.2,
-            "C": 0.2
-        },
-        "gaya_kerja": {
-            "analytical": 0.2,
-            "creative": 0.95,
-            "practical": 0.55,
-            "social": 0.2
-        },
-        "must_have_traits": [
-            "creative_thinking_high",
-            "aesthetic_sensitivity_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3000000,
-                6500000
-            ],
-            "ai_resistance_score": 0.5,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.2,
-            0.3,
-            0.85,
-            0.4,
-            0.4,
-            0.2,
-            0.75,
-            0.15,
-            0.25,
-            0.98,
-            0.4,
-            0.4,
-            0.1,
-            0.1,
-            0.45,
-            0.3,
-            0.2,
-            0.15,
-            0.65,
-            0.5,
-            0.2,
-            0.95,
-            0.35,
-            0.2,
-            0.4,
-            0.35
-        ]
+    "major_vector": [
+      0.4,
+      0.9,
+      0.1,
+      0.7,
+      0.4,
+      0.6,
+      0.8,
+      0.75,
+      0.95,
+      0.98,
+      0.85,
+      0.85,
+      0.2,
+      0.7,
+      0.9,
+      0.3,
+      0.4,
+      0.9,
+      0.5,
+      0.8,
+      0.95,
+      0.4,
+      0.8,
+      0.9,
+      0.3,
+      0.5
+    ]
+  },
+  {
+    "keywords": [
+      "KEDOKTERAN GIGI",
+      "DENTAL",
+      "ORTODONTI"
+    ],
+    "sub_rumpun": "Kedokteran Gigi",
+    "riasec_profile": {
+      "R": 0.5,
+      "I": 0.75,
+      "A": 0.2,
+      "S": 0.6,
+      "E": 0.3,
+      "C": 0.6
     },
-    {
-        "keywords": [
-            "DESAIN INTERIOR",
-            "PERANCANGAN RUANG",
-            "INTERIOR ARCHITECTURE"
-        ],
-        "sub_rumpun": "Desain Interior",
-        "riasec_profile": {
-            "R": 0.4,
-            "I": 0.35,
-            "A": 0.85,
-            "S": 0.2,
-            "E": 0.3,
-            "C": 0.4
-        },
-        "gaya_kerja": {
-            "analytical": 0.4,
-            "creative": 0.85,
-            "practical": 0.7,
-            "social": 0.3
-        },
-        "must_have_traits": [
-            "visual_spatial_high",
-            "creative_thinking_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3800000,
-                7500000
-            ],
-            "ai_resistance_score": 0.45,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.4,
-            0.35,
-            0.9,
-            0.3,
-            0.2,
-            0.35,
-            0.55,
-            0.1,
-            0.45,
-            0.9,
-            0.5,
-            0.55,
-            0.35,
-            0.2,
-            0.55,
-            0.5,
-            0.35,
-            0.25,
-            0.7,
-            0.55,
-            0.3,
-            0.9,
-            0.45,
-            0.3,
-            0.35,
-            0.55
-        ]
+    "gaya_kerja": {
+      "analytical": 0.75,
+      "creative": 0.3,
+      "practical": 0.8,
+      "social": 0.6
     },
-    {
-        "keywords": [
-            "PGSD",
-            "PENDIDIKAN GURU SEKOLAH DASAR",
-            "GURU SD"
-        ],
-        "sub_rumpun": "PGSD",
-        "riasec_profile": {
-            "R": 0.2,
-            "I": 0.4,
-            "A": 0.4,
-            "S": 0.9,
-            "E": 0.3,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.4,
-            "creative": 0.5,
-            "practical": 0.6,
-            "social": 0.9
-        },
-        "must_have_traits": [
-            "patience_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3500000,
-                6500000
-            ],
-            "ai_resistance_score": 0.85,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.4,
-            0.7,
-            0.4,
-            0.3,
-            0.4,
-            0.9,
-            0.7,
-            0.2,
-            0.4,
-            0.55,
-            0.4,
-            0.4,
-            0.35,
-            0.2,
-            0.25,
-            0.85,
-            0.55,
-            0.9,
-            0.5,
-            0.75,
-            0.25,
-            0.35,
-            0.3,
-            0.8,
-            0.4,
-            0.4
-        ]
+    "must_have_traits": [
+      "fine_motor_skill_high",
+      "empathy_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        7500000,
+        14000000
+      ],
+      "ai_resistance_score": 0.85,
+      "demand_trend": "stable"
     },
-    {
-        "keywords": [
-            "PENDIDIKAN BAHASA",
-            "PENDIDIKAN BAHASA INGGRIS",
-            "PENDIDIKAN BAHASA INDONESIA"
-        ],
-        "sub_rumpun": "Pendidikan Bahasa",
-        "riasec_profile": {
-            "R": 0.15,
-            "I": 0.45,
-            "A": 0.5,
-            "S": 0.8,
-            "E": 0.3,
-            "C": 0.4
-        },
-        "gaya_kerja": {
-            "analytical": 0.5,
-            "creative": 0.5,
-            "practical": 0.5,
-            "social": 0.8
-        },
-        "must_have_traits": [
-            "verbal_reasoning_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3500000,
-                6500000
-            ],
-            "ai_resistance_score": 0.7,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.4,
-            0.85,
-            0.35,
-            0.15,
-            0.2,
-            0.8,
-            0.6,
-            0.1,
-            0.5,
-            0.55,
-            0.55,
-            0.4,
-            0.25,
-            0.2,
-            0.2,
-            0.9,
-            0.45,
-            0.75,
-            0.45,
-            0.65,
-            0.35,
-            0.35,
-            0.3,
-            0.65,
-            0.2,
-            0.4
-        ]
+    "major_vector": [
+      0.5,
+      0.75,
+      0.2,
+      0.6,
+      0.3,
+      0.6,
+      0.75,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.85,
+      0.2,
+      0.6,
+      0.85,
+      0.4,
+      0.3,
+      0.9,
+      0.6,
+      0.8,
+      0.9,
+      0.4,
+      0.75,
+      0.8,
+      0.4,
+      0.6
+    ]
+  },
+  {
+    "keywords": [
+      "KEPERAWATAN",
+      "NERS",
+      "KESEHATAN KLINIS"
+    ],
+    "sub_rumpun": "Keperawatan",
+    "riasec_profile": {
+      "R": 0.4,
+      "I": 0.5,
+      "A": 0.1,
+      "S": 0.9,
+      "E": 0.2,
+      "C": 0.6
     },
-    {
-        "keywords": [
-            "PENDIDIKAN MATEMATIKA",
-            "PENDIDIKAN FISIKA",
-            "PENDIDIKAN IPA"
-        ],
-        "sub_rumpun": "Pendidikan MIPA",
-        "riasec_profile": {
-            "R": 0.25,
-            "I": 0.65,
-            "A": 0.25,
-            "S": 0.75,
-            "E": 0.25,
-            "C": 0.5
-        },
-        "gaya_kerja": {
-            "analytical": 0.7,
-            "creative": 0.35,
-            "practical": 0.5,
-            "social": 0.75
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3500000,
-                6800000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.75,
-            0.6,
-            0.35,
-            0.15,
-            0.1,
-            0.75,
-            0.6,
-            0.15,
-            0.75,
-            0.35,
-            0.7,
-            0.55,
-            0.7,
-            0.6,
-            0.3,
-            0.8,
-            0.45,
-            0.7,
-            0.55,
-            0.6,
-            0.4,
-            0.25,
-            0.3,
-            0.7,
-            0.2,
-            0.45
-        ]
+    "gaya_kerja": {
+      "analytical": 0.5,
+      "creative": 0.2,
+      "practical": 0.7,
+      "social": 0.9
     },
-    {
-        "keywords": [
-            "ILMU KEOLAHRAGAAN",
-            "PENDIDIKAN JASMANI",
-            "PJOK",
-            "KESEHATAN OLAHRAGA",
-            "PELATIH OLAHRAGA",
-            "PENDIDIKAN JASMANI KESEHATAN DAN REKREASI"
-        ],
-        "sub_rumpun": "Ilmu Keolahragaan & PJOK",
-        "riasec_profile": {
-            "R": 0.6,
-            "I": 0.35,
-            "A": 0.2,
-            "S": 0.75,
-            "E": 0.3,
-            "C": 0.35
-        },
-        "gaya_kerja": {
-            "analytical": 0.35,
-            "creative": 0.3,
-            "practical": 0.8,
-            "social": 0.75
-        },
-        "must_have_traits": [
-            "physical_stamina_high",
-            "communication_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3500000,
-                6800000
-            ],
-            "ai_resistance_score": 0.85,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.35,
-            0.5,
-            0.35,
-            0.9,
-            0.2,
-            0.7,
-            0.6,
-            0.15,
-            0.4,
-            0.35,
-            0.45,
-            0.35,
-            0.2,
-            0.4,
-            0.5,
-            0.65,
-            0.5,
-            0.65,
-            0.5,
-            0.7,
-            0.3,
-            0.2,
-            0.4,
-            0.6,
-            0.9,
-            0.3
-        ]
+    "must_have_traits": [
+      "empathy_high",
+      "stress_tolerance_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        8000000
+      ],
+      "ai_resistance_score": 0.8,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "AGROTEKNOLOGI",
-            "PERTANIAN",
-            "AGRIBISNIS",
-            "AGRONOMI"
-        ],
-        "sub_rumpun": "Agroteknologi & Pertanian",
-        "riasec_profile": {
-            "R": 0.55,
-            "I": 0.65,
-            "A": 0.15,
-            "S": 0.3,
-            "E": 0.4,
-            "C": 0.45
-        },
-        "gaya_kerja": {
-            "analytical": 0.65,
-            "creative": 0.3,
-            "practical": 0.75,
-            "social": 0.35
-        },
-        "must_have_traits": [
-            "scientific_reasoning_high",
-            "practical_skills_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3800000,
-                7500000
-            ],
-            "ai_resistance_score": 0.75,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.65,
-            0.4,
-            0.4,
-            0.55,
-            0.1,
-            0.35,
-            0.55,
-            0.9,
-            0.7,
-            0.35,
-            0.65,
-            0.6,
-            0.5,
-            0.75,
-            0.55,
-            0.4,
-            0.4,
-            0.35,
-            0.65,
-            0.55,
-            0.55,
-            0.2,
-            0.5,
-            0.55,
-            0.6,
-            0.4
-        ]
+    "major_vector": [
+      0.4,
+      0.5,
+      0.1,
+      0.9,
+      0.2,
+      0.6,
+      0.6,
+      0.55,
+      0.75,
+      0.9,
+      0.8,
+      0.75,
+      0.3,
+      0.8,
+      0.6,
+      0.2,
+      0.3,
+      0.8,
+      0.4,
+      0.85,
+      0.95,
+      0.3,
+      0.5,
+      0.9,
+      0.2,
+      0.4
+    ]
+  },
+  {
+    "keywords": [
+      "FARMASI",
+      "APOTEKER",
+      "KEFARMASIAN"
+    ],
+    "sub_rumpun": "Farmasi",
+    "riasec_profile": {
+      "R": 0.4,
+      "I": 0.85,
+      "A": 0.1,
+      "S": 0.4,
+      "E": 0.3,
+      "C": 0.75
     },
-    {
-        "keywords": [
-            "KEHUTANAN",
-            "KONSERVASI HUTAN",
-            "MANAJEMEN LINGKUNGAN"
-        ],
-        "sub_rumpun": "Kehutanan",
-        "riasec_profile": {
-            "R": 0.55,
-            "I": 0.6,
-            "A": 0.15,
-            "S": 0.3,
-            "E": 0.3,
-            "C": 0.4
-        },
-        "gaya_kerja": {
-            "analytical": 0.6,
-            "creative": 0.25,
-            "practical": 0.8,
-            "social": 0.3
-        },
-        "must_have_traits": [
-            "scientific_reasoning_high",
-            "physical_stamina_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3800000,
-                7500000
-            ],
-            "ai_resistance_score": 0.8,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.6,
-            0.4,
-            0.4,
-            0.6,
-            0.1,
-            0.35,
-            0.55,
-            0.9,
-            0.6,
-            0.3,
-            0.6,
-            0.5,
-            0.4,
-            0.7,
-            0.55,
-            0.4,
-            0.4,
-            0.35,
-            0.6,
-            0.6,
-            0.55,
-            0.2,
-            0.35,
-            0.6,
-            0.7,
-            0.35
-        ]
+    "gaya_kerja": {
+      "analytical": 0.85,
+      "creative": 0.2,
+      "practical": 0.65,
+      "social": 0.4
     },
-    {
-        "keywords": [
-            "PETERNAKAN",
-            "ILMU TERNAK",
-            "PRODUKSI TERNAK"
-        ],
-        "sub_rumpun": "Peternakan",
-        "riasec_profile": {
-            "R": 0.6,
-            "I": 0.55,
-            "A": 0.1,
-            "S": 0.3,
-            "E": 0.35,
-            "C": 0.45
-        },
-        "gaya_kerja": {
-            "analytical": 0.55,
-            "creative": 0.2,
-            "practical": 0.85,
-            "social": 0.3
-        },
-        "must_have_traits": [
-            "practical_skills_high",
-            "scientific_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3800000,
-                7200000
-            ],
-            "ai_resistance_score": 0.8,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.55,
-            0.35,
-            0.35,
-            0.6,
-            0.1,
-            0.35,
-            0.5,
-            0.85,
-            0.55,
-            0.25,
-            0.55,
-            0.55,
-            0.4,
-            0.65,
-            0.6,
-            0.4,
-            0.4,
-            0.4,
-            0.6,
-            0.55,
-            0.45,
-            0.15,
-            0.45,
-            0.6,
-            0.7,
-            0.3
-        ]
+    "must_have_traits": [
+      "logical_thinking_high",
+      "precision_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5000000,
+        9000000
+      ],
+      "ai_resistance_score": 0.7,
+      "demand_trend": "stable"
     },
-    {
-        "keywords": [
-            "PARIWISATA",
-            "PERHOTELAN",
-            "HOSPITALITY",
-            "MANAJEMEN PERHOTELAN",
-            "DESTINASI WISATA",
-            "TATA BOGA",
-            "TATA HIDANG",
-            "MANAJEMEN DESTINASI PARIWISATA"
-        ],
-        "sub_rumpun": "Pariwisata & Perhotelan",
-        "riasec_profile": {
-            "R": 0.3,
-            "I": 0.3,
-            "A": 0.4,
-            "S": 0.8,
-            "E": 0.6,
-            "C": 0.4
-        },
-        "gaya_kerja": {
-            "analytical": 0.3,
-            "creative": 0.45,
-            "practical": 0.65,
-            "social": 0.85
-        },
-        "must_have_traits": [
-            "communication_high",
-            "service_orientation_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3500000,
-                7000000
-            ],
-            "ai_resistance_score": 0.6,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.3,
-            0.6,
-            0.35,
-            0.4,
-            0.25,
-            0.85,
-            0.6,
-            0.15,
-            0.35,
-            0.5,
-            0.4,
-            0.4,
-            0.3,
-            0.15,
-            0.4,
-            0.85,
-            0.55,
-            0.7,
-            0.5,
-            0.8,
-            0.2,
-            0.4,
-            0.7,
-            0.5,
-            0.4,
-            0.45
-        ]
+    "major_vector": [
+      0.4,
+      0.85,
+      0.1,
+      0.4,
+      0.3,
+      0.75,
+      0.8,
+      0.65,
+      0.95,
+      0.9,
+      0.75,
+      0.85,
+      0.1,
+      0.5,
+      0.9,
+      0.2,
+      0.3,
+      0.95,
+      0.5,
+      0.85,
+      0.6,
+      0.5,
+      0.6,
+      0.7,
+      0.7,
+      0.6
+    ]
+  },
+  {
+    "keywords": [
+      "GIZI",
+      "ILMU GIZI",
+      "NUTRISI",
+      "DIETISIEN"
+    ],
+    "sub_rumpun": "Gizi",
+    "riasec_profile": {
+      "R": 0.3,
+      "I": 0.6,
+      "A": 0.15,
+      "S": 0.7,
+      "E": 0.3,
+      "C": 0.6
     },
-    {
-        "keywords": [
-            "LOGISTIK",
-            "MANAJEMEN LOGISTIK",
-            "RANTAI PASOK",
-            "SUPPLY CHAIN MANAGEMENT",
-            "MANAJEMEN TRANSPORTASI",
-            "KEPELABUHANAN",
-            "MANAJEMEN PELABUHAN",
-            "D4 LOGISTIK"
-        ],
-        "sub_rumpun": "Manajemen Logistik, Transportasi & Kepelabuhanan",
-        "riasec_profile": {
-            "R": 0.4,
-            "I": 0.5,
-            "A": 0.15,
-            "S": 0.4,
-            "E": 0.7,
-            "C": 0.7
-        },
-        "gaya_kerja": {
-            "analytical": 0.65,
-            "creative": 0.25,
-            "practical": 0.75,
-            "social": 0.5
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "organizational_skill_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4200000,
-                8500000
-            ],
-            "ai_resistance_score": 0.55,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.65,
-            0.45,
-            0.4,
-            0.4,
-            0.1,
-            0.45,
-            0.55,
-            0.1,
-            0.7,
-            0.25,
-            0.6,
-            0.7,
-            0.65,
-            0.3,
-            0.5,
-            0.55,
-            0.55,
-            0.25,
-            0.75,
-            0.65,
-            0.3,
-            0.25,
-            0.75,
-            0.45,
-            0.35,
-            0.55
-        ]
+    "gaya_kerja": {
+      "analytical": 0.6,
+      "creative": 0.3,
+      "practical": 0.6,
+      "social": 0.7
     },
-    {
-        "keywords": [
-            "ILMU PERPUSTAKAAN",
-            "KEARSIPAN",
-            "SAINS INFORMASI",
-            "MANAJEMEN INFORMASI",
-            "DOKUMENTASI",
-            "D3 KEARSIPAN"
-        ],
-        "sub_rumpun": "Ilmu Perpustakaan & Kearsipan",
-        "riasec_profile": {
-            "R": 0.15,
-            "I": 0.5,
-            "A": 0.25,
-            "S": 0.6,
-            "E": 0.25,
-            "C": 0.8
-        },
-        "gaya_kerja": {
-            "analytical": 0.6,
-            "creative": 0.25,
-            "practical": 0.55,
-            "social": 0.55
-        },
-        "must_have_traits": [
-            "detail_oriented_high",
-            "organizational_skill_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3200000,
-                6000000
-            ],
-            "ai_resistance_score": 0.55,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.55,
-            0.6,
-            0.3,
-            0.1,
-            0.1,
-            0.55,
-            0.5,
-            0.1,
-            0.6,
-            0.2,
-            0.55,
-            0.85,
-            0.4,
-            0.25,
-            0.3,
-            0.55,
-            0.3,
-            0.4,
-            0.85,
-            0.45,
-            0.4,
-            0.2,
-            0.3,
-            0.55,
-            0.2,
-            0.6
-        ]
+    "must_have_traits": [
+      "empathy_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        8000000
+      ],
+      "ai_resistance_score": 0.7,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "HUKUM ISLAM",
-            "SYARIAH",
-            "HUKUM KELUARGA ISLAM",
-            "PTKIN"
-        ],
-        "sub_rumpun": "Hukum Islam / Syariah",
-        "riasec_profile": {
-            "R": 0.1,
-            "I": 0.55,
-            "A": 0.15,
-            "S": 0.6,
-            "E": 0.4,
-            "C": 0.6
-        },
-        "gaya_kerja": {
-            "analytical": 0.6,
-            "creative": 0.2,
-            "practical": 0.5,
-            "social": 0.55
-        },
-        "must_have_traits": [
-            "critical_thinking_high",
-            "ethical_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3500000,
-                7000000
-            ],
-            "ai_resistance_score": 0.7,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.6,
-            0.8,
-            0.2,
-            0.1,
-            0.1,
-            0.6,
-            0.65,
-            0.1,
-            0.7,
-            0.25,
-            0.8,
-            0.65,
-            0.35,
-            0.35,
-            0.2,
-            0.7,
-            0.5,
-            0.5,
-            0.75,
-            0.5,
-            0.4,
-            0.15,
-            0.4,
-            0.9,
-            0.15,
-            0.35
-        ]
+    "major_vector": [
+      0.3,
+      0.6,
+      0.15,
+      0.7,
+      0.3,
+      0.6,
+      0.65,
+      0.5,
+      0.85,
+      0.92,
+      0.8,
+      0.75,
+      0.2,
+      0.7,
+      0.7,
+      0.3,
+      0.3,
+      0.8,
+      0.5,
+      0.8,
+      0.9,
+      0.4,
+      0.5,
+      0.8,
+      0.4,
+      0.5
+    ]
+  },
+  {
+    "keywords": [
+      "KESEHATAN MASYARAKAT",
+      "KESMAS",
+      "EPIDEMIOLOGI",
+      "KEBIJAKAN KESEHATAN"
+    ],
+    "sub_rumpun": "Kesehatan Masyarakat",
+    "riasec_profile": {
+      "R": 0.2,
+      "I": 0.7,
+      "A": 0.2,
+      "S": 0.7,
+      "E": 0.5,
+      "C": 0.6
     },
-    {
-        "keywords": [
-            "EKONOMI SYARIAH",
-            "PERBANKAN SYARIAH",
-            "AKUNTANSI SYARIAH",
-            "KEUANGAN ISLAM",
-            "MUAMALAH",
-            "MANAJEMEN BISNIS SYARIAH"
-        ],
-        "sub_rumpun": "Ekonomi Syariah & Perbankan Syariah",
-        "riasec_profile": {
-            "R": 0.15,
-            "I": 0.6,
-            "A": 0.15,
-            "S": 0.4,
-            "E": 0.55,
-            "C": 0.75
-        },
-        "gaya_kerja": {
-            "analytical": 0.75,
-            "creative": 0.2,
-            "practical": 0.6,
-            "social": 0.4
-        },
-        "must_have_traits": [
-            "logical_thinking_high",
-            "ethical_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                4000000,
-                8000000
-            ],
-            "ai_resistance_score": 0.55,
-            "demand_trend": "growing"
-        },
-        "major_vector": [
-            0.75,
-            0.55,
-            0.3,
-            0.1,
-            0.1,
-            0.4,
-            0.6,
-            0.1,
-            0.75,
-            0.25,
-            0.7,
-            0.8,
-            0.8,
-            0.4,
-            0.3,
-            0.45,
-            0.4,
-            0.35,
-            0.85,
-            0.45,
-            0.35,
-            0.2,
-            0.65,
-            0.8,
-            0.15,
-            0.55
-        ]
+    "gaya_kerja": {
+      "analytical": 0.75,
+      "creative": 0.3,
+      "practical": 0.5,
+      "social": 0.75
     },
-    {
-        "keywords": [
-            "ILMU AL QURAN DAN TAFSIR",
-            "ILMU HADIS",
-            "AQIDAH FILSAFAT ISLAM",
-            "PEMIKIRAN ISLAM",
-            "USHULUDDIN",
-            "PERBANDINGAN AGAMA",
-            "STUDI AGAMA-AGAMA"
-        ],
-        "sub_rumpun": "Ilmu Al-Qur'an, Hadis & Pemikiran Islam",
-        "riasec_profile": {
-            "R": 0.1,
-            "I": 0.6,
-            "A": 0.25,
-            "S": 0.6,
-            "E": 0.2,
-            "C": 0.45
-        },
-        "gaya_kerja": {
-            "analytical": 0.65,
-            "creative": 0.25,
-            "practical": 0.35,
-            "social": 0.6
-        },
-        "must_have_traits": [
-            "critical_thinking_high",
-            "research_orientation_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3200000,
-                6200000
-            ],
-            "ai_resistance_score": 0.8,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.6,
-            0.85,
-            0.25,
-            0.1,
-            0.15,
-            0.6,
-            0.7,
-            0.1,
-            0.7,
-            0.3,
-            0.75,
-            0.55,
-            0.3,
-            0.3,
-            0.15,
-            0.7,
-            0.4,
-            0.6,
-            0.7,
-            0.5,
-            0.65,
-            0.2,
-            0.25,
-            0.9,
-            0.15,
-            0.3
-        ]
+    "must_have_traits": [
+      "research_orientation_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        8500000
+      ],
+      "ai_resistance_score": 0.65,
+      "demand_trend": "growing"
     },
-    {
-        "keywords": [
-            "PENDIDIKAN AGAMA ISLAM",
-            "STUDI ISLAM",
-            "USHULUDDIN",
-            "DAKWAH"
-        ],
-        "sub_rumpun": "Pendidikan Agama Islam / Studi Islam",
-        "riasec_profile": {
-            "R": 0.1,
-            "I": 0.45,
-            "A": 0.25,
-            "S": 0.85,
-            "E": 0.3,
-            "C": 0.4
-        },
-        "gaya_kerja": {
-            "analytical": 0.5,
-            "creative": 0.3,
-            "practical": 0.45,
-            "social": 0.85
-        },
-        "must_have_traits": [
-            "communication_high",
-            "ethical_reasoning_high"
-        ],
-        "prospek_karir": {
-            "gaji_awal_range": [
-                3200000,
-                6000000
-            ],
-            "ai_resistance_score": 0.85,
-            "demand_trend": "stable"
-        },
-        "major_vector": [
-            0.5,
-            0.75,
-            0.25,
-            0.15,
-            0.25,
-            0.85,
-            0.7,
-            0.1,
-            0.5,
-            0.35,
-            0.6,
-            0.4,
-            0.25,
-            0.25,
-            0.2,
-            0.85,
-            0.5,
-            0.85,
-            0.55,
-            0.6,
-            0.35,
-            0.3,
-            0.3,
-            0.9,
-            0.25,
-            0.3
-        ]
-    }
+    "major_vector": [
+      0.2,
+      0.7,
+      0.2,
+      0.7,
+      0.5,
+      0.6,
+      0.7,
+      0.55,
+      0.75,
+      0.85,
+      0.85,
+      0.8,
+      0.3,
+      0.8,
+      0.75,
+      0.4,
+      0.6,
+      0.75,
+      0.5,
+      0.75,
+      0.85,
+      0.5,
+      0.6,
+      0.85,
+      0.3,
+      0.5
+    ]
+  },
+  {
+    "keywords": [
+      "MATEMATIKA",
+      "STATISTIKA",
+      "AKTUARIA"
+    ],
+    "sub_rumpun": "Matematika & Statistika",
+    "riasec_profile": {
+      "R": 0.3,
+      "I": 0.95,
+      "A": 0.2,
+      "S": 0.15,
+      "E": 0.2,
+      "C": 0.6
+    },
+    "gaya_kerja": {
+      "analytical": 0.95,
+      "creative": 0.4,
+      "practical": 0.4,
+      "social": 0.2
+    },
+    "must_have_traits": [
+      "logical_thinking_high",
+      "abstract_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5500000,
+        10000000
+      ],
+      "ai_resistance_score": 0.6,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.3,
+      0.95,
+      0.2,
+      0.15,
+      0.2,
+      0.6,
+      0.6,
+      0.1,
+      0.95,
+      0.4,
+      0.9,
+      0.75,
+      0.95,
+      0.85,
+      0.4,
+      0.35,
+      0.25,
+      0.15,
+      0.85,
+      0.5,
+      0.75,
+      0.25,
+      0.35,
+      0.5,
+      0.15,
+      0.6
+    ]
+  },
+  {
+    "keywords": [
+      "FISIKA",
+      "FISIKA TERAPAN",
+      "GEOFISIKA",
+      "ASTRONOMI"
+    ],
+    "sub_rumpun": "Fisika",
+    "riasec_profile": {
+      "R": 0.4,
+      "I": 0.95,
+      "A": 0.2,
+      "S": 0.1,
+      "E": 0.2,
+      "C": 0.5
+    },
+    "gaya_kerja": {
+      "analytical": 0.9,
+      "creative": 0.45,
+      "practical": 0.45,
+      "social": 0.2
+    },
+    "must_have_traits": [
+      "logical_thinking_high",
+      "scientific_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5000000,
+        9500000
+      ],
+      "ai_resistance_score": 0.65,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.4,
+      0.95,
+      0.2,
+      0.1,
+      0.2,
+      0.5,
+      0.6,
+      0.3,
+      0.95,
+      0.4,
+      0.9,
+      0.7,
+      0.9,
+      0.95,
+      0.6,
+      0.3,
+      0.25,
+      0.15,
+      0.85,
+      0.5,
+      0.8,
+      0.25,
+      0.25,
+      0.5,
+      0.2,
+      0.55
+    ]
+  },
+  {
+    "keywords": [
+      "KIMIA",
+      "KIMIA ANALITIK",
+      "KIMIA MURNI"
+    ],
+    "sub_rumpun": "Kimia",
+    "riasec_profile": {
+      "R": 0.45,
+      "I": 0.9,
+      "A": 0.15,
+      "S": 0.15,
+      "E": 0.2,
+      "C": 0.6
+    },
+    "gaya_kerja": {
+      "analytical": 0.85,
+      "creative": 0.35,
+      "practical": 0.55,
+      "social": 0.2
+    },
+    "must_have_traits": [
+      "precision_high",
+      "scientific_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4800000,
+        9000000
+      ],
+      "ai_resistance_score": 0.7,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.45,
+      0.9,
+      0.15,
+      0.15,
+      0.2,
+      0.6,
+      0.55,
+      0.4,
+      0.9,
+      0.35,
+      0.85,
+      0.85,
+      0.75,
+      0.9,
+      0.6,
+      0.3,
+      0.25,
+      0.2,
+      0.9,
+      0.5,
+      0.75,
+      0.2,
+      0.25,
+      0.55,
+      0.35,
+      0.5
+    ]
+  },
+  {
+    "keywords": [
+      "BIOLOGI",
+      "BIOTEKNOLOGI",
+      "MIKROBIOLOGI",
+      "GENETIKA"
+    ],
+    "sub_rumpun": "Biologi",
+    "riasec_profile": {
+      "R": 0.4,
+      "I": 0.85,
+      "A": 0.15,
+      "S": 0.25,
+      "E": 0.2,
+      "C": 0.55
+    },
+    "gaya_kerja": {
+      "analytical": 0.8,
+      "creative": 0.35,
+      "practical": 0.5,
+      "social": 0.25
+    },
+    "must_have_traits": [
+      "scientific_reasoning_high",
+      "research_orientation_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        8500000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.4,
+      0.85,
+      0.15,
+      0.25,
+      0.2,
+      0.55,
+      0.55,
+      0.85,
+      0.85,
+      0.35,
+      0.8,
+      0.75,
+      0.6,
+      0.9,
+      0.5,
+      0.35,
+      0.25,
+      0.3,
+      0.85,
+      0.5,
+      0.8,
+      0.2,
+      0.25,
+      0.55,
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "keywords": [
+      "SAINS DATA",
+      "DATA SCIENCE",
+      "ANALITIK DATA",
+      "BIG DATA"
+    ],
+    "sub_rumpun": "Sains Data",
+    "riasec_profile": {
+      "R": 0.3,
+      "I": 0.9,
+      "A": 0.3,
+      "S": 0.2,
+      "E": 0.4,
+      "C": 0.7
+    },
+    "gaya_kerja": {
+      "analytical": 0.9,
+      "creative": 0.45,
+      "practical": 0.6,
+      "social": 0.3
+    },
+    "must_have_traits": [
+      "logical_thinking_high",
+      "pattern_recognition_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        7000000,
+        13000000
+      ],
+      "ai_resistance_score": 0.55,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.3,
+      0.9,
+      0.3,
+      0.2,
+      0.4,
+      0.7,
+      0.6,
+      0.1,
+      0.95,
+      0.55,
+      0.85,
+      0.7,
+      0.9,
+      0.7,
+      0.6,
+      0.5,
+      0.4,
+      0.2,
+      0.7,
+      0.65,
+      0.65,
+      0.3,
+      0.55,
+      0.5,
+      0.15,
+      0.9
+    ]
+  },
+  {
+    "keywords": [
+      "MANAJEMEN",
+      "MANAJEMEN BISNIS",
+      "MANAJEMEN SDM",
+      "MANAJEMEN PEMASARAN"
+    ],
+    "sub_rumpun": "Manajemen",
+    "riasec_profile": {
+      "R": 0.2,
+      "I": 0.5,
+      "A": 0.3,
+      "S": 0.6,
+      "E": 0.8,
+      "C": 0.5
+    },
+    "gaya_kerja": {
+      "analytical": 0.6,
+      "creative": 0.5,
+      "practical": 0.6,
+      "social": 0.7
+    },
+    "must_have_traits": [
+      "leadership_potential",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        9000000
+      ],
+      "ai_resistance_score": 0.5,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.2,
+      0.5,
+      0.3,
+      0.6,
+      0.8,
+      0.5,
+      0.85,
+      0.3,
+      0.3,
+      0.2,
+      0.9,
+      0.9,
+      0.2,
+      0.8,
+      0.7,
+      0.5,
+      0.9,
+      0.6,
+      0.7,
+      0.6,
+      0.4,
+      0.6,
+      0.85,
+      0.5,
+      0.9,
+      0.85
+    ]
+  },
+  {
+    "keywords": [
+      "AKUNTANSI",
+      "AUDIT",
+      "PERPAJAKAN",
+      "KEUANGAN"
+    ],
+    "sub_rumpun": "Akuntansi",
+    "riasec_profile": {
+      "R": 0.2,
+      "I": 0.6,
+      "A": 0.15,
+      "S": 0.3,
+      "E": 0.5,
+      "C": 0.85
+    },
+    "gaya_kerja": {
+      "analytical": 0.8,
+      "creative": 0.2,
+      "practical": 0.7,
+      "social": 0.35
+    },
+    "must_have_traits": [
+      "detail_oriented_high",
+      "logical_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        8500000
+      ],
+      "ai_resistance_score": 0.45,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.2,
+      0.6,
+      0.15,
+      0.3,
+      0.5,
+      0.85,
+      0.9,
+      0.25,
+      0.25,
+      0.15,
+      0.85,
+      0.9,
+      0.1,
+      0.5,
+      0.85,
+      0.2,
+      0.4,
+      0.95,
+      0.6,
+      0.9,
+      0.3,
+      0.4,
+      0.7,
+      0.4,
+      0.85,
+      0.7
+    ]
+  },
+  {
+    "keywords": [
+      "EKONOMI PEMBANGUNAN",
+      "ILMU EKONOMI",
+      "EKONOMI MAKRO"
+    ],
+    "sub_rumpun": "Ekonomi Pembangunan",
+    "riasec_profile": {
+      "R": 0.15,
+      "I": 0.75,
+      "A": 0.2,
+      "S": 0.4,
+      "E": 0.5,
+      "C": 0.6
+    },
+    "gaya_kerja": {
+      "analytical": 0.85,
+      "creative": 0.3,
+      "practical": 0.5,
+      "social": 0.4
+    },
+    "must_have_traits": [
+      "research_orientation_high",
+      "logical_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4800000,
+        9000000
+      ],
+      "ai_resistance_score": 0.55,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.15,
+      0.75,
+      0.2,
+      0.4,
+      0.5,
+      0.6,
+      0.9,
+      0.4,
+      0.3,
+      0.2,
+      0.85,
+      0.85,
+      0.2,
+      0.5,
+      0.85,
+      0.4,
+      0.5,
+      0.7,
+      0.6,
+      0.75,
+      0.5,
+      0.6,
+      0.7,
+      0.7,
+      0.8,
+      0.7
+    ]
+  },
+  {
+    "keywords": [
+      "BISNIS DIGITAL",
+      "KEWIRAUSAHAAN",
+      "STARTUP",
+      "E-COMMERCE"
+    ],
+    "sub_rumpun": "Bisnis Digital & Kewirausahaan",
+    "riasec_profile": {
+      "R": 0.2,
+      "I": 0.55,
+      "A": 0.5,
+      "S": 0.5,
+      "E": 0.9,
+      "C": 0.5
+    },
+    "gaya_kerja": {
+      "analytical": 0.6,
+      "creative": 0.7,
+      "practical": 0.7,
+      "social": 0.6
+    },
+    "must_have_traits": [
+      "leadership_potential",
+      "risk_tolerance_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        10000000
+      ],
+      "ai_resistance_score": 0.5,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.2,
+      0.55,
+      0.5,
+      0.5,
+      0.9,
+      0.5,
+      0.8,
+      0.4,
+      0.3,
+      0.2,
+      0.85,
+      0.9,
+      0.3,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.5,
+      0.9,
+      0.4,
+      0.4,
+      0.9,
+      0.8,
+      0.5,
+      0.95,
+      0.9
+    ]
+  },
+  {
+    "keywords": [
+      "PSIKOLOGI",
+      "PSIKOLOGI KLINIS",
+      "PSIKOLOGI INDUSTRI"
+    ],
+    "sub_rumpun": "Psikologi",
+    "riasec_profile": {
+      "R": 0.15,
+      "I": 0.7,
+      "A": 0.3,
+      "S": 0.85,
+      "E": 0.3,
+      "C": 0.5
+    },
+    "gaya_kerja": {
+      "analytical": 0.7,
+      "creative": 0.35,
+      "practical": 0.4,
+      "social": 0.85
+    },
+    "must_have_traits": [
+      "empathy_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4200000,
+        8000000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.15,
+      0.7,
+      0.3,
+      0.85,
+      0.3,
+      0.5,
+      0.75,
+      0.1,
+      0.75,
+      0.4,
+      0.75,
+      0.6,
+      0.4,
+      0.6,
+      0.25,
+      0.75,
+      0.45,
+      0.9,
+      0.65,
+      0.65,
+      0.55,
+      0.2,
+      0.35,
+      0.75,
+      0.2,
+      0.4
+    ]
+  },
+  {
+    "keywords": [
+      "HUKUM",
+      "ILMU HUKUM",
+      "HUKUM PIDANA",
+      "HUKUM BISNIS"
+    ],
+    "sub_rumpun": "Hukum",
+    "riasec_profile": {
+      "R": 0.15,
+      "I": 0.65,
+      "A": 0.2,
+      "S": 0.5,
+      "E": 0.6,
+      "C": 0.7
+    },
+    "gaya_kerja": {
+      "analytical": 0.75,
+      "creative": 0.25,
+      "practical": 0.5,
+      "social": 0.55
+    },
+    "must_have_traits": [
+      "critical_thinking_high",
+      "verbal_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4500000,
+        9000000
+      ],
+      "ai_resistance_score": 0.6,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.15,
+      0.65,
+      0.2,
+      0.5,
+      0.6,
+      0.7,
+      0.6,
+      0.1,
+      0.8,
+      0.25,
+      0.9,
+      0.75,
+      0.4,
+      0.4,
+      0.2,
+      0.75,
+      0.6,
+      0.4,
+      0.75,
+      0.5,
+      0.4,
+      0.15,
+      0.5,
+      0.85,
+      0.15,
+      0.4
+    ]
+  },
+  {
+    "keywords": [
+      "ILMU KOMUNIKASI",
+      "JURNALISTIK",
+      "PUBLIC RELATIONS",
+      "PENYIARAN"
+    ],
+    "sub_rumpun": "Ilmu Komunikasi",
+    "riasec_profile": {
+      "R": 0.1,
+      "I": 0.4,
+      "A": 0.55,
+      "S": 0.7,
+      "E": 0.6,
+      "C": 0.4
+    },
+    "gaya_kerja": {
+      "analytical": 0.4,
+      "creative": 0.7,
+      "practical": 0.6,
+      "social": 0.75
+    },
+    "must_have_traits": [
+      "communication_high",
+      "creative_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4000000,
+        8000000
+      ],
+      "ai_resistance_score": 0.55,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.1,
+      0.4,
+      0.55,
+      0.7,
+      0.6,
+      0.4,
+      0.65,
+      0.1,
+      0.5,
+      0.7,
+      0.6,
+      0.35,
+      0.3,
+      0.2,
+      0.25,
+      0.9,
+      0.6,
+      0.5,
+      0.4,
+      0.75,
+      0.35,
+      0.55,
+      0.6,
+      0.4,
+      0.2,
+      0.55
+    ]
+  },
+  {
+    "keywords": [
+      "PERIKLANAN",
+      "ADVERTISING",
+      "PENYIARAN",
+      "BROADCASTING",
+      "HUMAS",
+      "PUBLIC RELATIONS DIGITAL",
+      "MEDIA DIGITAL",
+      "HUBUNGAN MASYARAKAT"
+    ],
+    "sub_rumpun": "Periklanan, Penyiaran & PR Digital",
+    "riasec_profile": {
+      "R": 0.1,
+      "I": 0.35,
+      "A": 0.65,
+      "S": 0.6,
+      "E": 0.7,
+      "C": 0.35
+    },
+    "gaya_kerja": {
+      "analytical": 0.4,
+      "creative": 0.8,
+      "practical": 0.6,
+      "social": 0.7
+    },
+    "must_have_traits": [
+      "creative_thinking_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4000000,
+        8500000
+      ],
+      "ai_resistance_score": 0.5,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.1,
+      0.35,
+      0.65,
+      0.6,
+      0.7,
+      0.35,
+      0.65,
+      0.1,
+      0.5,
+      0.8,
+      0.55,
+      0.35,
+      0.25,
+      0.15,
+      0.3,
+      0.85,
+      0.6,
+      0.4,
+      0.4,
+      0.75,
+      0.3,
+      0.6,
+      0.75,
+      0.4,
+      0.2,
+      0.65
+    ]
+  },
+  {
+    "keywords": [
+      "HUBUNGAN INTERNASIONAL",
+      "DIPLOMASI",
+      "STUDI GLOBAL"
+    ],
+    "sub_rumpun": "Hubungan Internasional",
+    "riasec_profile": {
+      "R": 0.1,
+      "I": 0.65,
+      "A": 0.3,
+      "S": 0.6,
+      "E": 0.55,
+      "C": 0.5
+    },
+    "gaya_kerja": {
+      "analytical": 0.7,
+      "creative": 0.35,
+      "practical": 0.4,
+      "social": 0.65
+    },
+    "must_have_traits": [
+      "critical_thinking_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4200000,
+        8500000
+      ],
+      "ai_resistance_score": 0.6,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.1,
+      0.65,
+      0.3,
+      0.6,
+      0.55,
+      0.5,
+      0.6,
+      0.15,
+      0.75,
+      0.35,
+      0.8,
+      0.55,
+      0.35,
+      0.5,
+      0.2,
+      0.8,
+      0.6,
+      0.45,
+      0.55,
+      0.65,
+      0.55,
+      0.2,
+      0.5,
+      0.6,
+      0.15,
+      0.45
+    ]
+  },
+  {
+    "keywords": [
+      "SOSIOLOGI",
+      "ANTROPOLOGI",
+      "ILMU SOSIAL"
+    ],
+    "sub_rumpun": "Sosiologi & Antropologi",
+    "riasec_profile": {
+      "R": 0.1,
+      "I": 0.7,
+      "A": 0.35,
+      "S": 0.75,
+      "E": 0.25,
+      "C": 0.4
+    },
+    "gaya_kerja": {
+      "analytical": 0.7,
+      "creative": 0.4,
+      "practical": 0.35,
+      "social": 0.75
+    },
+    "must_have_traits": [
+      "research_orientation_high",
+      "empathy_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3800000,
+        7000000
+      ],
+      "ai_resistance_score": 0.7,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.1,
+      0.7,
+      0.35,
+      0.75,
+      0.25,
+      0.4,
+      0.65,
+      0.2,
+      0.75,
+      0.4,
+      0.75,
+      0.5,
+      0.3,
+      0.55,
+      0.2,
+      0.7,
+      0.4,
+      0.7,
+      0.5,
+      0.6,
+      0.7,
+      0.25,
+      0.25,
+      0.6,
+      0.2,
+      0.35
+    ]
+  },
+  {
+    "keywords": [
+      "SASTRA INGGRIS",
+      "SASTRA JEPANG",
+      "SASTRA ARAB",
+      "SASTRA INDONESIA",
+      "SASTRA MANDARIN",
+      "LINGUISTIK",
+      "BAHASA DAN SASTRA",
+      "SASTRA KOREA"
+    ],
+    "sub_rumpun": "Sastra & Linguistik",
+    "riasec_profile": {
+      "R": 0.1,
+      "I": 0.5,
+      "A": 0.6,
+      "S": 0.6,
+      "E": 0.25,
+      "C": 0.4
+    },
+    "gaya_kerja": {
+      "analytical": 0.5,
+      "creative": 0.55,
+      "practical": 0.4,
+      "social": 0.6
+    },
+    "must_have_traits": [
+      "verbal_reasoning_high",
+      "creative_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3500000,
+        7000000
+      ],
+      "ai_resistance_score": 0.65,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.1,
+      0.5,
+      0.6,
+      0.6,
+      0.25,
+      0.4,
+      0.65,
+      0.1,
+      0.55,
+      0.6,
+      0.6,
+      0.4,
+      0.2,
+      0.2,
+      0.15,
+      0.75,
+      0.35,
+      0.5,
+      0.5,
+      0.55,
+      0.5,
+      0.4,
+      0.3,
+      0.5,
+      0.15,
+      0.4
+    ]
+  },
+  {
+    "keywords": [
+      "DKV",
+      "DESAIN KOMUNIKASI VISUAL",
+      "DESAIN GRAFIS",
+      "ILUSTRASI"
+    ],
+    "sub_rumpun": "Desain Komunikasi Visual",
+    "riasec_profile": {
+      "R": 0.3,
+      "I": 0.35,
+      "A": 0.9,
+      "S": 0.3,
+      "E": 0.4,
+      "C": 0.3
+    },
+    "gaya_kerja": {
+      "analytical": 0.3,
+      "creative": 0.9,
+      "practical": 0.6,
+      "social": 0.35
+    },
+    "must_have_traits": [
+      "creative_thinking_high",
+      "visual_spatial_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4000000,
+        8000000
+      ],
+      "ai_resistance_score": 0.4,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.3,
+      0.35,
+      0.9,
+      0.3,
+      0.4,
+      0.3,
+      0.6,
+      0.1,
+      0.4,
+      0.95,
+      0.5,
+      0.5,
+      0.2,
+      0.15,
+      0.4,
+      0.5,
+      0.35,
+      0.25,
+      0.6,
+      0.6,
+      0.25,
+      0.95,
+      0.5,
+      0.3,
+      0.25,
+      0.65
+    ]
+  },
+  {
+    "keywords": [
+      "ARSITEKTUR",
+      "PERANCANGAN KOTA",
+      "URBAN DESIGN"
+    ],
+    "sub_rumpun": "Arsitektur",
+    "riasec_profile": {
+      "R": 0.5,
+      "I": 0.6,
+      "A": 0.8,
+      "S": 0.2,
+      "E": 0.35,
+      "C": 0.5
+    },
+    "gaya_kerja": {
+      "analytical": 0.65,
+      "creative": 0.8,
+      "practical": 0.75,
+      "social": 0.3
+    },
+    "must_have_traits": [
+      "visual_spatial_high",
+      "creative_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        5000000,
+        9500000
+      ],
+      "ai_resistance_score": 0.55,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.5,
+      0.6,
+      0.8,
+      0.2,
+      0.35,
+      0.5,
+      0.6,
+      0.25,
+      0.7,
+      0.85,
+      0.6,
+      0.6,
+      0.6,
+      0.5,
+      0.6,
+      0.5,
+      0.4,
+      0.2,
+      0.7,
+      0.55,
+      0.4,
+      0.9,
+      0.45,
+      0.4,
+      0.4,
+      0.6
+    ]
+  },
+  {
+    "keywords": [
+      "FILM",
+      "TELEVISI",
+      "SINEMATOGRAFI",
+      "PRODUKSI MEDIA"
+    ],
+    "sub_rumpun": "Film & Televisi",
+    "riasec_profile": {
+      "R": 0.2,
+      "I": 0.3,
+      "A": 0.9,
+      "S": 0.35,
+      "E": 0.5,
+      "C": 0.3
+    },
+    "gaya_kerja": {
+      "analytical": 0.3,
+      "creative": 0.9,
+      "practical": 0.6,
+      "social": 0.5
+    },
+    "must_have_traits": [
+      "creative_thinking_high",
+      "storytelling_ability"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3800000,
+        8000000
+      ],
+      "ai_resistance_score": 0.45,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.2,
+      0.3,
+      0.9,
+      0.35,
+      0.5,
+      0.3,
+      0.65,
+      0.1,
+      0.35,
+      0.95,
+      0.5,
+      0.4,
+      0.15,
+      0.15,
+      0.35,
+      0.65,
+      0.45,
+      0.3,
+      0.5,
+      0.65,
+      0.3,
+      0.8,
+      0.5,
+      0.3,
+      0.35,
+      0.55
+    ]
+  },
+  {
+    "keywords": [
+      "SENI RUPA",
+      "SENI LUKIS",
+      "SENI PATUNG",
+      "SENI MURNI"
+    ],
+    "sub_rumpun": "Seni Rupa Murni",
+    "riasec_profile": {
+      "R": 0.35,
+      "I": 0.2,
+      "A": 0.95,
+      "S": 0.2,
+      "E": 0.2,
+      "C": 0.2
+    },
+    "gaya_kerja": {
+      "analytical": 0.2,
+      "creative": 0.95,
+      "practical": 0.55,
+      "social": 0.2
+    },
+    "must_have_traits": [
+      "creative_thinking_high",
+      "aesthetic_sensitivity_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3000000,
+        6500000
+      ],
+      "ai_resistance_score": 0.5,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.35,
+      0.2,
+      0.95,
+      0.2,
+      0.2,
+      0.2,
+      0.75,
+      0.15,
+      0.25,
+      0.98,
+      0.4,
+      0.4,
+      0.1,
+      0.1,
+      0.45,
+      0.3,
+      0.2,
+      0.15,
+      0.65,
+      0.5,
+      0.2,
+      0.95,
+      0.35,
+      0.2,
+      0.4,
+      0.35
+    ]
+  },
+  {
+    "keywords": [
+      "DESAIN INTERIOR",
+      "PERANCANGAN RUANG",
+      "INTERIOR ARCHITECTURE"
+    ],
+    "sub_rumpun": "Desain Interior",
+    "riasec_profile": {
+      "R": 0.4,
+      "I": 0.35,
+      "A": 0.85,
+      "S": 0.2,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "gaya_kerja": {
+      "analytical": 0.4,
+      "creative": 0.85,
+      "practical": 0.7,
+      "social": 0.3
+    },
+    "must_have_traits": [
+      "visual_spatial_high",
+      "creative_thinking_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3800000,
+        7500000
+      ],
+      "ai_resistance_score": 0.45,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.4,
+      0.35,
+      0.85,
+      0.2,
+      0.3,
+      0.4,
+      0.55,
+      0.1,
+      0.45,
+      0.9,
+      0.5,
+      0.55,
+      0.35,
+      0.2,
+      0.55,
+      0.5,
+      0.35,
+      0.25,
+      0.7,
+      0.55,
+      0.3,
+      0.9,
+      0.45,
+      0.3,
+      0.35,
+      0.55
+    ]
+  },
+  {
+    "keywords": [
+      "PGSD",
+      "PENDIDIKAN GURU SEKOLAH DASAR",
+      "GURU SD"
+    ],
+    "sub_rumpun": "PGSD",
+    "riasec_profile": {
+      "R": 0.2,
+      "I": 0.4,
+      "A": 0.4,
+      "S": 0.9,
+      "E": 0.3,
+      "C": 0.5
+    },
+    "gaya_kerja": {
+      "analytical": 0.4,
+      "creative": 0.5,
+      "practical": 0.6,
+      "social": 0.9
+    },
+    "must_have_traits": [
+      "patience_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3500000,
+        6500000
+      ],
+      "ai_resistance_score": 0.85,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.2,
+      0.4,
+      0.4,
+      0.9,
+      0.3,
+      0.5,
+      0.7,
+      0.2,
+      0.4,
+      0.55,
+      0.4,
+      0.4,
+      0.35,
+      0.2,
+      0.25,
+      0.85,
+      0.55,
+      0.9,
+      0.5,
+      0.75,
+      0.25,
+      0.35,
+      0.3,
+      0.8,
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "keywords": [
+      "PENDIDIKAN BAHASA",
+      "PENDIDIKAN BAHASA INGGRIS",
+      "PENDIDIKAN BAHASA INDONESIA"
+    ],
+    "sub_rumpun": "Pendidikan Bahasa",
+    "riasec_profile": {
+      "R": 0.15,
+      "I": 0.45,
+      "A": 0.5,
+      "S": 0.8,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "gaya_kerja": {
+      "analytical": 0.5,
+      "creative": 0.5,
+      "practical": 0.5,
+      "social": 0.8
+    },
+    "must_have_traits": [
+      "verbal_reasoning_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3500000,
+        6500000
+      ],
+      "ai_resistance_score": 0.7,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.15,
+      0.45,
+      0.5,
+      0.8,
+      0.3,
+      0.4,
+      0.6,
+      0.1,
+      0.5,
+      0.55,
+      0.55,
+      0.4,
+      0.25,
+      0.2,
+      0.2,
+      0.9,
+      0.45,
+      0.75,
+      0.45,
+      0.65,
+      0.35,
+      0.35,
+      0.3,
+      0.65,
+      0.2,
+      0.4
+    ]
+  },
+  {
+    "keywords": [
+      "PENDIDIKAN MATEMATIKA",
+      "PENDIDIKAN FISIKA",
+      "PENDIDIKAN IPA"
+    ],
+    "sub_rumpun": "Pendidikan MIPA",
+    "riasec_profile": {
+      "R": 0.25,
+      "I": 0.65,
+      "A": 0.25,
+      "S": 0.75,
+      "E": 0.25,
+      "C": 0.5
+    },
+    "gaya_kerja": {
+      "analytical": 0.7,
+      "creative": 0.35,
+      "practical": 0.5,
+      "social": 0.75
+    },
+    "must_have_traits": [
+      "logical_thinking_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3500000,
+        6800000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.25,
+      0.65,
+      0.25,
+      0.75,
+      0.25,
+      0.5,
+      0.6,
+      0.15,
+      0.75,
+      0.35,
+      0.7,
+      0.55,
+      0.7,
+      0.6,
+      0.3,
+      0.8,
+      0.45,
+      0.7,
+      0.55,
+      0.6,
+      0.4,
+      0.25,
+      0.3,
+      0.7,
+      0.2,
+      0.45
+    ]
+  },
+  {
+    "keywords": [
+      "ILMU KEOLAHRAGAAN",
+      "PENDIDIKAN JASMANI",
+      "PJOK",
+      "KESEHATAN OLAHRAGA",
+      "PELATIH OLAHRAGA",
+      "PENDIDIKAN JASMANI KESEHATAN DAN REKREASI"
+    ],
+    "sub_rumpun": "Ilmu Keolahragaan & PJOK",
+    "riasec_profile": {
+      "R": 0.6,
+      "I": 0.35,
+      "A": 0.2,
+      "S": 0.75,
+      "E": 0.3,
+      "C": 0.35
+    },
+    "gaya_kerja": {
+      "analytical": 0.35,
+      "creative": 0.3,
+      "practical": 0.8,
+      "social": 0.75
+    },
+    "must_have_traits": [
+      "physical_stamina_high",
+      "communication_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3500000,
+        6800000
+      ],
+      "ai_resistance_score": 0.85,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.6,
+      0.35,
+      0.2,
+      0.75,
+      0.3,
+      0.35,
+      0.6,
+      0.15,
+      0.4,
+      0.35,
+      0.45,
+      0.35,
+      0.2,
+      0.4,
+      0.5,
+      0.65,
+      0.5,
+      0.65,
+      0.5,
+      0.7,
+      0.3,
+      0.2,
+      0.4,
+      0.6,
+      0.9,
+      0.3
+    ]
+  },
+  {
+    "keywords": [
+      "AGROTEKNOLOGI",
+      "PERTANIAN",
+      "AGRIBISNIS",
+      "AGRONOMI"
+    ],
+    "sub_rumpun": "Agroteknologi & Pertanian",
+    "riasec_profile": {
+      "R": 0.55,
+      "I": 0.65,
+      "A": 0.15,
+      "S": 0.3,
+      "E": 0.4,
+      "C": 0.45
+    },
+    "gaya_kerja": {
+      "analytical": 0.65,
+      "creative": 0.3,
+      "practical": 0.75,
+      "social": 0.35
+    },
+    "must_have_traits": [
+      "scientific_reasoning_high",
+      "practical_skills_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3800000,
+        7500000
+      ],
+      "ai_resistance_score": 0.75,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.55,
+      0.65,
+      0.15,
+      0.3,
+      0.4,
+      0.45,
+      0.55,
+      0.9,
+      0.7,
+      0.35,
+      0.65,
+      0.6,
+      0.5,
+      0.75,
+      0.55,
+      0.4,
+      0.4,
+      0.35,
+      0.65,
+      0.55,
+      0.55,
+      0.2,
+      0.5,
+      0.55,
+      0.6,
+      0.4
+    ]
+  },
+  {
+    "keywords": [
+      "KEHUTANAN",
+      "KONSERVASI HUTAN",
+      "MANAJEMEN LINGKUNGAN"
+    ],
+    "sub_rumpun": "Kehutanan",
+    "riasec_profile": {
+      "R": 0.55,
+      "I": 0.6,
+      "A": 0.15,
+      "S": 0.3,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "gaya_kerja": {
+      "analytical": 0.6,
+      "creative": 0.25,
+      "practical": 0.8,
+      "social": 0.3
+    },
+    "must_have_traits": [
+      "scientific_reasoning_high",
+      "physical_stamina_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3800000,
+        7500000
+      ],
+      "ai_resistance_score": 0.8,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.55,
+      0.6,
+      0.15,
+      0.3,
+      0.3,
+      0.4,
+      0.55,
+      0.9,
+      0.6,
+      0.3,
+      0.6,
+      0.5,
+      0.4,
+      0.7,
+      0.55,
+      0.4,
+      0.4,
+      0.35,
+      0.6,
+      0.6,
+      0.55,
+      0.2,
+      0.35,
+      0.6,
+      0.7,
+      0.35
+    ]
+  },
+  {
+    "keywords": [
+      "PETERNAKAN",
+      "ILMU TERNAK",
+      "PRODUKSI TERNAK"
+    ],
+    "sub_rumpun": "Peternakan",
+    "riasec_profile": {
+      "R": 0.6,
+      "I": 0.55,
+      "A": 0.1,
+      "S": 0.3,
+      "E": 0.35,
+      "C": 0.45
+    },
+    "gaya_kerja": {
+      "analytical": 0.55,
+      "creative": 0.2,
+      "practical": 0.85,
+      "social": 0.3
+    },
+    "must_have_traits": [
+      "practical_skills_high",
+      "scientific_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3800000,
+        7200000
+      ],
+      "ai_resistance_score": 0.8,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.6,
+      0.55,
+      0.1,
+      0.3,
+      0.35,
+      0.45,
+      0.5,
+      0.85,
+      0.55,
+      0.25,
+      0.55,
+      0.55,
+      0.4,
+      0.65,
+      0.6,
+      0.4,
+      0.4,
+      0.4,
+      0.6,
+      0.55,
+      0.45,
+      0.15,
+      0.45,
+      0.6,
+      0.7,
+      0.3
+    ]
+  },
+  {
+    "keywords": [
+      "PARIWISATA",
+      "PERHOTELAN",
+      "HOSPITALITY",
+      "MANAJEMEN PERHOTELAN",
+      "DESTINASI WISATA",
+      "TATA BOGA",
+      "TATA HIDANG",
+      "MANAJEMEN DESTINASI PARIWISATA"
+    ],
+    "sub_rumpun": "Pariwisata & Perhotelan",
+    "riasec_profile": {
+      "R": 0.3,
+      "I": 0.3,
+      "A": 0.4,
+      "S": 0.8,
+      "E": 0.6,
+      "C": 0.4
+    },
+    "gaya_kerja": {
+      "analytical": 0.3,
+      "creative": 0.45,
+      "practical": 0.65,
+      "social": 0.85
+    },
+    "must_have_traits": [
+      "communication_high",
+      "service_orientation_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3500000,
+        7000000
+      ],
+      "ai_resistance_score": 0.6,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.3,
+      0.3,
+      0.4,
+      0.8,
+      0.6,
+      0.4,
+      0.6,
+      0.15,
+      0.35,
+      0.5,
+      0.4,
+      0.4,
+      0.3,
+      0.15,
+      0.4,
+      0.85,
+      0.55,
+      0.7,
+      0.5,
+      0.8,
+      0.2,
+      0.4,
+      0.7,
+      0.5,
+      0.4,
+      0.45
+    ]
+  },
+  {
+    "keywords": [
+      "LOGISTIK",
+      "MANAJEMEN LOGISTIK",
+      "RANTAI PASOK",
+      "SUPPLY CHAIN MANAGEMENT",
+      "MANAJEMEN TRANSPORTASI",
+      "KEPELABUHANAN",
+      "MANAJEMEN PELABUHAN",
+      "D4 LOGISTIK"
+    ],
+    "sub_rumpun": "Manajemen Logistik, Transportasi & Kepelabuhanan",
+    "riasec_profile": {
+      "R": 0.4,
+      "I": 0.5,
+      "A": 0.15,
+      "S": 0.4,
+      "E": 0.7,
+      "C": 0.7
+    },
+    "gaya_kerja": {
+      "analytical": 0.65,
+      "creative": 0.25,
+      "practical": 0.75,
+      "social": 0.5
+    },
+    "must_have_traits": [
+      "logical_thinking_high",
+      "organizational_skill_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4200000,
+        8500000
+      ],
+      "ai_resistance_score": 0.55,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.4,
+      0.5,
+      0.15,
+      0.4,
+      0.7,
+      0.7,
+      0.55,
+      0.1,
+      0.7,
+      0.25,
+      0.6,
+      0.7,
+      0.65,
+      0.3,
+      0.5,
+      0.55,
+      0.55,
+      0.25,
+      0.75,
+      0.65,
+      0.3,
+      0.25,
+      0.75,
+      0.45,
+      0.35,
+      0.55
+    ]
+  },
+  {
+    "keywords": [
+      "ILMU PERPUSTAKAAN",
+      "KEARSIPAN",
+      "SAINS INFORMASI",
+      "MANAJEMEN INFORMASI",
+      "DOKUMENTASI",
+      "D3 KEARSIPAN"
+    ],
+    "sub_rumpun": "Ilmu Perpustakaan & Kearsipan",
+    "riasec_profile": {
+      "R": 0.15,
+      "I": 0.5,
+      "A": 0.25,
+      "S": 0.6,
+      "E": 0.25,
+      "C": 0.8
+    },
+    "gaya_kerja": {
+      "analytical": 0.6,
+      "creative": 0.25,
+      "practical": 0.55,
+      "social": 0.55
+    },
+    "must_have_traits": [
+      "detail_oriented_high",
+      "organizational_skill_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3200000,
+        6000000
+      ],
+      "ai_resistance_score": 0.55,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.15,
+      0.5,
+      0.25,
+      0.6,
+      0.25,
+      0.8,
+      0.5,
+      0.1,
+      0.6,
+      0.2,
+      0.55,
+      0.85,
+      0.4,
+      0.25,
+      0.3,
+      0.55,
+      0.3,
+      0.4,
+      0.85,
+      0.45,
+      0.4,
+      0.2,
+      0.3,
+      0.55,
+      0.2,
+      0.6
+    ]
+  },
+  {
+    "keywords": [
+      "HUKUM ISLAM",
+      "SYARIAH",
+      "HUKUM KELUARGA ISLAM",
+      "PTKIN"
+    ],
+    "sub_rumpun": "Hukum Islam / Syariah",
+    "riasec_profile": {
+      "R": 0.1,
+      "I": 0.55,
+      "A": 0.15,
+      "S": 0.6,
+      "E": 0.4,
+      "C": 0.6
+    },
+    "gaya_kerja": {
+      "analytical": 0.6,
+      "creative": 0.2,
+      "practical": 0.5,
+      "social": 0.55
+    },
+    "must_have_traits": [
+      "critical_thinking_high",
+      "ethical_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3500000,
+        7000000
+      ],
+      "ai_resistance_score": 0.7,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.1,
+      0.55,
+      0.15,
+      0.6,
+      0.4,
+      0.6,
+      0.65,
+      0.1,
+      0.7,
+      0.25,
+      0.8,
+      0.65,
+      0.35,
+      0.35,
+      0.2,
+      0.7,
+      0.5,
+      0.5,
+      0.75,
+      0.5,
+      0.4,
+      0.15,
+      0.4,
+      0.9,
+      0.15,
+      0.35
+    ]
+  },
+  {
+    "keywords": [
+      "EKONOMI SYARIAH",
+      "PERBANKAN SYARIAH",
+      "AKUNTANSI SYARIAH",
+      "KEUANGAN ISLAM",
+      "MUAMALAH",
+      "MANAJEMEN BISNIS SYARIAH"
+    ],
+    "sub_rumpun": "Ekonomi Syariah & Perbankan Syariah",
+    "riasec_profile": {
+      "R": 0.15,
+      "I": 0.6,
+      "A": 0.15,
+      "S": 0.4,
+      "E": 0.55,
+      "C": 0.75
+    },
+    "gaya_kerja": {
+      "analytical": 0.75,
+      "creative": 0.2,
+      "practical": 0.6,
+      "social": 0.4
+    },
+    "must_have_traits": [
+      "logical_thinking_high",
+      "ethical_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        4000000,
+        8000000
+      ],
+      "ai_resistance_score": 0.55,
+      "demand_trend": "growing"
+    },
+    "major_vector": [
+      0.15,
+      0.6,
+      0.15,
+      0.4,
+      0.55,
+      0.75,
+      0.6,
+      0.1,
+      0.75,
+      0.25,
+      0.7,
+      0.8,
+      0.8,
+      0.4,
+      0.3,
+      0.45,
+      0.4,
+      0.35,
+      0.85,
+      0.45,
+      0.35,
+      0.2,
+      0.65,
+      0.8,
+      0.15,
+      0.55
+    ]
+  },
+  {
+    "keywords": [
+      "ILMU AL QURAN DAN TAFSIR",
+      "ILMU HADIS",
+      "AQIDAH FILSAFAT ISLAM",
+      "PEMIKIRAN ISLAM",
+      "USHULUDDIN",
+      "PERBANDINGAN AGAMA",
+      "STUDI AGAMA-AGAMA"
+    ],
+    "sub_rumpun": "Ilmu Al-Qur'an, Hadis & Pemikiran Islam",
+    "riasec_profile": {
+      "R": 0.1,
+      "I": 0.6,
+      "A": 0.25,
+      "S": 0.6,
+      "E": 0.2,
+      "C": 0.45
+    },
+    "gaya_kerja": {
+      "analytical": 0.65,
+      "creative": 0.25,
+      "practical": 0.35,
+      "social": 0.6
+    },
+    "must_have_traits": [
+      "critical_thinking_high",
+      "research_orientation_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3200000,
+        6200000
+      ],
+      "ai_resistance_score": 0.8,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.1,
+      0.6,
+      0.25,
+      0.6,
+      0.2,
+      0.45,
+      0.7,
+      0.1,
+      0.7,
+      0.3,
+      0.75,
+      0.55,
+      0.3,
+      0.3,
+      0.15,
+      0.7,
+      0.4,
+      0.6,
+      0.7,
+      0.5,
+      0.65,
+      0.2,
+      0.25,
+      0.9,
+      0.15,
+      0.3
+    ]
+  },
+  {
+    "keywords": [
+      "PENDIDIKAN AGAMA ISLAM",
+      "STUDI ISLAM",
+      "USHULUDDIN",
+      "DAKWAH"
+    ],
+    "sub_rumpun": "Pendidikan Agama Islam / Studi Islam",
+    "riasec_profile": {
+      "R": 0.1,
+      "I": 0.45,
+      "A": 0.25,
+      "S": 0.85,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "gaya_kerja": {
+      "analytical": 0.5,
+      "creative": 0.3,
+      "practical": 0.45,
+      "social": 0.85
+    },
+    "must_have_traits": [
+      "communication_high",
+      "ethical_reasoning_high"
+    ],
+    "prospek_karir": {
+      "gaji_awal_range": [
+        3200000,
+        6000000
+      ],
+      "ai_resistance_score": 0.85,
+      "demand_trend": "stable"
+    },
+    "major_vector": [
+      0.1,
+      0.45,
+      0.25,
+      0.85,
+      0.3,
+      0.4,
+      0.7,
+      0.1,
+      0.5,
+      0.35,
+      0.6,
+      0.4,
+      0.25,
+      0.25,
+      0.2,
+      0.85,
+      0.5,
+      0.85,
+      0.55,
+      0.6,
+      0.35,
+      0.3,
+      0.3,
+      0.9,
+      0.25,
+      0.3
+    ]
+  }
 ]

@@ -4,6 +4,7 @@ import {
   runMatchingPipeline,
   checkRiasecVariance,
   cosineSimilarity,
+  parseVector,
   VECTOR_SIZE,
 } from '@/lib/vectorMatcher';
 
@@ -122,7 +123,7 @@ export async function POST(request) {
         // Normalisasi prodi object
         const prodiNorm = {
           ...prodi,
-          major_vector: Array.isArray(prodi.major_vector) ? prodi.major_vector : null,
+          major_vector: parseVector(prodi.major_vector),
           riasec_profile: prodi.riasec_profile || {},
           akademik_minimum: prodi.akademik_minimum || {},
           must_have_traits: prodi.must_have_traits || [],
