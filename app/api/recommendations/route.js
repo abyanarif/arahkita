@@ -145,10 +145,13 @@ export async function POST(request) {
     // ── 6. Sort by finalScore descending ──
     matchResults.sort((a, b) => b.finalScore - a.finalScore);
 
-    // ── 7. Kelompokkan ke Aman / Target / Reach ──
-    const amanList   = matchResults.filter((r) => r.category === 'aman');
-    const targetList = matchResults.filter((r) => r.category === 'target');
-    const reachList  = matchResults.filter((r) => r.category === 'reach');
+    // ── 6b. GROUP by nama_prodi (deduplikasi nama jurusan, agregasi ptn_list) ──
+    const groupedResults = groupByNamaProdi(matchResults);
+
+    // ── 7. Kelompokkan ke Aman / Target / Reach (dari grouped results) ──
+    const amanList   = groupedResults.filter((r) => r.category === 'aman');
+    const targetList = groupedResults.filter((r) => r.category === 'target');
+    const reachList  = groupedResults.filter((r) => r.category === 'reach');
 
     // Top 3: ambil 1 dari tiap kategori (aman, target, reach) untuk strategi optimal
     const topMatches = [];
@@ -157,18 +160,17 @@ export async function POST(request) {
     if (reachList.length > 0)  topMatches.push({ ...reachList[0],  strategi: 'Reach',   rank: 3 });
 
     // Jika ada kategori yang kosong, isi dari yang tersisa
-    while (topMatches.length < 3 && matchResults.length > topMatches.length) {
-      const usedCodes = new Set(topMatches.map((m) => m.prodi.kode_prodi));
-      const next = matchResults.find((r) => !usedCodes.has(r.prodi.kode_prodi));
+    while (topMatches.length < 3 && groupedResults.length > topMatches.length) {
+      const usedNames = new Set(topMatches.map((m) => m.prodi.nama_prodi_generic));
+      const next = groupedResults.find((r) => !usedNames.has(r.prodi.nama_prodi_generic));
       if (!next) break;
       topMatches.push({ ...next, strategi: next.category, rank: topMatches.length + 1 });
     }
 
-    // ── 8. Alternatif / Pivot Majors ──
-    // Ambil prodi dari RIASEC kategori kedua (bukan top 3) sebagai pivot
-    const usedTopCodes = new Set(topMatches.map((m) => m.prodi.kode_prodi));
-    const alternatives = matchResults
-      .filter((r) => !usedTopCodes.has(r.prodi.kode_prodi))
+    // ── 8. Alternatif / Pivot Majors (dari grouped results, bukan top 3) ──
+    const usedTopNames = new Set(topMatches.map((m) => m.prodi.nama_prodi_generic));
+    const alternatives = groupedResults
+      .filter((r) => !usedTopNames.has(r.prodi.nama_prodi_generic))
       .slice(0, 3)
       .map((r, i) => ({
         ...r,
@@ -233,6 +235,95 @@ export async function POST(request) {
 }
 
 // ──────────────────────────────────────────────────────────────────
+// HELPER: Grouping by nama_prodi — deduplikasi & agregasi ptn_list
+// ──────────────────────────────────────────────────────────────────
+
+/**
+ * Deduplikasi matchResults berdasarkan nama_prodi (canonical).
+ * Untuk setiap nama jurusan yang sama, ambil instance dengan finalScore terbaik
+ * sebagai representasi utama, lalu agregasi semua PTN yang menyediakan prodi tersebut
+ * ke dalam field `ptn_list`.
+ *
+ * @param {object[]} matchResults - sorted desc by finalScore
+ * @returns {object[]} grouped results, masih sorted desc by finalScore
+ */
+function groupByNamaProdi(matchResults) {
+  const groupMap = new Map(); // key = nama_prodi canonical lowercase
+
+  matchResults.forEach((result) => {
+    const namaGeneric = normalizeNamaProdi(result.prodi.nama_prodi);
+    const key = namaGeneric.toLowerCase();
+
+    if (!groupMap.has(key)) {
+      // Pertama kali muncul — jadikan representative
+      groupMap.set(key, {
+        ...result,
+        prodi: {
+          ...result.prodi,
+          nama_prodi_generic: namaGeneric,
+        },
+        ptn_list: [
+          {
+            kode_prodi: result.prodi.kode_prodi,
+            nama_ptn: result.prodi.nama_ptn,
+            provinsi_1: result.prodi.provinsi_1,
+            jenis_ptn: result.prodi.jenis_ptn,
+            jenjang: result.prodi.jenjang,
+            daya_tampung_snbt: result.prodi.daya_tampung_snbt,
+            daya_tampung_snbp: result.prodi.daya_tampung_snbp,
+            keketatan_snbt: result.prodi.keketatan_snbt,
+            finalScore: result.finalScore,
+            category: result.category,
+          },
+        ],
+      });
+    } else {
+      // Sudah ada — tambahkan PTN ke ptn_list jika belum ada
+      const existing = groupMap.get(key);
+      const alreadyAdded = existing.ptn_list.some(
+        (p) => p.kode_prodi === result.prodi.kode_prodi
+      );
+      if (!alreadyAdded) {
+        existing.ptn_list.push({
+          kode_prodi: result.prodi.kode_prodi,
+          nama_ptn: result.prodi.nama_ptn,
+          provinsi_1: result.prodi.provinsi_1,
+          jenis_ptn: result.prodi.jenis_ptn,
+          jenjang: result.prodi.jenjang,
+          daya_tampung_snbt: result.prodi.daya_tampung_snbt,
+          daya_tampung_snbp: result.prodi.daya_tampung_snbp,
+          keketatan_snbt: result.prodi.keketatan_snbt,
+          finalScore: result.finalScore,
+          category: result.category,
+        });
+      }
+    }
+  });
+
+  // Sort ptn_list tiap grup by keketatan_snbt asc (dari paling mudah → ketat)
+  groupMap.forEach((grouped) => {
+    grouped.ptn_list.sort((a, b) => (b.keketatan_snbt || 10) - (a.keketatan_snbt || 10));
+    grouped.ptn_count = grouped.ptn_list.length;
+  });
+
+  return Array.from(groupMap.values());
+}
+
+/**
+ * Normalisasi nama prodi: hapus prefix universitas/kampus jika ada,
+ * hilangkan suffix kode/tahun, uppercase.
+ * Misal: "TEKNIK INFORMATIKA - UNAIR" → "TEKNIK INFORMATIKA"
+ */
+function normalizeNamaProdi(nama) {
+  if (!nama) return 'JURUSAN TIDAK DIKETAHUI';
+  // Hapus bagian setelah " - " (biasanya nama kampus)
+  let clean = nama.split(' - ')[0].trim();
+  // Hapus kode angka di akhir (misal "TEKNIK SIPIL 001")
+  clean = clean.replace(/\s+\d{3,}$/, '').trim();
+  return clean.toUpperCase();
+}
+
+// ──────────────────────────────────────────────────────────────────
 // HELPER: Format match result untuk response
 // ──────────────────────────────────────────────────────────────────
 function formatMatchResult(m) {
@@ -249,9 +340,13 @@ function formatMatchResult(m) {
     warnings: m.warnings || [],
     usingVectorMatch: m.usingVectorMatch,
     pivotReason: m.pivotReason || null,
+    // ptn_list: daftar semua PTN yang menyediakan jurusan ini (terurut dari keketatan tertinggi)
+    ptn_list: m.ptn_list || [],
+    ptn_count: m.ptn_count || 1,
     prodi: {
       kode_prodi: m.prodi.kode_prodi,
       nama_prodi: m.prodi.nama_prodi,
+      nama_prodi_generic: m.prodi.nama_prodi_generic || normalizeNamaProdi(m.prodi.nama_prodi),
       jenjang: m.prodi.jenjang,
       nama_ptn: m.prodi.nama_ptn,
       provinsi_1: m.prodi.provinsi_1,
@@ -274,14 +369,15 @@ function buildCareerRoadmap(topMatches, riasecResult) {
   const roadmap = [];
 
   topMatches.forEach((match) => {
+    const namaGeneric = match.prodi.nama_prodi_generic || normalizeNamaProdi(match.prodi.nama_prodi);
     const prospek = match.prodi.prospek_karir || {};
-    const entryRoles = prospek.entry || generateFallbackRoles(match.prodi.nama_prodi, 'entry');
-    const midRoles   = prospek.mid   || generateFallbackRoles(match.prodi.nama_prodi, 'mid');
-    const aiScore    = prospek.ai_resistance ?? estimateAiResistance(match.prodi.nama_prodi);
+    const entryRoles = prospek.entry || generateFallbackRoles(namaGeneric, 'entry');
+    const midRoles   = prospek.mid   || generateFallbackRoles(namaGeneric, 'mid');
+    const aiScore    = prospek.ai_resistance ?? estimateAiResistance(namaGeneric);
 
     roadmap.push({
-      prodi: match.prodi.nama_prodi,
-      ptn: match.prodi.nama_ptn,
+      prodi: namaGeneric,           // nama jurusan generic (tanpa nama kampus)
+      ptn_count: match.ptn_count || 1,
       category: match.category,
       entryRoles,
       midRoles,
@@ -381,13 +477,14 @@ function buildCrossRumpunSuggestions(matchResults) {
   };
 
   matchResults.forEach((result) => {
-    const namaLower = (result.prodi.nama_prodi || '').toLowerCase();
+    const namaGeneric = result.prodi.nama_prodi_generic || normalizeNamaProdi(result.prodi.nama_prodi);
+    const namaLower = namaGeneric.toLowerCase();
     for (const [rumpun, keywords] of Object.entries(rumpunKeywords)) {
       if (rumpunMap[rumpun] === null && keywords.some((k) => namaLower.includes(k))) {
         rumpunMap[rumpun] = {
           rumpun,
-          prodiNama: result.prodi.nama_prodi,
-          ptnNama: result.prodi.nama_ptn,
+          prodiNama: namaGeneric,
+          ptnCount: result.ptn_count || 1,
           finalScore: result.finalScore,
           kodeProdi: result.prodi.kode_prodi,
         };

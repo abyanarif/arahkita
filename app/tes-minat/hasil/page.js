@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Sparkles,
@@ -15,15 +15,16 @@ import {
   ChevronUp,
   RotateCcw,
   Building,
-  BookOpen,
   Star,
   Compass,
-  Award,
   ArrowRight,
   Info,
   BarChart2,
   Shield,
   Loader2,
+  MapPin,
+  Users,
+  ExternalLink,
 } from 'lucide-react';
 import Link from 'next/link';
 import {
@@ -43,66 +44,261 @@ import {
 
 // ── Badge warna per strategi ──────────────────────────────────────
 const STRATEGY_CONFIG = {
-  Aman: {
-    label: 'Aman',
-    color: '#10B981',
-    bg: '#ECFDF5',
-    border: '#10B981',
-    icon: ShieldCheck,
-    desc: 'Peluang sangat besar dengan profil kamu saat ini.',
-  },
-  Target: {
-    label: 'Target',
-    color: '#3157AC',
-    bg: '#EFF4FF',
-    border: '#3157AC',
-    icon: Target,
-    desc: 'Peluang wajar — perlu persiapan optimal di bidang kunci.',
-  },
-  Reach: {
-    label: 'Reach',
-    color: '#F5A623',
-    bg: '#FFF8EB',
-    border: '#F5A623',
-    icon: Zap,
-    desc: 'Prodi ambisius — butuh peningkatan signifikan. Siapkan rencana B.',
-  },
-  reach: {
-    label: 'Reach',
-    color: '#F5A623',
-    bg: '#FFF8EB',
-    border: '#F5A623',
-    icon: Zap,
-    desc: 'Prodi ambisius — butuh peningkatan signifikan. Siapkan rencana B.',
-  },
-  aman: {
-    label: 'Aman',
-    color: '#10B981',
-    bg: '#ECFDF5',
-    border: '#10B981',
-    icon: ShieldCheck,
-    desc: 'Peluang sangat besar dengan profil kamu saat ini.',
-  },
-  target: {
-    label: 'Target',
-    color: '#3157AC',
-    bg: '#EFF4FF',
-    border: '#3157AC',
-    icon: Target,
-    desc: 'Peluang wajar — perlu persiapan optimal di bidang kunci.',
-  },
+  Aman: { label: 'Aman', color: '#10B981', bg: '#ECFDF5', border: '#10B981', icon: ShieldCheck, desc: 'Peluang sangat besar dengan profil kamu saat ini.' },
+  Target: { label: 'Target', color: '#3157AC', bg: '#EFF4FF', border: '#3157AC', icon: Target, desc: 'Peluang wajar — perlu persiapan optimal di bidang kunci.' },
+  Reach: { label: 'Reach', color: '#F5A623', bg: '#FFF8EB', border: '#F5A623', icon: Zap, desc: 'Prodi ambisius — butuh peningkatan signifikan. Siapkan rencana B.' },
+  reach: { label: 'Reach', color: '#F5A623', bg: '#FFF8EB', border: '#F5A623', icon: Zap, desc: 'Prodi ambisius — butuh peningkatan signifikan. Siapkan rencana B.' },
+  aman: { label: 'Aman', color: '#10B981', bg: '#ECFDF5', border: '#10B981', icon: ShieldCheck, desc: 'Peluang sangat besar dengan profil kamu saat ini.' },
+  target: { label: 'Target', color: '#3157AC', bg: '#EFF4FF', border: '#3157AC', icon: Target, desc: 'Peluang wajar — perlu persiapan optimal di bidang kunci.' },
 };
 
 const RIASEC_COLORS = {
-  Realistic: '#3157AC',
-  Investigative: '#6366F1',
-  Artistic: '#EC4899',
-  Social: '#10B981',
-  Enterprising: '#F5A623',
-  Conventional: '#64748B',
+  Realistic: '#3157AC', Investigative: '#6366F1', Artistic: '#EC4899',
+  Social: '#10B981', Enterprising: '#F5A623', Conventional: '#64748B',
 };
 
-const RIASEC_CODE_LABELS = { R: 'Realistic', I: 'Investigative', A: 'Artistic', S: 'Social', E: 'Enterprising', C: 'Conventional' };
+// ──────────────────────────────────────────────────────────────────
+// KOMPONEN: Dropdown Daftar PTN Penyedia
+// ──────────────────────────────────────────────────────────────────
+function PtnDropdown({ ptnList = [], namaProdi }) {
+  const [open, setOpen] = useState(false);
+
+  if (!ptnList || ptnList.length === 0) return null;
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 transition-all text-xs font-semibold text-slate-600"
+        aria-expanded={open}
+        aria-label={`Lihat ${ptnList.length} PTN penyedia ${namaProdi}`}
+      >
+        <span className="flex items-center gap-1.5">
+          <Building className="w-3.5 h-3.5 text-[#3157AC]" />
+          {ptnList.length} PTN menyediakan jurusan ini
+        </span>
+        {open ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -6, scaleY: 0.95 }}
+            animate={{ opacity: 1, y: 0, scaleY: 1 }}
+            exit={{ opacity: 0, y: -6, scaleY: 0.95 }}
+            transition={{ duration: 0.18 }}
+            className="absolute z-20 top-full mt-1 left-0 right-0 bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden"
+            style={{ transformOrigin: 'top' }}
+          >
+            <div className="p-2 border-b border-slate-100">
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wide px-2">
+                PTN Penyedia — {namaProdi}
+              </p>
+            </div>
+            <div className="max-h-60 overflow-y-auto divide-y divide-slate-50">
+              {ptnList.map((ptn, i) => {
+                const cfg = STRATEGY_CONFIG[ptn.category] || STRATEGY_CONFIG['target'];
+                const keketatan = ptn.keketatan_snbt;
+                const keketatanLabel =
+                  keketatan != null
+                    ? keketatan < 5 ? 'Sangat Ketat' : keketatan <= 15 ? 'Ketat' : 'Sedang'
+                    : null;
+                const keketatanColor =
+                  keketatan != null
+                    ? keketatan < 5 ? 'text-red-600 bg-red-50' : keketatan <= 15 ? 'text-amber-700 bg-amber-50' : 'text-emerald-700 bg-emerald-50'
+                    : 'text-slate-500 bg-slate-100';
+
+                return (
+                  <div key={i} className="px-3 py-2.5 hover:bg-slate-50 transition-all">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-xs text-slate-900 truncate">{ptn.nama_ptn}</p>
+                        <div className="flex items-center gap-1.5 mt-0.5">
+                          <MapPin className="w-2.5 h-2.5 text-slate-400 shrink-0" />
+                          <span className="text-[10px] text-slate-500">{ptn.provinsi_1}</span>
+                          {ptn.jenjang && (
+                            <span className="text-[10px] font-bold text-slate-400">· {ptn.jenjang}</span>
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-end gap-1 shrink-0">
+                        {keketatanLabel && (
+                          <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${keketatanColor}`}>
+                            {keketatanLabel}
+                          </span>
+                        )}
+                        {ptn.daya_tampung_snbt && (
+                          <span className="text-[9px] text-slate-400">
+                            {ptn.daya_tampung_snbt} kursi SNBT
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 mt-1.5">
+                      <Link
+                        href={`/kalkulator-peluang?prodi=${ptn.kode_prodi}`}
+                        className="text-[10px] font-bold text-[#3157AC] hover:underline flex items-center gap-0.5"
+                        onClick={() => setOpen(false)}
+                      >
+                        Cek Peluang <ExternalLink className="w-2.5 h-2.5" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="p-2 border-t border-slate-100">
+              <Link
+                href={`/direktori-ptn?search=${encodeURIComponent(namaProdi)}`}
+                className="flex items-center justify-center gap-1 text-[10px] font-bold text-[#D48813] hover:underline py-1"
+                onClick={() => setOpen(false)}
+              >
+                Lihat semua di Direktori PTN <ArrowRight className="w-2.5 h-2.5" />
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ──────────────────────────────────────────────────────────────────
+// KOMPONEN: Card Rekomendasi Jurusan (Generic, tanpa nama kampus)
+// ──────────────────────────────────────────────────────────────────
+function RecomCard({ match, idx, isAlternative = false }) {
+  const cfg = STRATEGY_CONFIG[match.strategi || match.category] || STRATEGY_CONFIG['Target'];
+  const StratIcon = cfg.icon;
+  const namaGeneric = match.prodi?.nama_prodi_generic || match.prodi?.nama_prodi || '';
+  const ptnList = match.ptn_list || [];
+  const ptnCount = match.ptn_count || ptnList.length || 1;
+
+  if (isAlternative) {
+    return (
+      <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-3 flex flex-col">
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">
+            Alternatif #{idx + 1}
+          </span>
+          <span
+            className="text-[10px] px-2 py-0.5 rounded-full font-bold"
+            style={{ backgroundColor: cfg.bg, color: cfg.color }}
+          >
+            {cfg.label}
+          </span>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-slate-900 text-sm leading-snug">{namaGeneric}</h4>
+          <p className="text-[10px] text-slate-500 mt-0.5">{match.prodi.jenjang}</p>
+        </div>
+
+        <p className="text-xs text-slate-500 leading-relaxed flex-1">{match.pivotReason}</p>
+
+        {/* PTN Dropdown */}
+        <PtnDropdown ptnList={ptnList} namaProdi={namaGeneric} />
+
+        <div className="flex items-center justify-between text-xs pt-1 border-t border-slate-100">
+          <span className="text-slate-400">
+            Skor: <strong className="text-slate-700">{match.finalScorePercent}%</strong>
+          </span>
+          <Link
+            href={`/direktori-ptn?search=${encodeURIComponent(namaGeneric)}`}
+            className="font-bold text-[#D48813] hover:underline"
+          >
+            Lihat Prodi →
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: idx * 0.1 }}
+      className="bg-white p-5 rounded-2xl border shadow-md flex flex-col space-y-4"
+      style={{ borderColor: cfg.border + '40' }}
+    >
+      {/* Strategi badge + rank */}
+      <div className="flex items-center justify-between">
+        <span
+          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold"
+          style={{ backgroundColor: cfg.bg, color: cfg.color, border: `1px solid ${cfg.border}40` }}
+        >
+          <StratIcon className="w-3 h-3" /> {cfg.label}
+        </span>
+        <span className="text-xs font-bold text-slate-400">#{idx + 1}</span>
+      </div>
+
+      {/* Nama jurusan GENERIC (tanpa nama kampus) */}
+      <div className="flex-1 space-y-1">
+        <h3 className="font-extrabold text-slate-900 text-base leading-snug uppercase tracking-wide">
+          {namaGeneric}
+        </h3>
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-xs text-slate-500">{match.prodi.jenjang}</span>
+          {ptnCount > 1 && (
+            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#3157AC] bg-[#EFF4FF] px-2 py-0.5 rounded-full">
+              <Users className="w-2.5 h-2.5" />
+              {ptnCount} PTN menyediakan
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* Match score bar */}
+      <div className="space-y-1.5">
+        <div className="flex justify-between items-center text-xs font-bold">
+          <span className="text-slate-500">Skor Kecocokan</span>
+          <span style={{ color: cfg.color }}>{match.finalScorePercent}%</span>
+        </div>
+        <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+          <motion.div
+            className="h-full rounded-full"
+            style={{ backgroundColor: cfg.color }}
+            initial={{ width: 0 }}
+            animate={{ width: `${match.finalScorePercent}%` }}
+            transition={{ duration: 0.8, delay: idx * 0.1 + 0.3 }}
+          />
+        </div>
+      </div>
+
+      {/* Rekomendasi singkat */}
+      <p
+        className="text-xs text-slate-600 leading-relaxed p-3 rounded-xl"
+        style={{ backgroundColor: cfg.bg }}
+      >
+        {match.recommendation}
+      </p>
+
+      {/* Warnings ringkas */}
+      {match.warnings?.length > 0 && (
+        <div className="space-y-1.5">
+          {match.warnings.slice(0, 2).map((w, wi) => (
+            <div key={wi} className="flex items-start gap-1.5 text-xs text-amber-700">
+              <AlertTriangle className="w-3 h-3 shrink-0 mt-0.5 text-amber-500" />
+              <span>{w}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Dropdown daftar PTN Penyedia */}
+      <PtnDropdown ptnList={ptnList} namaProdi={namaGeneric} />
+
+      {/* CTA ke direktori */}
+      <Link
+        href={`/direktori-ptn?search=${encodeURIComponent(namaGeneric)}`}
+        className="w-full text-center py-2 rounded-xl font-bold text-xs text-white transition-all hover:opacity-90"
+        style={{ backgroundColor: cfg.color }}
+      >
+        Cari Prodi di Direktori PTN →
+      </Link>
+    </motion.div>
+  );
+}
 
 // ──────────────────────────────────────────────────────────────────
 // KOMPONEN UTAMA
@@ -119,10 +315,7 @@ export default function HasilAssessmentPage() {
   useEffect(() => {
     try {
       const raw = sessionStorage.getItem('arahkita_assessment_result');
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        setLocalResult(parsed);
-      }
+      if (raw) setLocalResult(JSON.parse(raw));
     } catch (_) {}
   }, []);
 
@@ -244,10 +437,7 @@ export default function HasilAssessmentPage() {
               </div>
               <h3 className="text-lg font-bold text-white">{item.trait}</h3>
               <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-[#F5A623] rounded-full"
-                  style={{ width: `${item.percentage}%` }}
-                />
+                <div className="h-full bg-[#F5A623] rounded-full" style={{ width: `${item.percentage}%` }} />
               </div>
             </div>
           ))}
@@ -285,16 +475,16 @@ export default function HasilAssessmentPage() {
               >
                 {recommendations.crossRumpunSuggestions.map((s, i) => (
                   <div key={i} className="bg-white p-4 rounded-xl border border-[#F5A623]/30 space-y-1.5">
-                    <span className="text-[10px] font-bold text-[#D48813] uppercase tracking-wide">
-                      {s.rumpun}
-                    </span>
+                    <span className="text-[10px] font-bold text-[#D48813] uppercase tracking-wide">{s.rumpun}</span>
                     <p className="text-sm font-bold text-slate-900">{s.prodiNama}</p>
-                    <p className="text-xs text-slate-500">{s.ptnNama}</p>
+                    {s.ptnCount > 1 && (
+                      <p className="text-xs text-slate-500">{s.ptnCount} PTN penyedia</p>
+                    )}
                     <Link
-                      href={`/kalkulator-peluang?prodi=${s.kodeProdi}`}
+                      href={`/direktori-ptn?search=${encodeURIComponent(s.prodiNama)}`}
                       className="text-xs font-bold text-[#3157AC] hover:underline flex items-center gap-1"
                     >
-                      Cek Peluang <ArrowRight className="w-3 h-3" />
+                      Lihat di Direktori <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
                 ))}
@@ -326,84 +516,9 @@ export default function HasilAssessmentPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {(recommendations?.topMatches || []).map((match, idx) => {
-              const cfg = STRATEGY_CONFIG[match.strategi] || STRATEGY_CONFIG['Target'];
-              const StratIcon = cfg.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white p-5 rounded-2xl border shadow-md flex flex-col space-y-4"
-                  style={{ borderColor: cfg.border + '40' }}
-                >
-                  {/* Strategi badge */}
-                  <div className="flex items-center justify-between">
-                    <span
-                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold"
-                      style={{ backgroundColor: cfg.bg, color: cfg.color, border: `1px solid ${cfg.border}40` }}
-                    >
-                      <StratIcon className="w-3 h-3" /> {cfg.label}
-                    </span>
-                    <span className="text-xs font-bold text-slate-400">#{idx + 1}</span>
-                  </div>
-
-                  {/* Prodi info */}
-                  <div className="flex-1 space-y-1">
-                    <h3 className="font-bold text-slate-900 text-base leading-snug">
-                      {match.prodi.nama_prodi}
-                    </h3>
-                    <p className="text-xs font-medium text-[#3157AC]">{match.prodi.nama_ptn}</p>
-                    <p className="text-[10px] text-slate-500">{match.prodi.jenjang} · {match.prodi.provinsi_1}</p>
-                  </div>
-
-                  {/* Match score bar */}
-                  <div className="space-y-1.5">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <span className="text-slate-500">Skor Kecocokan</span>
-                      <span style={{ color: cfg.color }}>{match.finalScorePercent}%</span>
-                    </div>
-                    <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full rounded-full"
-                        style={{ backgroundColor: cfg.color }}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${match.finalScorePercent}%` }}
-                        transition={{ duration: 0.8, delay: idx * 0.1 + 0.3 }}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Rekomendasi singkat */}
-                  <p className="text-xs text-slate-600 leading-relaxed p-3 rounded-xl"
-                    style={{ backgroundColor: cfg.bg }}>
-                    {match.recommendation}
-                  </p>
-
-                  {/* Warnings ringkas */}
-                  {match.warnings?.length > 0 && (
-                    <div className="space-y-1.5">
-                      {match.warnings.slice(0, 2).map((w, wi) => (
-                        <div key={wi} className="flex items-start gap-1.5 text-xs text-amber-700">
-                          <AlertTriangle className="w-3 h-3 shrink-0 mt-0.5 text-amber-500" />
-                          <span>{w}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* CTA */}
-                  <Link
-                    href={`/kalkulator-peluang?prodi=${match.prodi.kode_prodi}`}
-                    className="w-full text-center py-2 rounded-xl font-bold text-xs text-white transition-all hover:opacity-90"
-                    style={{ backgroundColor: cfg.color }}
-                  >
-                    Cek Peluang Masuk →
-                  </Link>
-                </motion.div>
-              );
-            })}
+            {(recommendations?.topMatches || []).map((match, idx) => (
+              <RecomCard key={idx} match={match} idx={idx} />
+            ))}
           </div>
         )}
       </div>
@@ -440,15 +555,8 @@ export default function HasilAssessmentPage() {
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="80%">
                     <PolarGrid gridType="polygon" stroke="#E2E8F0" />
-                    <PolarAngleAxis
-                      dataKey="subject"
-                      tick={{ fontSize: 11, fill: '#64748B', fontWeight: 600 }}
-                    />
-                    <PolarRadiusAxis
-                      angle={30}
-                      domain={[0, 100]}
-                      tick={{ fontSize: 9, fill: '#94A3B8' }}
-                    />
+                    <PolarAngleAxis dataKey="subject" tick={{ fontSize: 11, fill: '#64748B', fontWeight: 600 }} />
+                    <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fontSize: 9, fill: '#94A3B8' }} />
                     <Radar
                       name="Profil RIASEC"
                       dataKey="score"
@@ -457,9 +565,7 @@ export default function HasilAssessmentPage() {
                       fillOpacity={0.25}
                       strokeWidth={2}
                     />
-                    <Tooltip
-                      formatter={(value, name, props) => [`${value}%`, props?.payload?.fullName || name]}
-                    />
+                    <Tooltip formatter={(value, name, props) => [`${value}%`, props?.payload?.fullName || name]} />
                   </RadarChart>
                 </ResponsiveContainer>
               </div>
@@ -476,15 +582,10 @@ export default function HasilAssessmentPage() {
                   <BarChart data={barData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                     <XAxis dataKey="trait" tick={{ fontSize: 12 }} />
                     <YAxis domain={[0, 100]} unit="%" tick={{ fontSize: 12 }} />
-                    <Tooltip
-                      formatter={(value, name, props) => [`${value}%`, props?.payload?.fullTrait || 'Score']}
-                    />
+                    <Tooltip formatter={(value, name, props) => [`${value}%`, props?.payload?.fullTrait || 'Score']} />
                     <Bar dataKey="percentage" radius={[8, 8, 0, 0]}>
                       {barData.map((entry, index) => (
-                        <Cell
-                          key={`cell-${index}`}
-                          fill={RIASEC_COLORS[riasecScores[index]?.trait] || '#3157AC'}
-                        />
+                        <Cell key={`cell-${index}`} fill={RIASEC_COLORS[riasecScores[index]?.trait] || '#3157AC'} />
                       ))}
                     </Bar>
                   </BarChart>
@@ -528,10 +629,7 @@ export default function HasilAssessmentPage() {
                           <span className="font-bold text-slate-800">{val}%</span>
                         </div>
                         <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#3157AC] rounded-full"
-                            style={{ width: `${val}%` }}
-                          />
+                          <div className="h-full bg-[#3157AC] rounded-full" style={{ width: `${val}%` }} />
                         </div>
                       </div>
                     );
@@ -555,7 +653,9 @@ export default function HasilAssessmentPage() {
                         <div className="flex items-center justify-between flex-wrap gap-2">
                           <div>
                             <p className="font-bold text-slate-900 text-sm">{cr.prodi}</p>
-                            <p className="text-xs text-slate-500">{cr.ptn}</p>
+                            {cr.ptn_count > 1 && (
+                              <p className="text-xs text-slate-500">{cr.ptn_count} PTN penyedia</p>
+                            )}
                           </div>
                           <div className="flex items-center gap-2">
                             <span
@@ -566,11 +666,9 @@ export default function HasilAssessmentPage() {
                             </span>
                             <span
                               className={`text-xs px-2 py-0.5 rounded-full font-bold ${
-                                cr.aiResistanceScore >= 0.7
-                                  ? 'bg-emerald-50 text-emerald-700'
-                                  : cr.aiResistanceScore >= 0.4
-                                  ? 'bg-amber-50 text-amber-700'
-                                  : 'bg-red-50 text-red-700'
+                                cr.aiResistanceScore >= 0.7 ? 'bg-emerald-50 text-emerald-700'
+                                : cr.aiResistanceScore >= 0.4 ? 'bg-amber-50 text-amber-700'
+                                : 'bg-red-50 text-red-700'
                               }`}
                             >
                               <Shield className="inline w-3 h-3 mr-0.5" />
@@ -583,17 +681,13 @@ export default function HasilAssessmentPage() {
                           <div className="space-y-1">
                             <p className="font-bold text-slate-600 uppercase tracking-wide text-[10px]">Entry Roles</p>
                             <ul className="space-y-0.5">
-                              {cr.entryRoles.map((r, ri) => (
-                                <li key={ri} className="text-slate-700">• {r}</li>
-                              ))}
+                              {cr.entryRoles.map((r, ri) => <li key={ri} className="text-slate-700">• {r}</li>)}
                             </ul>
                           </div>
                           <div className="space-y-1">
                             <p className="font-bold text-slate-600 uppercase tracking-wide text-[10px]">Mid-Level Roles</p>
                             <ul className="space-y-0.5">
-                              {cr.midRoles.map((r, ri) => (
-                                <li key={ri} className="text-slate-700">• {r}</li>
-                              ))}
+                              {cr.midRoles.map((r, ri) => <li key={ri} className="text-slate-700">• {r}</li>)}
                             </ul>
                           </div>
                         </div>
@@ -608,12 +702,8 @@ export default function HasilAssessmentPage() {
                               className="h-full rounded-full transition-all"
                               style={{
                                 width: `${Math.round(cr.aiResistanceScore * 100)}%`,
-                                backgroundColor:
-                                  cr.aiResistanceScore >= 0.7
-                                    ? '#10B981'
-                                    : cr.aiResistanceScore >= 0.4
-                                    ? '#F5A623'
-                                    : '#EF4444',
+                                backgroundColor: cr.aiResistanceScore >= 0.7 ? '#10B981'
+                                  : cr.aiResistanceScore >= 0.4 ? '#F5A623' : '#EF4444',
                               }}
                             />
                           </div>
@@ -635,46 +725,12 @@ export default function HasilAssessmentPage() {
           <div className="flex items-center gap-2">
             <Compass className="w-5 h-5 text-[#3157AC]" />
             <h2 className="text-xl font-bold text-slate-900">Pilihan Alternatif (Pivot Major)</h2>
-            <span className="text-xs text-slate-500 ml-1">— Prodi dengan jalur karir yang saling overlap</span>
+            <span className="text-xs text-slate-500 ml-1">— Jurusan dengan jalur karir yang saling overlap</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {recommendations.alternatives.map((match, idx) => {
-              const cfg = STRATEGY_CONFIG[match.category] || STRATEGY_CONFIG['Target'];
-              return (
-                <div
-                  key={idx}
-                  className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-3 flex flex-col"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">
-                      Alternatif #{idx + 1}
-                    </span>
-                    <span
-                      className="text-[10px] px-2 py-0.5 rounded-full font-bold"
-                      style={{ backgroundColor: cfg.bg, color: cfg.color }}
-                    >
-                      {cfg.label}
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-sm">{match.prodi.nama_prodi}</h4>
-                    <p className="text-xs text-[#3157AC] font-medium">{match.prodi.nama_ptn}</p>
-                  </div>
-                  <p className="text-xs text-slate-500 leading-relaxed flex-1">
-                    {match.pivotReason}
-                  </p>
-                  <div className="flex items-center justify-between text-xs pt-2 border-t border-slate-100">
-                    <span className="text-slate-400">Skor: <strong className="text-slate-700">{match.finalScorePercent}%</strong></span>
-                    <Link
-                      href={`/kalkulator-peluang?prodi=${match.prodi.kode_prodi}`}
-                      className="font-bold text-[#D48813] hover:underline"
-                    >
-                      Cek Peluang →
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
+            {recommendations.alternatives.map((match, idx) => (
+              <RecomCard key={idx} match={match} idx={idx} isAlternative />
+            ))}
           </div>
         </div>
       )}
