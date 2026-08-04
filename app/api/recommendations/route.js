@@ -72,31 +72,8 @@ export async function POST(request) {
       );
     }
 
-    // ── 2. Ambil seluruh prodi dari Supabase ──
-    const limit = Math.min(parseInt(limitParam) || 200, 500);
-    const { data: prodiList, error: prodiError } = await supabase
-      .from('prodi')
-      .select(`
-        kode_prodi,
-        id_ptn,
-        nama_prodi,
-        jenjang,
-        daya_tampung_sekarang,
-        daya_tampung_snbt,
-        daya_tampung_snbp,
-        portofolio,
-        riasec_profile,
-        major_vector,
-        akademik_minimum,
-        must_have_traits,
-        gaya_kerja,
-        keketatan_snbt,
-        prospek_karir,
-        ptn(nama_ptn, provinsi_1, jenis_ptn)
-      `)
-      .limit(limit);
-
-    if (prodiError) throw prodiError;
+    // ── 2. Ambil SELURUH prodi dari Supabase (paginated untuk >5.000 data) ──
+    const prodiList = await fetchAllProdi(supabase);
 
     if (!prodiList || prodiList.length === 0) {
       return NextResponse.json({ success: false, error: 'Tidak ada data prodi tersedia.' }, { status: 404 });
@@ -311,15 +288,62 @@ function groupByNamaProdi(matchResults) {
 }
 
 /**
+ * Fetch seluruh prodi dari Supabase secara paginated (Supabase REST limit 1.000 per request)
+ * Memastikan seluruh >5.000 data prodi dan PTN penyedianya terbaca lengkap.
+ */
+async function fetchAllProdi(client) {
+  const all = [];
+  const PAGE_SIZE = 1000;
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await client
+      .from('prodi')
+      .select(`
+        kode_prodi,
+        id_ptn,
+        nama_prodi,
+        jenjang,
+        daya_tampung_sekarang,
+        daya_tampung_snbt,
+        daya_tampung_snbp,
+        portofolio,
+        riasec_profile,
+        major_vector,
+        akademik_minimum,
+        must_have_traits,
+        gaya_kerja,
+        keketatan_snbt,
+        prospek_karir,
+        ptn(nama_ptn, provinsi_1, jenis_ptn)
+      `)
+      .range(from, from + PAGE_SIZE - 1)
+      .order('kode_prodi', { ascending: true });
+
+    if (error) throw error;
+    if (!data || data.length === 0) break;
+
+    all.push(...data);
+    if (data.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+
+  return all;
+}
+
+/**
  * Normalisasi nama prodi: hapus prefix universitas/kampus jika ada,
- * hilangkan suffix kode/tahun, uppercase.
+ * hilangkan suffix kode/tahun/jenjang, uppercase.
  * Misal: "TEKNIK INFORMATIKA - UNAIR" → "TEKNIK INFORMATIKA"
  */
 function normalizeNamaProdi(nama) {
   if (!nama) return 'JURUSAN TIDAK DIKETAHUI';
   // Hapus bagian setelah " - " (biasanya nama kampus)
   let clean = nama.split(' - ')[0].trim();
-  // Hapus kode angka di akhir (misal "TEKNIK SIPIL 001")
+  // Hapus suffix jenjang / cabang / kode
+  clean = clean.replace(/\s*\((S1|D4|D3|D2|D1)\)/i, '');
+  clean = clean.replace(/\s+PSDKU.*$/i, '');
+  clean = clean.replace(/\s+KAMPUS.*$/i, '');
   clean = clean.replace(/\s+\d{3,}$/, '').trim();
   return clean.toUpperCase();
 }
