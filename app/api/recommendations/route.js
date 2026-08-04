@@ -339,6 +339,7 @@ function formatMatchResult(m) {
     recommendation: m.recommendation,
     warnings: m.warnings || [],
     usingVectorMatch: m.usingVectorMatch,
+    matchMode: m.matchMode || 'name_based', // 'vector' | 'riasec_profile' | 'name_based'
     pivotReason: m.pivotReason || null,
     // ptn_list: daftar semua PTN yang menyediakan jurusan ini (terurut dari keketatan tertinggi)
     ptn_list: m.ptn_list || [],

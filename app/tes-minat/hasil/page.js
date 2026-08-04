@@ -149,7 +149,7 @@ function PtnDropdown({ ptnList = [], namaProdi }) {
             </div>
             <div className="p-2 border-t border-slate-100">
               <Link
-                href={`/direktori-ptn?search=${encodeURIComponent(namaProdi)}`}
+                href={`/direktori-ptn?q=${encodeURIComponent(namaProdi)}`}
                 className="flex items-center justify-center gap-1 text-[10px] font-bold text-[#D48813] hover:underline py-1"
                 onClick={() => setOpen(false)}
               >
@@ -203,7 +203,7 @@ function RecomCard({ match, idx, isAlternative = false }) {
             Skor: <strong className="text-slate-700">{match.finalScorePercent}%</strong>
           </span>
           <Link
-            href={`/direktori-ptn?search=${encodeURIComponent(namaGeneric)}`}
+            href={`/direktori-ptn?q=${encodeURIComponent(namaGeneric)}`}
             className="font-bold text-[#D48813] hover:underline"
           >
             Lihat Prodi →
@@ -481,7 +481,7 @@ export default function HasilAssessmentPage() {
                       <p className="text-xs text-slate-500">{s.ptnCount} PTN penyedia</p>
                     )}
                     <Link
-                      href={`/direktori-ptn?search=${encodeURIComponent(s.prodiNama)}`}
+                      href={`/direktori-ptn?q=${encodeURIComponent(s.prodiNama)}`}
                       className="text-xs font-bold text-[#3157AC] hover:underline flex items-center gap-1"
                     >
                       Lihat di Direktori <ArrowRight className="w-3 h-3" />
@@ -500,6 +500,17 @@ export default function HasilAssessmentPage() {
           <Star className="w-5 h-5 text-[#F5A623]" />
           <h2 className="text-xl font-bold text-slate-900">Top 3 Rekomendasi Jurusan</h2>
         </div>
+
+        {/* Banner: fallback mode info */}
+        {recommendations?.topMatches?.[0]?.matchMode === 'name_based' && (
+          <div className="flex items-start gap-2.5 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600">
+            <Info className="w-4 h-4 shrink-0 mt-0.5 text-slate-400" />
+            <span>
+              <strong>Mode Estimasi Aktif</strong> — Skor kecocokan dihitung berdasarkan kesesuaian nama jurusan dengan profil RIASEC-mu karena data vektor belum ter-seed di database.
+              Skor akan lebih presisi setelah admin melengkapi data prodi.
+            </span>
+          </div>
+        )}
 
         {loadingRec ? (
           <div className="flex items-center justify-center py-16 gap-3">
