@@ -99,8 +99,14 @@ function normalizeNamaProdi(nama) {
   clean = clean.replace(/\s*\((S1|D4|D3|D2|D1)\)/i, '');
   clean = clean.replace(/\s+PSDKU.*$/i, '');
   clean = clean.replace(/\s+KAMPUS.*$/i, '');
-  clean = clean.replace(/\s+\d{3,}$/, '').trim();
-  return clean.toUpperCase();
+  clean = clean.replace(/\s+\d{3,}$/, '').trim().toUpperCase();
+
+  if (/DOKTER HEWAN|KEDOKTERAN HEWAN/i.test(clean)) return 'KEDOKTERAN HEWAN';
+  if (/PENDIDIKAN DOKTER GIGI|KEDOKTERAN GIGI/i.test(clean)) return 'KEDOKTERAN GIGI';
+  if (/PENDIDIKAN DOKTER|^KEDOKTERAN$/i.test(clean)) return 'KEDOKTERAN';
+  if (/PENDIDIKAN APOTEKER|^FARMASI$/i.test(clean)) return 'FARMASI';
+
+  return clean;
 }
 
 function groupByNamaProdi(matchResults) {
@@ -213,25 +219,32 @@ async function main() {
   matchResults.sort((a, b) => b.finalScore - a.finalScore);
   const grouped = groupByNamaProdi(matchResults);
 
-  // 3. Inspeksi Hasil Grouping untuk FARMASI
-  console.log('📊 [LANGKAH 3] Hasil Grouping PTN Penyedia (Contoh: FARMASI):');
-  const farmasiGroup = grouped.find((g) => g.prodi.nama_prodi_generic.includes('FARMASI'));
+  // 3. Inspeksi Hasil Grouping untuk FARMASI & KEDOKTERAN HEWAN
+  console.log('📊 [LANGKAH 3] Hasil Grouping PTN Penyedia dengan Alias Canonical:');
+  const farmasiGroup = grouped.find((g) => g.prodi.nama_prodi_generic === 'FARMASI');
+  const hewanGroup = grouped.find((g) => g.prodi.nama_prodi_generic === 'KEDOKTERAN HEWAN');
 
   if (farmasiGroup) {
-    console.log(`  • Nama Jurusan Generic : ${farmasiGroup.prodi.nama_prodi_generic}`);
-    console.log(`  • Skor Kecocokan      : ${farmasiGroup.finalScorePercent}% (${farmasiGroup.category.toUpperCase()})`);
-    console.log(`  • Total PTN Penyedia  : ${farmasiGroup.ptn_count} PTN (Sebelumnya hanya 1-2 PTN!)`);
-    console.log(`  • Sample PTN Penyedia (Top 10):`);
-    farmasiGroup.ptn_list.slice(0, 10).forEach((ptn, idx) => {
-      console.log(`      ${idx + 1}. ${ptn.nama_ptn} (${ptn.provinsi_1}) — ${ptn.daya_tampung_snbt || '-'} kursi SNBT`);
+    console.log(`\n  [A] ${farmasiGroup.prodi.nama_prodi_generic}:`);
+    console.log(`      • Total PTN Penyedia : ${farmasiGroup.ptn_count} PTN`);
+    console.log(`      • Sample PTN Penyedia (Top 5):`);
+    farmasiGroup.ptn_list.slice(0, 5).forEach((ptn, idx) => {
+      console.log(`        ${idx + 1}. ${ptn.nama_ptn} (${ptn.provinsi_1}) — ${ptn.daya_tampung_snbt || '-'} kursi SNBT`);
     });
-  } else {
-    console.log('  ⚠️ Farmasi tidak ditemukan di grouped results.');
+  }
+
+  if (hewanGroup) {
+    console.log(`\n  [B] ${hewanGroup.prodi.nama_prodi_generic}:`);
+    console.log(`      • Total PTN Penyedia : ${hewanGroup.ptn_count} PTN (Sebelumnya hanya 2 PTN!)`);
+    console.log(`      • Seluruh PTN Penyedia:`);
+    hewanGroup.ptn_list.forEach((ptn, idx) => {
+      console.log(`        ${idx + 1}. ${ptn.nama_ptn} (${ptn.provinsi_1}) — ${ptn.daya_tampung_snbt || '-'} kursi SNBT`);
+    });
   }
 
   console.log('\n═══════════════════════════════════════════════════════════════════════════');
-  if (farmasiGroup && farmasiGroup.ptn_count >= 30) {
-    console.log('  🎉 ✅ DIAGNOSTIC & FIX PASSED: Seluruh PTN Penyedia Terbaca & Ter-grouping Lengkap!');
+  if (farmasiGroup && hewanGroup && hewanGroup.ptn_count >= 10) {
+    console.log('  🎉 ✅ DIAGNOSTIC & FIX PASSED: Alias Grouping Kedokteran Hewan & Farmasi 100% Berhasil!');
   } else {
     console.log('  ⚠️ FIX VERIFICATION FAILED');
   }

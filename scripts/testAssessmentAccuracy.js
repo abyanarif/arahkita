@@ -65,8 +65,17 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
 function normalizeNamaProdi(nama) {
   if (!nama) return 'JURUSAN TIDAK DIKETAHUI';
   let clean = nama.split(' - ')[0].trim();
-  clean = clean.replace(/\s+\d{3,}$/, '').trim();
-  return clean.toUpperCase();
+  clean = clean.replace(/\s*\((S1|D4|D3|D2|D1)\)/i, '');
+  clean = clean.replace(/\s+PSDKU.*$/i, '');
+  clean = clean.replace(/\s+KAMPUS.*$/i, '');
+  clean = clean.replace(/\s+\d{3,}$/, '').trim().toUpperCase();
+
+  if (/DOKTER HEWAN|KEDOKTERAN HEWAN/i.test(clean)) return 'KEDOKTERAN HEWAN';
+  if (/PENDIDIKAN DOKTER GIGI|KEDOKTERAN GIGI/i.test(clean)) return 'KEDOKTERAN GIGI';
+  if (/PENDIDIKAN DOKTER|^KEDOKTERAN$/i.test(clean)) return 'KEDOKTERAN';
+  if (/PENDIDIKAN APOTEKER|^FARMASI$/i.test(clean)) return 'FARMASI';
+
+  return clean;
 }
 
 function groupByNamaProdi(matchResults) {

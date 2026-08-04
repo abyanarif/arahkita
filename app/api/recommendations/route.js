@@ -332,20 +332,69 @@ async function fetchAllProdi(client) {
 }
 
 /**
- * Normalisasi nama prodi: hapus prefix universitas/kampus jika ada,
- * hilangkan suffix kode/tahun/jenjang, uppercase.
- * Misal: "TEKNIK INFORMATIKA - UNAIR" → "TEKNIK INFORMATIKA"
+ * Normalisasi & Alias Grouping Nama Prodi:
+ * Menggabungkan variasi nama jurusan serumpun (misal "PENDIDIKAN DOKTER HEWAN" & "KEDOKTERAN HEWAN" → "KEDOKTERAN HEWAN"),
+ * hapus prefix universitas/kampus, hilangkan suffix kode/tahun/jenjang.
  */
 function normalizeNamaProdi(nama) {
   if (!nama) return 'JURUSAN TIDAK DIKETAHUI';
+
   // Hapus bagian setelah " - " (biasanya nama kampus)
   let clean = nama.split(' - ')[0].trim();
   // Hapus suffix jenjang / cabang / kode
   clean = clean.replace(/\s*\((S1|D4|D3|D2|D1)\)/i, '');
   clean = clean.replace(/\s+PSDKU.*$/i, '');
   clean = clean.replace(/\s+KAMPUS.*$/i, '');
-  clean = clean.replace(/\s+\d{3,}$/, '').trim();
-  return clean.toUpperCase();
+  clean = clean.replace(/\s+\d{3,}$/, '').trim().toUpperCase();
+
+  // ── Rules Canonical Alias Grouping ──────────────────────────────────
+  if (/DOKTER HEWAN|KEDOKTERAN HEWAN/i.test(clean)) {
+    return 'KEDOKTERAN HEWAN';
+  }
+  if (/PENDIDIKAN DOKTER GIGI|KEDOKTERAN GIGI/i.test(clean)) {
+    return 'KEDOKTERAN GIGI';
+  }
+  if (/PENDIDIKAN DOKTER|^KEDOKTERAN$/i.test(clean)) {
+    return 'KEDOKTERAN';
+  }
+  if (/PENDIDIKAN APOTEKER|^FARMASI$/i.test(clean)) {
+    return 'FARMASI';
+  }
+  if (/TEKNIK INFORMATIKA|^INFORMATIKA$|^ILMU KOMPUTER$/i.test(clean)) {
+    return 'INFORMATIKA / TEKNIK INFORMATIKA';
+  }
+  if (/TEKNIK KOMPUTER|REKAYASA KOMPUTER/i.test(clean)) {
+    return 'TEKNIK KOMPUTER';
+  }
+  if (/SISTEM INFORMASI|MANAJEMEN INFORMATIKA/i.test(clean)) {
+    return 'SISTEM INFORMASI';
+  }
+  if (/AGROTEKNOLOGI|AGRONOMI|AGROEKOTEKNOLOGI|BUDIDAYA PERTANIAN/i.test(clean)) {
+    return 'AGROTEKNOLOGI';
+  }
+  if (/AGRIBISNIS|SOSIAL EKONOMI PERTANIAN/i.test(clean)) {
+    return 'AGRIBISNIS';
+  }
+  if (/BUDIDAYA PETERNAKAN|BUDI DAYA TERNAK|ILMU PETERNAKAN|^PETERNAKAN$/i.test(clean)) {
+    return 'PETERNAKAN';
+  }
+  if (/BUDIDAYA PERAIRAN|BUDIDAYA PERIKANAN|AKUAKULTUR|^PERIKANAN$/i.test(clean)) {
+    return 'PERIKANAN & AKUAKULTUR';
+  }
+  if (/ADMINISTRASI PUBLIK|ADMINISTRASI NEGARA|ILMU ADMINISTRASI NEGARA|ILMU ADMINISTRASI PUBLIK/i.test(clean)) {
+    return 'ADMINISTRASI PUBLIK / NEGARA';
+  }
+  if (/HUBUNGAN INTERNASIONAL/i.test(clean)) {
+    return 'HUBUNGAN INTERNASIONAL';
+  }
+  if (/ILMU HUKUM|^HUKUM$/i.test(clean)) {
+    return 'ILMU HUKUM';
+  }
+  if (/ILMU KOMUNIKASI|^KOMUNIKASI$/i.test(clean)) {
+    return 'ILMU KOMUNIKASI';
+  }
+
+  return clean;
 }
 
 // ──────────────────────────────────────────────────────────────────
